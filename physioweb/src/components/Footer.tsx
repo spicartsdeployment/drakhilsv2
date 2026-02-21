@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer className="relative" style={{ backgroundColor: '#1a3333', overflow: 'hidden' }}>
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0"
         style={{
           backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -28,9 +28,9 @@ export function Footer() {
       />
 
       {/* Soft Teal Glow - Top Right Corner */}
-      <div 
+      <div
         className="absolute opacity-30 blur-3xl pointer-events-none"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #0f8987 0%, transparent 70%)',
           width: '200px',
           height: '200px',
@@ -40,9 +40,9 @@ export function Footer() {
       />
 
       {/* Soft Teal Glow - Bottom Left Corner */}
-      <div 
+      <div
         className="absolute opacity-20 blur-2xl pointer-events-none"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #c1f5f1 0%, transparent 70%)',
           width: '150px',
           height: '150px',
@@ -52,9 +52,9 @@ export function Footer() {
       />
 
       {/* Soft Teal Glow - Center */}
-      <div 
+      <div
         className="absolute opacity-10 blur-3xl pointer-events-none"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #33a9b1 0%, transparent 70%)',
           width: '300px',
           height: '300px',
@@ -65,9 +65,9 @@ export function Footer() {
       />
 
       {/* Instagram Gallery Section */}
-      <div 
+      <div
         className="py-16 overflow-hidden relative z-10"
-        style={{ 
+        style={{
           backgroundColor: 'transparent'
         }}
       >
@@ -154,12 +154,12 @@ export function Footer() {
                   />
                   <div className="instagram-card-overlay">
                     <div className="instagram-icon-container">
-                      <Instagram 
-                        size={26} 
-                        style={{ 
+                      <Instagram
+                        size={26}
+                        style={{
                           color: 'white',
                           strokeWidth: 2
-                        }} 
+                        }}
                       />
                     </div>
                   </div>
@@ -175,12 +175,12 @@ export function Footer() {
                   />
                   <div className="instagram-card-overlay">
                     <div className="instagram-icon-container">
-                      <Instagram 
-                        size={26} 
-                        style={{ 
+                      <Instagram
+                        size={26}
+                        style={{
                           color: 'white',
                           strokeWidth: 2
-                        }} 
+                        }}
                       />
                     </div>
                   </div>
@@ -196,9 +196,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <img src={logo} alt="Dr. AKHIL'S" className="h-10" />
-            </div>
+            </div> */}
             <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               Providing comprehensive rehabilitation and therapy services to help you achieve optimal health and wellness.
             </p>
@@ -248,15 +248,17 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="flex-shrink-0 mt-1" style={{ color: '#33a9b1' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>123 Health Street, Medical District, City, State 12345</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Dr Akhil’s Physio Rehabs, Irrum Colony, Venkatramana Colony,Beside Silver Star Benz Showroom lane, Hyderabad-500482</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} style={{ color: '#33a9b1' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>+1 (555) 123-4567</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>+91 83338 90389
+
+                </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} style={{ color: '#33a9b1' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>info@physiotherapy.com</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>drakhilsrehabs@gmail.com</span>
               </li>
             </ul>
           </div>
