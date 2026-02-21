@@ -1,0 +1,20 @@
+Card updates needed:
+
+1. Shoulder Therapy - "Expert rehabilitation programs designed to alleviate shoulder pain and improve range of motion for better daily function."
+
+2. Pain Relief - "Personalized comfort solutions using advanced techniques to manage and reduce chronic pain effectively."
+
+3. Neck Wellness - "Comprehensive care targeting neck tension, stiffness, and discomfort through specialized therapeutic interventions."
+
+4. Back Therapy - "Advanced solutions for back pain management and spinal health improvement through evidence-based practices."
+
+5. Knee Therapy - "Mobility restoration programs designed to strengthen knee joints and improve overall leg function and stability."
+
+6. Sports Injury - "Athletic recovery programs tailored for sports-related injuries to help athletes return to peak performance safely."
+
+7. Spine Therapy - "Structural support and alignment correction for optimal spinal health and posture improvement."
+
+All cards need:
+- Add <div className="therapy-card-divider"></div> after title
+- Update description with above text
+- Same updates for duplicate set

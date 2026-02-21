@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "wdt-ext";
+  src: url("/fonts/wdt-ext.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #0f8987;
+  --color-primary-light: #c1f5f1;
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --wdtPrimaryColor: #0f8987;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0f8987 0%, #33a9b1 100%);
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #33a9b1 0%, #0f8987 100%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #0f8987;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0f8987 #f0f0f0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-family: Poppins, Roboto, serif, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Tippy.js Arrow Style Connectors for Hotspots */
+.wdt-hotspot-item {
+  position: relative;
+}
+
+.wdt-hotspot-item::before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease 0.6s;
+}
+
+/* Animated line opacity when section is visible */
+.hotspot-blink::before {
+  opacity: 1;
+}
+
+/* Blinking animation for hotspots */
+@keyframes hotspot-blink-animation {
+  0%, 100% { 
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 12px rgba(45, 79, 76, 0.6);
+  }
+  50% { 
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.5), 0 0 20px rgba(45, 79, 76, 1);
+  }
+}
+
+.hotspot-blink {
+  animation: hotspot-blink-animation 2s ease-in-out infinite;
+}
+
+/* Neck Hotspot - extends LEFT to RIGHT edge of Neck Stiffness card */
+.wdt-hotspot-item[data-placement="left"]::before {
+  border-bottom: 1px solid #1f3d3f;
+  width: calc(50vw - 84px - 360px);
+  height: 1px;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Shoulder/Palm Hotspot - extends RIGHT to LEFT edge of Palm Discomfort card */
+.wdt-hotspot-item[data-placement="right-top"]::before {
+  border-bottom: 1px solid #1f3d3f;
+  width: calc(50vw - 124px - 360px);
+  height: 1px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hand Tightness Hotspot - extends RIGHT to LEFT edge of Hand Tightness card */
+.wdt-hotspot-item[data-placement="right-hand"]::before {
+  border-bottom: 1px solid #1f3d3f;
+  width: 155px;
+  height: 1px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Leg Hotspot - extends LEFT to RIGHT edge of Leg Fatigue card */
+.wdt-hotspot-item[data-placement="left-bottom"]::before {
+  border-bottom: 1px solid #1f3d3f;
+  width: calc(50vw - 90px - 360px);
+  height: 1px;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hide connector lines on mobile devices */
+@media (max-width: 767px) {
+  .wdt-hotspot-item::before {
+    display: none !important;
+  }
+}
+
+/* Global Arrow Button Styles */
+.arrow-btn {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.arrow-btn::after {
+  content: "→";
+  font-family: "wdt-ext";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: currentColor;
+  transition: 0.3s ease;
+  rotate: 0deg;
+  text-indent: 0;
+}
+
+.arrow-btn:hover::after {
+  rotate: 45deg;
+}
+
+/* Variant for arrows that rotate -45deg */
+.arrow-btn-negative:hover::after {
+  rotate: -45deg;
+}
