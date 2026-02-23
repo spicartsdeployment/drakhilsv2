@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer';
 import { BackButton } from '../components/BackButton';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import tabCardImage from 'figma:asset/15edbbd6f09c65f963ef0c8380f86dc217a01ecb.png';
+import { AKHIL } from '../const';
 
 export function AboutUsPage() {
   const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'values'>('mission');
@@ -15,7 +16,6 @@ export function AboutUsPage() {
   const [conversationPercentage, setConversationPercentage] = useState(0);
   const [experiencePercentage, setExperiencePercentage] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
-
   // Trigger progress bar animation when section comes into viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -336,7 +336,7 @@ export function AboutUsPage() {
   // Holographic effect for main image
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!imageRef.current) return;
-    
+
     const overlay = imageRef.current.querySelector('.holographic-overlay') as HTMLElement;
     if (!overlay) return;
 
@@ -350,7 +350,7 @@ export function AboutUsPage() {
 
   const handleMouseLeave = () => {
     if (!imageRef.current) return;
-    
+
     const overlay = imageRef.current.querySelector('.holographic-overlay') as HTMLElement;
     if (overlay) {
       overlay.style.opacity = '0';
@@ -360,7 +360,7 @@ export function AboutUsPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#ffffff' }}>
       {/* Hero Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -372,7 +372,7 @@ export function AboutUsPage() {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -386,11 +386,11 @@ export function AboutUsPage() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -405,18 +405,18 @@ export function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ width: '100%' }}>
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left: Image */}
-            <div 
+            <div
               className="relative"
               style={{
                 animation: 'slideInFromLeft 1s ease-out forwards',
                 opacity: 0
               }}
             >
-              <div 
+              <div
                 className="holographic-image-wrapper image-with-cutout"
-                style={{ 
-                  boxShadow: '0 20px 60px rgba(0,0,0,0.15)', 
-                  width: '605px', 
+                style={{
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+                  width: '605px',
                   height: '540px'
                 }}
               >
@@ -426,17 +426,17 @@ export function AboutUsPage() {
                   className="w-full h-full"
                   style={{ objectFit: 'cover' }}
                 />
-                
+
                 {/* "Know More" button overlay */}
-                <div 
+                <div
                   className="absolute"
-                  style={{ 
+                  style={{
                     bottom: '3px',
                     right: '3px',
-                    zIndex: 3 
+                    zIndex: 3
                   }}
                 >
-                  <button 
+                  <button
                     className="flex items-center transition-all duration-300"
                     style={{
                       backgroundColor: '#33a9b1',
@@ -478,13 +478,13 @@ export function AboutUsPage() {
                     }}
                   >
                     <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: '14px', fontWeight: '500' }}>Know More</span>
-                    <div 
+                    <div
                       className="arrow-bg"
-                      style={{ 
+                      style={{
                         position: 'relative',
                         width: '34px',
                         height: '34px',
-                        borderRadius: '50%', 
+                        borderRadius: '50%',
                         backgroundColor: '#1f3d3f',
                         display: 'flex',
                         alignItems: 'center',
@@ -492,9 +492,9 @@ export function AboutUsPage() {
                         transition: 'background-color 0.3s ease'
                       }}
                     >
-                      <span 
+                      <span
                         className="arrow-icon"
-                        style={{ 
+                        style={{
                           fontFamily: 'Arial, sans-serif',
                           fontSize: '20px',
                           fontWeight: 'bold',
@@ -514,10 +514,10 @@ export function AboutUsPage() {
             </div>
 
             {/* Right: Content */}
-            <div 
-              style={{ 
-                height: '540px', 
-                display: 'flex', 
+            <div
+              style={{
+                height: '540px',
+                display: 'flex',
                 flexDirection: 'column',
                 animation: 'slideInFromRight 1s ease-out forwards',
                 opacity: 0
@@ -526,10 +526,10 @@ export function AboutUsPage() {
               {/* Label */}
               <div className="flex items-center gap-2 mb-4">
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#0f8987' }}></div>
-                <p style={{ 
-                  color: '#5a6c69', 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '1.5px', 
+                <p style={{
+                  color: '#5a6c69',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1.5px',
                   fontSize: '13px',
                   fontFamily: "'Poppins', sans-serif",
                   fontWeight: '500'
@@ -539,10 +539,10 @@ export function AboutUsPage() {
               </div>
 
               {/* Title */}
-              <h2 
-                style={{ 
-                  fontSize: '42px', 
-                  lineHeight: '1.2', 
+              <h2
+                style={{
+                  fontSize: '42px',
+                  lineHeight: '1.2',
                   marginBottom: '20px',
                   fontFamily: "'Philosopher', serif",
                   fontWeight: '400',
@@ -553,10 +553,10 @@ export function AboutUsPage() {
               </h2>
 
               {/* Description */}
-              <p 
-                style={{ 
-                  color: '#5a6c69', 
-                  lineHeight: '1.7', 
+              <p
+                style={{
+                  color: '#5a6c69',
+                  lineHeight: '1.7',
                   fontSize: '16px',
                   marginBottom: '30px',
                   fontFamily: "'Poppins', sans-serif",
@@ -567,7 +567,7 @@ export function AboutUsPage() {
               </p>
 
               {/* Tabs */}
-              <div 
+              <div
                 className="flex gap-3 mb-6"
                 style={{
                   border: '1px solid #d0e0df',
@@ -613,7 +613,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {activeTab !== 'vision' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -630,8 +630,8 @@ export function AboutUsPage() {
                     ></span>
                   )}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ position: 'relative', zIndex: 1 }}>
-                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
-                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+                    <circle cx="12" cy="12" r="3" />
                   </svg>
                   <span style={{ position: 'relative', zIndex: 1 }}>Our Vision</span>
                 </button>
@@ -670,7 +670,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {activeTab !== 'mission' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -687,8 +687,8 @@ export function AboutUsPage() {
                     ></span>
                   )}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ position: 'relative', zIndex: 1 }}>
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                   <span style={{ position: 'relative', zIndex: 1 }}>Our Mission</span>
                 </button>
@@ -727,7 +727,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {activeTab !== 'values' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -744,7 +744,7 @@ export function AboutUsPage() {
                     ></span>
                   )}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ position: 'relative', zIndex: 1 }}>
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
                   <span style={{ position: 'relative', zIndex: 1 }}>Our Values</span>
                 </button>
@@ -752,7 +752,7 @@ export function AboutUsPage() {
 
               {/* Tab Content Card */}
               {activeTab === 'vision' && (
-                <div 
+                <div
                   className="rounded-3xl overflow-hidden"
                   style={{
                     height: '215px',
@@ -762,7 +762,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {/* Background Pattern Overlay */}
-                  <div 
+                  <div
                     style={{
                       position: 'absolute',
                       top: 0,
@@ -780,9 +780,9 @@ export function AboutUsPage() {
 
                   {/* Left: Image */}
                   <div className="w-full lg:w-[35%]" style={{ position: 'relative', zIndex: 1 }}>
-                    <div 
+                    <div
                       className="h-full rounded-2xl overflow-hidden"
-                      style={{ 
+                      style={{
                         boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                         height: '215px'
                       }}
@@ -797,9 +797,9 @@ export function AboutUsPage() {
                   </div>
 
                   {/* Right: Content */}
-                  <div 
+                  <div
                     className="w-full lg:w-[65%]"
-                    style={{ 
+                    style={{
                       position: 'relative',
                       padding: '24px 28px',
                       display: 'flex',
@@ -808,10 +808,10 @@ export function AboutUsPage() {
                       zIndex: 1
                     }}
                   >
-                    <p 
-                      style={{ 
-                        color: 'white', 
-                        lineHeight: '1.65', 
+                    <p
+                      style={{
+                        color: 'white',
+                        lineHeight: '1.65',
                         fontSize: '15px',
                         marginBottom: '16px',
                         fontFamily: "'Poppins', sans-serif",
@@ -822,7 +822,7 @@ export function AboutUsPage() {
                     </p>
 
                     {/* Horizontal Line */}
-                    <div 
+                    <div
                       style={{
                         width: '100%',
                         height: '1px',
@@ -835,10 +835,10 @@ export function AboutUsPage() {
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -847,9 +847,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -859,10 +859,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -871,9 +871,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -883,10 +883,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -895,9 +895,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -907,10 +907,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -919,9 +919,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -936,7 +936,7 @@ export function AboutUsPage() {
               )}
 
               {activeTab === 'mission' && (
-                <div 
+                <div
                   className="rounded-3xl overflow-hidden"
                   style={{
                     height: '215px',
@@ -946,7 +946,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {/* Background Pattern Overlay */}
-                  <div 
+                  <div
                     style={{
                       position: 'absolute',
                       top: 0,
@@ -964,9 +964,9 @@ export function AboutUsPage() {
 
                   {/* Left: Image */}
                   <div className="w-full lg:w-[35%]" style={{ position: 'relative', zIndex: 1 }}>
-                    <div 
+                    <div
                       className="h-full rounded-2xl overflow-hidden"
-                      style={{ 
+                      style={{
                         boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                         height: '215px'
                       }}
@@ -981,9 +981,9 @@ export function AboutUsPage() {
                   </div>
 
                   {/* Right: Content */}
-                  <div 
+                  <div
                     className="w-full lg:w-[65%]"
-                    style={{ 
+                    style={{
                       position: 'relative',
                       padding: '24px 28px',
                       display: 'flex',
@@ -992,10 +992,10 @@ export function AboutUsPage() {
                       zIndex: 1
                     }}
                   >
-                    <p 
-                      style={{ 
-                        color: 'white', 
-                        lineHeight: '1.65', 
+                    <p
+                      style={{
+                        color: 'white',
+                        lineHeight: '1.65',
                         fontSize: '15px',
                         marginBottom: '16px',
                         fontFamily: "'Poppins', sans-serif",
@@ -1006,7 +1006,7 @@ export function AboutUsPage() {
                     </p>
 
                     {/* Horizontal Line */}
-                    <div 
+                    <div
                       style={{
                         width: '100%',
                         height: '1px',
@@ -1019,10 +1019,10 @@ export function AboutUsPage() {
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1031,9 +1031,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1043,10 +1043,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1055,9 +1055,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1067,10 +1067,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1079,9 +1079,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1091,10 +1091,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1103,9 +1103,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1120,7 +1120,7 @@ export function AboutUsPage() {
               )}
 
               {activeTab === 'values' && (
-                <div 
+                <div
                   className="rounded-3xl overflow-hidden"
                   style={{
                     height: '215px',
@@ -1130,7 +1130,7 @@ export function AboutUsPage() {
                   }}
                 >
                   {/* Background Pattern Overlay */}
-                  <div 
+                  <div
                     style={{
                       position: 'absolute',
                       top: 0,
@@ -1148,9 +1148,9 @@ export function AboutUsPage() {
 
                   {/* Left: Image */}
                   <div className="w-full lg:w-[35%]" style={{ position: 'relative', zIndex: 1 }}>
-                    <div 
+                    <div
                       className="h-full rounded-2xl overflow-hidden"
-                      style={{ 
+                      style={{
                         boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                         height: '215px'
                       }}
@@ -1165,9 +1165,9 @@ export function AboutUsPage() {
                   </div>
 
                   {/* Right: Content */}
-                  <div 
+                  <div
                     className="w-full lg:w-[65%]"
-                    style={{ 
+                    style={{
                       position: 'relative',
                       padding: '24px 28px',
                       display: 'flex',
@@ -1176,10 +1176,10 @@ export function AboutUsPage() {
                       zIndex: 1
                     }}
                   >
-                    <p 
-                      style={{ 
-                        color: 'white', 
-                        lineHeight: '1.65', 
+                    <p
+                      style={{
+                        color: 'white',
+                        lineHeight: '1.65',
                         fontSize: '15px',
                         marginBottom: '16px',
                         fontFamily: "'Poppins', sans-serif",
@@ -1190,7 +1190,7 @@ export function AboutUsPage() {
                     </p>
 
                     {/* Horizontal Line */}
-                    <div 
+                    <div
                       style={{
                         width: '100%',
                         height: '1px',
@@ -1203,10 +1203,10 @@ export function AboutUsPage() {
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1215,9 +1215,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1227,10 +1227,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1239,9 +1239,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1251,10 +1251,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1263,9 +1263,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1275,10 +1275,10 @@ export function AboutUsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-2" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ 
-                          width: '20px', 
-                          height: '20px', 
-                          borderRadius: '50%', 
+                        <div style={{
+                          width: '20px',
+                          height: '20px',
+                          borderRadius: '50%',
                           backgroundColor: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -1287,9 +1287,9 @@ export function AboutUsPage() {
                         }}>
                           <Check size={12} style={{ color: '#33a9b1', strokeWidth: 3 }} />
                         </div>
-                        <span 
-                          style={{ 
-                            color: 'white', 
+                        <span
+                          style={{
+                            color: 'white',
                             fontSize: '14px',
                             fontFamily: "'Poppins', sans-serif",
                             fontWeight: '500'
@@ -1345,17 +1345,17 @@ export function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Label */}
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div 
-              style={{ 
-                width: '50px', 
-                height: '2px', 
-                backgroundColor: '#33a9b1' 
+            <div
+              style={{
+                width: '50px',
+                height: '2px',
+                backgroundColor: '#33a9b1'
               }}
             />
-            <p style={{ 
-              color: '#5a6c69', 
-              textTransform: 'uppercase', 
-              letterSpacing: '2px', 
+            <p style={{
+              color: '#5a6c69',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
               fontSize: '13px',
               fontFamily: "'Poppins', sans-serif",
               fontWeight: '500'
@@ -1365,10 +1365,10 @@ export function AboutUsPage() {
           </div>
 
           {/* Main Heading */}
-          <h2 
+          <h2
             className="text-center mb-20"
-            style={{ 
-              fontSize: '46px', 
+            style={{
+              fontSize: '46px',
               lineHeight: '1.2',
               fontFamily: "'Philosopher', serif",
               fontWeight: '400',
@@ -1382,9 +1382,9 @@ export function AboutUsPage() {
           <div className="hidden lg:block relative" style={{ height: '600px' }}>
             {/* Ripple Animation Background - Behind Icon */}
             <div className="ripple-background-holistic absolute inset-0" style={{ zIndex: 0 }}></div>
-            
+
             {/* Central Circle with Icon */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '50%',
@@ -1401,7 +1401,7 @@ export function AboutUsPage() {
               }}
             >
               {/* Inner Circle */}
-              <div 
+              <div
                 style={{
                   width: '250px',
                   height: '250px',
@@ -1412,23 +1412,24 @@ export function AboutUsPage() {
                   justifyContent: 'center'
                 }}
               >
+                <img src={AKHIL[0]} alt="logo" style={{ width: '95px', height: '95px' }} />
                 {/* Icon Container */}
-                <div style={{ position: 'relative', width: '120px', height: '120px' }}>
-                  {/* Person Icon - Stylized */}
+                {/* <div style={{ position: 'relative', width: '120px', height: '120px' }}>
+                  
                   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Head */}
+                    
                     <circle cx="60" cy="30" r="12" fill="#1f3d3f" />
-                    {/* Body - curved with motion */}
-                    <path 
-                      d="M 60 42 Q 45 60, 40 85 L 48 85 Q 52 65, 60 50 Q 68 65, 72 85 L 80 85 Q 75 60, 60 42 Z" 
+                    
+                    <path
+                      d="M 60 42 Q 45 60, 40 85 L 48 85 Q 52 65, 60 50 Q 68 65, 72 85 L 80 85 Q 75 60, 60 42 Z"
                       fill="#1f3d3f"
                     />
-                    {/* Dotted arc showing movement */}
-                    <path 
-                      d="M 35 50 Q 50 35, 70 40" 
-                      stroke="#33a9b1" 
-                      strokeWidth="3" 
-                      strokeDasharray="3 4" 
+                    
+                    <path
+                      d="M 35 50 Q 50 35, 70 40"
+                      stroke="#33a9b1"
+                      strokeWidth="3"
+                      strokeDasharray="3 4"
                       fill="none"
                       strokeLinecap="round"
                     />
@@ -1438,12 +1439,12 @@ export function AboutUsPage() {
                     <circle cx="46" cy="38" r="2" fill="#33a9b1" />
                     <circle cx="38" cy="44" r="2.5" fill="#33a9b1" />
                   </svg>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Statistic 1: Top Left - Certified Experts */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '80px',
@@ -1454,7 +1455,7 @@ export function AboutUsPage() {
             >
               <div className="flex items-start gap-4">
                 {/* Icon */}
-                <div 
+                <div
                   style={{
                     width: '52px',
                     height: '52px',
@@ -1467,15 +1468,15 @@ export function AboutUsPage() {
                   }}
                 >
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
                 <div>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontSize: '42px',
                       fontFamily: "'Philosopher', serif",
                       fontWeight: '400',
@@ -1486,8 +1487,8 @@ export function AboutUsPage() {
                   >
                     20+
                   </div>
-                  <h4 
-                    style={{ 
+                  <h4
+                    style={{
                       fontSize: '16px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '500',
@@ -1497,8 +1498,8 @@ export function AboutUsPage() {
                   >
                     Certified Experts
                   </h4>
-                  <p 
-                    style={{ 
+                  <p
+                    style={{
                       fontSize: '13px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '300',
@@ -1513,7 +1514,7 @@ export function AboutUsPage() {
             </div>
 
             {/* Statistic 2: Left - High-End Technology */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '280px',
@@ -1524,7 +1525,7 @@ export function AboutUsPage() {
             >
               <div className="flex items-start gap-4">
                 {/* Icon */}
-                <div 
+                <div
                   style={{
                     width: '52px',
                     height: '52px',
@@ -1537,14 +1538,14 @@ export function AboutUsPage() {
                   }}
                 >
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
                   </svg>
                 </div>
                 <div>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontSize: '42px',
                       fontFamily: "'Philosopher', serif",
                       fontWeight: '400',
@@ -1555,8 +1556,8 @@ export function AboutUsPage() {
                   >
                     87%
                   </div>
-                  <h4 
-                    style={{ 
+                  <h4
+                    style={{
                       fontSize: '16px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '500',
@@ -1566,8 +1567,8 @@ export function AboutUsPage() {
                   >
                     High-End Technology
                   </h4>
-                  <p 
-                    style={{ 
+                  <p
+                    style={{
                       fontSize: '13px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '300',
@@ -1582,7 +1583,7 @@ export function AboutUsPage() {
             </div>
 
             {/* Statistic 3: Center - Patient Fulfillment */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '500px',
@@ -1595,7 +1596,7 @@ export function AboutUsPage() {
             >
               <div className="flex flex-col items-center">
                 {/* Icon */}
-                <div 
+                <div
                   style={{
                     width: '52px',
                     height: '52px',
@@ -1608,15 +1609,15 @@ export function AboutUsPage() {
                   }}
                 >
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                    <path d="M12 14l-2 2 2 2"/>
-                    <path d="M12 14l2 2-2 2"/>
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M12 14l-2 2 2 2" />
+                    <path d="M12 14l2 2-2 2" />
                   </svg>
                 </div>
                 <div>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontSize: '42px',
                       fontFamily: "'Philosopher', serif",
                       fontWeight: '400',
@@ -1627,8 +1628,8 @@ export function AboutUsPage() {
                   >
                     100%
                   </div>
-                  <h4 
-                    style={{ 
+                  <h4
+                    style={{
                       fontSize: '16px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '500',
@@ -1638,8 +1639,8 @@ export function AboutUsPage() {
                   >
                     Patient Fulfillment
                   </h4>
-                  <p 
-                    style={{ 
+                  <p
+                    style={{
                       fontSize: '13px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '300',
@@ -1654,7 +1655,7 @@ export function AboutUsPage() {
             </div>
 
             {/* Statistic 4: Top Right - Individualized Care */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '80px',
@@ -1666,7 +1667,7 @@ export function AboutUsPage() {
             >
               <div className="flex items-start gap-4 flex-row-reverse">
                 {/* Icon */}
-                <div 
+                <div
                   style={{
                     width: '52px',
                     height: '52px',
@@ -1679,14 +1680,14 @@ export function AboutUsPage() {
                   }}
                 >
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <circle cx="19" cy="11" r="3" fill="white"/>
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <circle cx="19" cy="11" r="3" fill="white" />
                   </svg>
                 </div>
                 <div>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontSize: '42px',
                       fontFamily: "'Philosopher', serif",
                       fontWeight: '400',
@@ -1697,8 +1698,8 @@ export function AboutUsPage() {
                   >
                     98%
                   </div>
-                  <h4 
-                    style={{ 
+                  <h4
+                    style={{
                       fontSize: '16px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '500',
@@ -1708,8 +1709,8 @@ export function AboutUsPage() {
                   >
                     Individualized Care
                   </h4>
-                  <p 
-                    style={{ 
+                  <p
+                    style={{
                       fontSize: '13px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '300',
@@ -1724,7 +1725,7 @@ export function AboutUsPage() {
             </div>
 
             {/* Statistic 5: Right - Therapy Accuracy */}
-            <div 
+            <div
               className="absolute"
               style={{
                 top: '280px',
@@ -1736,7 +1737,7 @@ export function AboutUsPage() {
             >
               <div className="flex items-start gap-4 flex-row-reverse">
                 {/* Icon */}
-                <div 
+                <div
                   style={{
                     width: '52px',
                     height: '52px',
@@ -1749,14 +1750,14 @@ export function AboutUsPage() {
                   }}
                 >
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <circle cx="12" cy="12" r="6"/>
-                    <circle cx="12" cy="12" r="2" fill="white"/>
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" fill="white" />
                   </svg>
                 </div>
                 <div>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontSize: '42px',
                       fontFamily: "'Philosopher', serif",
                       fontWeight: '400',
@@ -1767,8 +1768,8 @@ export function AboutUsPage() {
                   >
                     60+
                   </div>
-                  <h4 
-                    style={{ 
+                  <h4
+                    style={{
                       fontSize: '16px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '500',
@@ -1778,8 +1779,8 @@ export function AboutUsPage() {
                   >
                     Therapy Accuracy
                   </h4>
-                  <p 
-                    style={{ 
+                  <p
+                    style={{
                       fontSize: '13px',
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight: '300',
@@ -1798,7 +1799,7 @@ export function AboutUsPage() {
           <div className="lg:hidden flex flex-col gap-8 px-4">
             {/* Stat 1: Certified Experts */}
             <div className="flex items-start gap-4">
-              <div 
+              <div
                 style={{
                   width: '52px',
                   height: '52px',
@@ -1811,15 +1812,15 @@ export function AboutUsPage() {
                 }}
               >
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
               <div>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontSize: '42px',
                     fontFamily: "'Philosopher', serif",
                     fontWeight: '400',
@@ -1830,8 +1831,8 @@ export function AboutUsPage() {
                 >
                   20+
                 </div>
-                <h4 
-                  style={{ 
+                <h4
+                  style={{
                     fontSize: '16px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '500',
@@ -1841,8 +1842,8 @@ export function AboutUsPage() {
                 >
                   Certified Experts
                 </h4>
-                <p 
-                  style={{ 
+                <p
+                  style={{
                     fontSize: '13px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '300',
@@ -1857,7 +1858,7 @@ export function AboutUsPage() {
 
             {/* Stat 2: High-End Technology */}
             <div className="flex items-start gap-4">
-              <div 
+              <div
                 style={{
                   width: '52px',
                   height: '52px',
@@ -1870,14 +1871,14 @@ export function AboutUsPage() {
                 }}
               >
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
                 </svg>
               </div>
               <div>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontSize: '42px',
                     fontFamily: "'Philosopher', serif",
                     fontWeight: '400',
@@ -1888,8 +1889,8 @@ export function AboutUsPage() {
                 >
                   87%
                 </div>
-                <h4 
-                  style={{ 
+                <h4
+                  style={{
                     fontSize: '16px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '500',
@@ -1899,8 +1900,8 @@ export function AboutUsPage() {
                 >
                   High-End Technology
                 </h4>
-                <p 
-                  style={{ 
+                <p
+                  style={{
                     fontSize: '13px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '300',
@@ -1915,7 +1916,7 @@ export function AboutUsPage() {
 
             {/* Stat 3: Patient Fulfillment */}
             <div className="flex items-start gap-4">
-              <div 
+              <div
                 style={{
                   width: '52px',
                   height: '52px',
@@ -1928,15 +1929,15 @@ export function AboutUsPage() {
                 }}
               >
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                  <path d="M12 14l-2 2 2 2"/>
-                  <path d="M12 14l2 2-2 2"/>
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                  <path d="M12 14l-2 2 2 2" />
+                  <path d="M12 14l2 2-2 2" />
                 </svg>
               </div>
               <div>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontSize: '42px',
                     fontFamily: "'Philosopher', serif",
                     fontWeight: '400',
@@ -1947,8 +1948,8 @@ export function AboutUsPage() {
                 >
                   100%
                 </div>
-                <h4 
-                  style={{ 
+                <h4
+                  style={{
                     fontSize: '16px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '500',
@@ -1958,8 +1959,8 @@ export function AboutUsPage() {
                 >
                   Patient Fulfillment
                 </h4>
-                <p 
-                  style={{ 
+                <p
+                  style={{
                     fontSize: '13px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '300',
@@ -1974,7 +1975,7 @@ export function AboutUsPage() {
 
             {/* Stat 4: Individualized Care */}
             <div className="flex items-start gap-4">
-              <div 
+              <div
                 style={{
                   width: '52px',
                   height: '52px',
@@ -1987,14 +1988,14 @@ export function AboutUsPage() {
                 }}
               >
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <circle cx="19" cy="11" r="3" fill="white"/>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <circle cx="19" cy="11" r="3" fill="white" />
                 </svg>
               </div>
               <div>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontSize: '42px',
                     fontFamily: "'Philosopher', serif",
                     fontWeight: '400',
@@ -2005,8 +2006,8 @@ export function AboutUsPage() {
                 >
                   98%
                 </div>
-                <h4 
-                  style={{ 
+                <h4
+                  style={{
                     fontSize: '16px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '500',
@@ -2016,8 +2017,8 @@ export function AboutUsPage() {
                 >
                   Individualized Care
                 </h4>
-                <p 
-                  style={{ 
+                <p
+                  style={{
                     fontSize: '13px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '300',
@@ -2032,7 +2033,7 @@ export function AboutUsPage() {
 
             {/* Stat 5: Therapy Accuracy */}
             <div className="flex items-start gap-4">
-              <div 
+              <div
                 style={{
                   width: '52px',
                   height: '52px',
@@ -2045,14 +2046,14 @@ export function AboutUsPage() {
                 }}
               >
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <circle cx="12" cy="12" r="6"/>
-                  <circle cx="12" cy="12" r="2" fill="white"/>
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" fill="white" />
                 </svg>
               </div>
               <div>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontSize: '42px',
                     fontFamily: "'Philosopher', serif",
                     fontWeight: '400',
@@ -2063,8 +2064,8 @@ export function AboutUsPage() {
                 >
                   60+
                 </div>
-                <h4 
-                  style={{ 
+                <h4
+                  style={{
                     fontSize: '16px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '500',
@@ -2074,8 +2075,8 @@ export function AboutUsPage() {
                 >
                   Therapy Accuracy
                 </h4>
-                <p 
-                  style={{ 
+                <p
+                  style={{
                     fontSize: '13px',
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '300',
@@ -2092,21 +2093,21 @@ export function AboutUsPage() {
       </section>
 
       {/* Why Our Physiotherapy Clinic Stands Out Section */}
-      <section ref={progressSectionRef} style={{ 
-        backgroundColor: '#1f3d3f', 
+      <section ref={progressSectionRef} style={{
+        backgroundColor: '#1f3d3f',
         backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        paddingTop: '100px', 
-        paddingBottom: '100px' 
+        paddingTop: '100px',
+        paddingBottom: '100px'
       }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start justify-between">
             {/* Left Side - Images with Central Badge */}
-            <div 
-              className="relative w-full lg:w-[675px] lg:min-w-[675px]" 
-              style={{ 
+            <div
+              className="relative w-full lg:w-[675px] lg:min-w-[675px]"
+              style={{
                 flexShrink: 0,
                 animation: animateProgress ? 'slideInFromRight 1s ease-out' : 'none',
                 opacity: animateProgress ? 1 : 0
@@ -2121,7 +2122,7 @@ export function AboutUsPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 {/* Image 2 */}
                 <div className="rounded-3xl overflow-hidden hidden lg:block lg:w-[330px] h-[399px]" style={{ flexShrink: 0 }}>
                   <ImageWithFallback
@@ -2133,7 +2134,7 @@ export function AboutUsPage() {
               </div>
 
               {/* Central Circular Badge */}
-              <div 
+              <div
                 className="absolute hidden lg:flex"
                 style={{
                   left: '50%',
@@ -2162,9 +2163,9 @@ export function AboutUsPage() {
                       </textPath>
                     </text>
                   </svg>
-                  
+
                   {/* Play Button */}
-                  <div 
+                  <div
                     className="absolute"
                     style={{
                       top: '50%',
@@ -2196,7 +2197,7 @@ export function AboutUsPage() {
               </div>
 
               {/* Partner Logos Scrolling Strip */}
-              <div 
+              <div
                 className="rounded-3xl overflow-hidden relative"
                 style={{
                   marginTop: '15px',
@@ -2224,7 +2225,7 @@ export function AboutUsPage() {
                     }
                   `}
                 </style>
-                <div 
+                <div
                   className="scroll-container"
                   style={{
                     display: 'flex',
@@ -2247,7 +2248,7 @@ export function AboutUsPage() {
                   <div style={{ color: 'white', fontFamily: "'Poppins', sans-serif", fontWeight: '600', fontSize: '20px', letterSpacing: '1px' }}>
                     PETA ACADEMIA
                   </div>
-                  
+
                   {/* Duplicate set for seamless loop */}
                   <div style={{ color: 'white', fontFamily: "'Poppins', sans-serif", fontWeight: '700', fontSize: '20px', letterSpacing: '2px' }}>
                     CALEY PEACE
@@ -2285,164 +2286,164 @@ export function AboutUsPage() {
               <div>
                 {/* Top Label */}
                 <div className="flex items-center gap-3 mb-2">
-                <div 
-                  style={{ 
-                    width: '12px', 
-                    height: '12px', 
-                    borderRadius: '50%',
-                    backgroundColor: '#33a9b1' 
+                  <div
+                    style={{
+                      width: '12px',
+                      height: '12px',
+                      borderRadius: '50%',
+                      backgroundColor: '#33a9b1'
+                    }}
+                  />
+                  <p style={{
+                    color: '#c1f5f1',
+                    textTransform: 'uppercase',
+                    letterSpacing: '2px',
+                    fontSize: '13px',
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: '500'
+                  }}>
+                    EXCELLENCE IN CARE
+                  </p>
+                </div>
+
+                {/* Main Heading */}
+                <h2
+                  className="mb-3"
+                  style={{
+                    fontSize: '48px',
+                    lineHeight: '1.2',
+                    fontFamily: "'Philosopher', serif",
+                    fontWeight: '400',
+                    color: 'white'
                   }}
-                />
-                <p style={{ 
-                  color: '#c1f5f1', 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '2px', 
-                  fontSize: '13px',
-                  fontFamily: "'Poppins', sans-serif",
-                  fontWeight: '500'
-                }}>
-                  EXCELLENCE IN CARE
+                >
+                  Why Our <span style={{ color: '#33a9b1' }}>Physiotherapy Clinic</span><br />Stands Out
+                </h2>
+
+                {/* Subheading */}
+                <p
+                  className="mb-6"
+                  style={{
+                    fontSize: '16px',
+                    lineHeight: '1.6',
+                    color: '#b0c4c2',
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: '400'
+                  }}
+                >
+                  We're Committed To Delivering More Than Just Care — We Focus On Personalized Healing
                 </p>
-              </div>
 
-              {/* Main Heading */}
-              <h2 
-                className="mb-3"
-                style={{ 
-                  fontSize: '48px', 
-                  lineHeight: '1.2',
-                  fontFamily: "'Philosopher', serif",
-                  fontWeight: '400',
-                  color: 'white'
-                }}
-              >
-                Why Our <span style={{ color: '#33a9b1' }}>Physiotherapy Clinic</span><br />Stands Out
-              </h2>
-
-              {/* Subheading */}
-              <p 
-                className="mb-6"
-                style={{
-                  fontSize: '16px',
-                  lineHeight: '1.6',
-                  color: '#b0c4c2',
-                  fontFamily: "'Poppins', sans-serif",
-                  fontWeight: '400'
-                }}
-              >
-                We're Committed To Delivering More Than Just Care — We Focus On Personalized Healing
-              </p>
-
-              {/* Progress Bars */}
-              <div className="space-y-5">
-                {/* Care & Patience - 93% */}
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
-                      Care & Patience
-                    </span>
-                    <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
-                      {carePercentage}%
-                    </span>
+                {/* Progress Bars */}
+                <div className="space-y-5">
+                  {/* Care & Patience - 93% */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
+                        Care & Patience
+                      </span>
+                      <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
+                        {carePercentage}%
+                      </span>
+                    </div>
+                    <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
+                      <div
+                        className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
+                        style={{
+                          width: animateProgress ? '93%' : '0%',
+                          transition: 'width 1.5s ease-out'
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          left: animateProgress ? '93%' : '0%',
+                          top: '4px',
+                          width: '14px',
+                          height: '14px',
+                          backgroundColor: 'white',
+                          borderRadius: '50%',
+                          border: '3px solid #33a9b1',
+                          transform: 'translate(-50%, -50%)',
+                          transition: 'left 1.5s ease-out',
+                          animation: animateProgress ? 'blink 1.5s infinite' : 'none'
+                        }}
+                      />
+                    </div>
                   </div>
-                  <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
-                    <div 
-                      className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
-                      style={{ 
-                        width: animateProgress ? '93%' : '0%',
-                        transition: 'width 1.5s ease-out'
-                      }}
-                    />
-                    <div 
-                      style={{ 
-                        position: 'absolute',
-                        left: animateProgress ? '93%' : '0%',
-                        top: '4px',
-                        width: '14px',
-                        height: '14px',
-                        backgroundColor: 'white',
-                        borderRadius: '50%',
-                        border: '3px solid #33a9b1',
-                        transform: 'translate(-50%, -50%)',
-                        transition: 'left 1.5s ease-out',
-                        animation: animateProgress ? 'blink 1.5s infinite' : 'none'
-                      }}
-                    />
+
+                  {/* Honest Conversation - 95% */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
+                        Honest Conversation
+                      </span>
+                      <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
+                        {conversationPercentage}%
+                      </span>
+                    </div>
+                    <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
+                      <div
+                        className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
+                        style={{
+                          width: animateProgress ? '95%' : '0%',
+                          transition: 'width 1.5s ease-out 0.2s'
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          left: animateProgress ? '95%' : '0%',
+                          top: '4px',
+                          width: '14px',
+                          height: '14px',
+                          backgroundColor: 'white',
+                          borderRadius: '50%',
+                          border: '3px solid #33a9b1',
+                          transform: 'translate(-50%, -50%)',
+                          transition: 'left 1.5s ease-out 0.2s',
+                          animation: animateProgress ? 'blink 1.5s infinite' : 'none'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Specialized Experience - 96% */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
+                        Specialized Experience
+                      </span>
+                      <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
+                        {experiencePercentage}%
+                      </span>
+                    </div>
+                    <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
+                      <div
+                        className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
+                        style={{
+                          width: animateProgress ? '96%' : '0%',
+                          transition: 'width 1.5s ease-out 0.4s'
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          left: animateProgress ? '96%' : '0%',
+                          top: '4px',
+                          width: '14px',
+                          height: '14px',
+                          backgroundColor: 'white',
+                          borderRadius: '50%',
+                          border: '3px solid #33a9b1',
+                          transform: 'translate(-50%, -50%)',
+                          transition: 'left 1.5s ease-out 0.4s',
+                          animation: animateProgress ? 'blink 1.5s infinite' : 'none'
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-
-                {/* Honest Conversation - 95% */}
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
-                      Honest Conversation
-                    </span>
-                    <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
-                      {conversationPercentage}%
-                    </span>
-                  </div>
-                  <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
-                    <div 
-                      className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
-                      style={{ 
-                        width: animateProgress ? '95%' : '0%',
-                        transition: 'width 1.5s ease-out 0.2s'
-                      }}
-                    />
-                    <div 
-                      style={{ 
-                        position: 'absolute',
-                        left: animateProgress ? '95%' : '0%',
-                        top: '4px',
-                        width: '14px',
-                        height: '14px',
-                        backgroundColor: 'white',
-                        borderRadius: '50%',
-                        border: '3px solid #33a9b1',
-                        transform: 'translate(-50%, -50%)',
-                        transition: 'left 1.5s ease-out 0.2s',
-                        animation: animateProgress ? 'blink 1.5s infinite' : 'none'
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Specialized Experience - 96% */}
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span style={{ color: 'white', fontFamily: "'Philosopher', serif", fontSize: '20px', fontWeight: '400' }}>
-                      Specialized Experience
-                    </span>
-                    <span style={{ color: '#33a9b1', fontFamily: "'Poppins', sans-serif", fontSize: '18px', fontWeight: '600' }}>
-                      {experiencePercentage}%
-                    </span>
-                  </div>
-                  <div className="relative w-full rounded-full overflow-visible" style={{ height: '4px', backgroundColor: 'white' }}>
-                    <div 
-                      className="absolute h-full bg-gradient-to-r from-[#33a9b1] to-[#0f8987] rounded-full"
-                      style={{ 
-                        width: animateProgress ? '96%' : '0%',
-                        transition: 'width 1.5s ease-out 0.4s'
-                      }}
-                    />
-                    <div 
-                      style={{ 
-                        position: 'absolute',
-                        left: animateProgress ? '96%' : '0%',
-                        top: '4px',
-                        width: '14px',
-                        height: '14px',
-                        backgroundColor: 'white',
-                        borderRadius: '50%',
-                        border: '3px solid #33a9b1',
-                        transform: 'translate(-50%, -50%)',
-                        transition: 'left 1.5s ease-out 0.4s',
-                        animation: animateProgress ? 'blink 1.5s infinite' : 'none'
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
               </div>
 
               {/* Bottom Section - Button */}
@@ -2489,7 +2490,7 @@ export function AboutUsPage() {
                     transition: 'all 0.3s ease'
                   }}
                 >
-                  <span 
+                  <span
                     style={{
                       fontFamily: 'Arial, sans-serif',
                       fontSize: '22px',

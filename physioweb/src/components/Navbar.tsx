@@ -61,15 +61,15 @@ export function Navbar() {
     let lastKnownScrollPosition = 0;
 
     const checkScroll = () => {
-      const currentScrollY = 
-        window.pageYOffset || 
-        window.scrollY || 
-        document.documentElement.scrollTop || 
-        document.body.scrollTop || 
+      const currentScrollY =
+        window.pageYOffset ||
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
         0;
-      
+
       setScrollPos(currentScrollY);
-      
+
       // Mark that user has scrolled at least once
       if (!hasScrolledRef.current && currentScrollY > 0) {
         hasScrolledRef.current = true;
@@ -97,7 +97,7 @@ export function Navbar() {
 
     // Multiple scroll event sources
     const targets = [window, document, document.body, document.documentElement];
-    
+
     targets.forEach(target => {
       if (target) {
         target.addEventListener('scroll', requestTick, { passive: true });
@@ -140,11 +140,11 @@ export function Navbar() {
     <>
       {/* Sentinel element for Intersection Observer */}
       <div ref={sentinelRef} style={{ position: 'absolute', top: 0, height: '1px', width: '100%', pointerEvents: 'none' }} />
-      
+
       {/* Top Bar with Location, Timing, and Social Media */}
-      <div 
-        className="w-full py-3 px-4 fixed left-0 right-0 hidden md:block" 
-        style={{ 
+      <div
+        className="w-full py-3 px-4 fixed left-0 right-0 hidden md:block"
+        style={{
           backgroundColor: 'rgba(15, 137, 135, 0.95)',
           top: isVisible ? '0' : '-200px',
           zIndex: 50,
@@ -154,9 +154,14 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
           {/* Location */}
-          <div className="flex items-center gap-2 text-white text-sm">
-            <MapPin size={18} className="flex-shrink-0" />
-            <span>Banjara Hills, Hyderabad, 500482</span>
+          <div className="flex items-center gap-3 text-white text-sm">
+            <a className="flex items-center gap-3 text-white text-sm"
+              href="https://maps.app.goo.gl/3N3rYocaNkEGBNzbA"
+              target="_blank"
+              rel="noopener noreferrer">
+              <MapPin size={18} className="flex-shrink-0" />
+              <span>BanjaraHills, Hyderabad-500482</span>
+            </a>
           </div>
 
           {/* Timing */}
@@ -167,41 +172,41 @@ export function Navbar() {
 
           {/* Social Media Links */}
           <div className="flex items-center gap-3">
-            <a 
-              href="https://telegram.org" 
-              target="_blank" 
+            <a
+              href="https://telegram.org"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <Send size={16} style={{ color: '#0f8987' }} />
             </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/dr_akhils_rehabs?igsh=aXE4eTF1d3I1ZjZn"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <Instagram size={16} style={{ color: '#0f8987' }} />
             </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/share/1CXrzcoiKY/?mibextid=wwXIfr"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <Facebook size={16} style={{ color: '#0f8987' }} />
             </a>
-            <a 
-              href="https://youtube.com" 
-              target="_blank" 
+            <a
+              href="https://www.youtube.com/@drakhilshealthstudio"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <Youtube size={16} style={{ color: '#0f8987' }} />
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/dr-akhilsrehab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity"
             >
@@ -212,9 +217,9 @@ export function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav 
-        className="bg-white shadow-md fixed left-0 right-0 mx-4 rounded-2xl md:rounded-full md:mx-4 lg:mx-8" 
-        style={{ 
+      <nav
+        className="bg-white shadow-md fixed left-0 right-0 mx-4 rounded-2xl md:rounded-full md:mx-4 lg:mx-8"
+        style={{
           backgroundColor: 'rgba(255, 255, 255, 0.98)',
           top: isVisible ? 'var(--navbar-top, 0)' : '-150px',
           zIndex: 40,
@@ -233,24 +238,24 @@ export function Navbar() {
             {/* Desktop Navigation - Centered */}
             <div className="hidden lg:flex items-center space-x-8">
               {/* Departments Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setOpenDropdown('departments')}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button className="flex items-center space-x-1 hover:opacity-70 transition-opacity">
                   <span>Departments</span>
-                  <ChevronDown 
-                    size={16} 
-                    style={{ 
+                  <ChevronDown
+                    size={16}
+                    style={{
                       transform: openDropdown === 'departments' ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s ease'
-                    }} 
+                    }}
                   />
                 </button>
                 <AnimatePresence>
                   {openDropdown === 'departments' && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
@@ -272,24 +277,24 @@ export function Navbar() {
               </div>
 
               {/* Specialities Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setOpenDropdown('specialities')}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button className="flex items-center space-x-1 hover:opacity-70 transition-opacity">
                   <span>Specialities</span>
-                  <ChevronDown 
-                    size={16} 
-                    style={{ 
+                  <ChevronDown
+                    size={16}
+                    style={{
                       transform: openDropdown === 'specialities' ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s ease'
-                    }} 
+                    }}
                   />
                 </button>
                 <AnimatePresence>
                   {openDropdown === 'specialities' && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
@@ -311,24 +316,24 @@ export function Navbar() {
               </div>
 
               {/* Resources Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setOpenDropdown('resources')}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button className="flex items-center space-x-1 hover:opacity-70 transition-opacity">
                   <span>Resources</span>
-                  <ChevronDown 
-                    size={16} 
-                    style={{ 
+                  <ChevronDown
+                    size={16}
+                    style={{
                       transform: openDropdown === 'resources' ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s ease'
-                    }} 
+                    }}
                   />
                 </button>
                 <AnimatePresence>
                   {openDropdown === 'resources' && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
@@ -350,24 +355,24 @@ export function Navbar() {
               </div>
 
               {/* About Us Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setOpenDropdown('about')}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button className="flex items-center space-x-1 hover:opacity-70 transition-opacity">
                   <span>About Us</span>
-                  <ChevronDown 
-                    size={16} 
-                    style={{ 
+                  <ChevronDown
+                    size={16}
+                    style={{
                       transform: openDropdown === 'about' ? 'rotate(180deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s ease'
-                    }} 
+                    }}
                   />
                 </button>
                 <AnimatePresence>
                   {openDropdown === 'about' && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
@@ -419,7 +424,7 @@ export function Navbar() {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <div 
+            <div
               className="lg:hidden pb-4 max-h-[70vh] overflow-y-auto"
               style={{
                 scrollbarWidth: 'none', /* Firefox */

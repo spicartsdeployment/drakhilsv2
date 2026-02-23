@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Footer } from '../components/Footer';
 import { BackButton } from '../components/BackButton';
-import { X } from 'lucide-react';
+import { Award, X } from 'lucide-react';
+import { AWARDS } from '../const';
+import { CLINIC_IMAGES } from '../const';
 
 export function GalleryPageAboutUs() {
   const [activeTab, setActiveTab] = useState<'clinic' | 'achievements' | 'treatments'>('clinic');
@@ -17,32 +19,32 @@ export function GalleryPageAboutUs() {
 
   // Gallery images for each category with custom layouts
   const clinicImages = [
-    { url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=900&fit=crop', gridColumn: '2', gridRow: '1 / 3', height: '100%' },
-    { url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop', gridColumn: '3 / 5', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&h=900&fit=crop', gridColumn: '3', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=900&fit=crop', gridColumn: '4', gridRow: '2', height: '320px' }
+    { url: CLINIC_IMAGES[6], gridColumn: '1', gridRow: '1', height: '320px' },
+    { url: CLINIC_IMAGES[1], gridColumn: '2', gridRow: '1 / 3', height: '100%' },
+    { url: CLINIC_IMAGES[0], gridColumn: '3 / 5', gridRow: '1', height: '320px' },
+    { url: CLINIC_IMAGES[3], gridColumn: '1', gridRow: '2', height: '320px' },
+    { url: CLINIC_IMAGES[4], gridColumn: '3', gridRow: '2', height: '320px' },
+    { url: CLINIC_IMAGES[5], gridColumn: '4', gridRow: '2', height: '320px' }
   ];
 
   const achievementsImages = [
-    { url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=900&fit=crop', gridColumn: '2', gridRow: '1 / 3', height: '100%' },
-    { url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=600&fit=crop', gridColumn: '3 / 5', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&h=900&fit=crop', gridColumn: '3', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=900&fit=crop', gridColumn: '4', gridRow: '2', height: '320px' }
+    { url: AWARDS[0], gridColumn: '1', gridRow: '1', height: '320px' },
+    { url: AWARDS[1], gridColumn: '2', gridRow: '1 / 3', height: '100%' },
+    { url: AWARDS[2], gridColumn: '3 / 5', gridRow: '1', height: '320px' },
+    { url: AWARDS[3], gridColumn: '1', gridRow: '2', height: '320px' },
+    { url: AWARDS[0], gridColumn: '3', gridRow: '2', height: '320px' },
+    { url: AWARDS[1], gridColumn: '4', gridRow: '2', height: '320px' }
   ];
 
   const treatmentsImages = [
-    { url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=900&fit=crop', gridColumn: '2', gridRow: '1 / 3', height: '100%' },
-    { url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop', gridColumn: '3 / 5', gridRow: '1', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop', gridColumn: '1', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&h=900&fit=crop', gridColumn: '3', gridRow: '2', height: '320px' },
-    { url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=900&fit=crop', gridColumn: '4', gridRow: '2', height: '320px' }
+    { url: CLINIC_IMAGES[7], gridColumn: '1', gridRow: '1', height: '320px' },
+    { url: CLINIC_IMAGES[8], gridColumn: '2', gridRow: '1 / 3', height: '100%' },
+    { url: CLINIC_IMAGES[9], gridColumn: '3 / 5', gridRow: '1', height: '320px' },
+    { url: CLINIC_IMAGES[10], gridColumn: '1', gridRow: '2', height: '320px' },
+    { url: CLINIC_IMAGES[11], gridColumn: '3', gridRow: '2', height: '320px' },
+    { url: CLINIC_IMAGES[12], gridColumn: '4', gridRow: '2', height: '320px' }
   ];
-
+  console.log('Clinic Images:', CLINIC_IMAGES[8]);
   const currentImages = activeTab === 'clinic' ? clinicImages : activeTab === 'achievements' ? achievementsImages : treatmentsImages;
 
   // Get dimensions based on size
@@ -108,7 +110,7 @@ export function GalleryPageAboutUs() {
         }
       `}</style>
       {/* Hero Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -120,7 +122,7 @@ export function GalleryPageAboutUs() {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -134,11 +136,11 @@ export function GalleryPageAboutUs() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -161,13 +163,14 @@ export function GalleryPageAboutUs() {
             </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-6">
               {/* Tab Buttons */}
-              <div 
+              <div
                 className="tab-buttons-container"
                 style={{
                   border: '1px solid #2d4a4a',
                   borderRadius: '50px',
                   backgroundColor: 'transparent',
                   display: 'flex',
+                  padding: '4px',
                   flexDirection: 'row'
                 }}
               >
@@ -208,7 +211,7 @@ export function GalleryPageAboutUs() {
                   }}
                 >
                   {activeTab !== 'clinic' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -264,7 +267,7 @@ export function GalleryPageAboutUs() {
                   }}
                 >
                   {activeTab !== 'achievements' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -320,7 +323,7 @@ export function GalleryPageAboutUs() {
                   }}
                 >
                   {activeTab !== 'treatments' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -407,7 +410,7 @@ export function GalleryPageAboutUs() {
           `}</style>
 
           {/* Gallery Grid with Custom Layout */}
-          <div 
+          <div
             className="gallery-grid"
             style={{
               display: 'grid',
@@ -417,7 +420,7 @@ export function GalleryPageAboutUs() {
             }}
           >
             {currentImages.map((image, index) => (
-              <div 
+              <div
                 key={index}
                 className="holographic-image-wrapper gallery-item group"
                 style={{
@@ -438,7 +441,7 @@ export function GalleryPageAboutUs() {
                   e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
                 }}
               >
-                <img 
+                <img
                   src={image.url}
                   alt={`Gallery ${index + 1}`}
                   style={{
@@ -447,9 +450,9 @@ export function GalleryPageAboutUs() {
                     objectFit: 'cover'
                   }}
                 />
-                
+
                 {/* Magnifying Glass Icon */}
-                <div 
+                <div
                   className="zoom-icon"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -457,10 +460,10 @@ export function GalleryPageAboutUs() {
                   }}
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.35-4.35"/>
-                    <line x1="11" y1="8" x2="11" y2="14"/>
-                    <line x1="8" y1="11" x2="14" y2="11"/>
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
                 </div>
               </div>
@@ -471,14 +474,14 @@ export function GalleryPageAboutUs() {
 
       {/* Image Overlay Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{
             backgroundColor: 'transparent'
           }}
           onClick={() => setSelectedImage(null)}
         >
-          <img 
+          <img
             src={selectedImage}
             alt="Gallery preview"
             style={{

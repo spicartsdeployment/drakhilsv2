@@ -3,6 +3,8 @@ import { Link, useNavigate } from '../../App';
 import { Footer } from '../../components/Footer';
 import { BackButton } from '../../components/BackButton';
 import { Facebook, Linkedin, Mail } from 'lucide-react';
+import { CLINIC_IMAGES } from '../../const';
+import { AKHIL } from '../../const';
 
 interface Therapist {
   id: number;
@@ -22,13 +24,13 @@ export function AboutSitePage() {
   const therapists: Therapist[] = [
     {
       id: 1,
-      name: 'Dr. Rohan Khanna',
+      name: 'Dr. Akhil',
       specialty: 'MANUAL THERAPY - THERAPY SPECIALIST',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop',
+      image: AKHIL[1],
       specialtyPath: '/specialities/physical-therapist',
       facebook: 'https://facebook.com',
       linkedin: 'https://linkedin.com',
-      email: 'mailto:rohan.khanna@drakhils.com'
+      email: 'mailto:akhil@drakhils.com'
     },
     {
       id: 2,
@@ -114,7 +116,7 @@ export function AboutSitePage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'rgb(222, 232, 222)' }}>
       {/* Hero Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -126,7 +128,7 @@ export function AboutSitePage() {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -140,11 +142,11 @@ export function AboutSitePage() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -178,9 +180,9 @@ export function AboutSitePage() {
                   }}
                 >
                   {/* Image Container with Text Overlay */}
-                  <div 
+                  <div
                     className="relative overflow-hidden"
-                    style={{ 
+                    style={{
                       width: '100%',
                       height: '100%',
                       position: 'relative',
@@ -217,8 +219,8 @@ export function AboutSitePage() {
                       }}
                     >
                       {/* Specialty */}
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: 'white',
                           fontSize: '10px',
                           fontWeight: '500',
@@ -233,8 +235,8 @@ export function AboutSitePage() {
                       </p>
 
                       {/* Name */}
-                      <h3 
-                        style={{ 
+                      <h3
+                        style={{
                           color: 'white',
                           fontSize: '20px',
                           fontWeight: '400',
@@ -262,7 +264,7 @@ export function AboutSitePage() {
                         <button
                           onClick={(e) => handleSocialClick(e, therapist.facebook)}
                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                          style={{ 
+                          style={{
                             backgroundColor: 'white',
                             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
                           }}
@@ -274,7 +276,7 @@ export function AboutSitePage() {
                         <button
                           onClick={(e) => handleSocialClick(e, therapist.email)}
                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                          style={{ 
+                          style={{
                             backgroundColor: 'white',
                             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
                           }}
@@ -286,7 +288,7 @@ export function AboutSitePage() {
                         <button
                           onClick={(e) => handleSocialClick(e, therapist.linkedin)}
                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                          style={{ 
+                          style={{
                             backgroundColor: 'white',
                             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
                           }}

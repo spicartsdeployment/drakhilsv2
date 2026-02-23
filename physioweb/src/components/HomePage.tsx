@@ -166,7 +166,7 @@ export function HomePage() {
     <div className="min-h-screen overflow-x-hidden">
       {/* Popup Modal */}
       <PopupModal isOpen={showPopup} onClose={handleClosePopup} />
-      
+
       {/* Hero Section */}
       <section className="relative w-full h-[700px] lg:h-[800px] overflow-hidden bg-black">
         {/* Animated Background Image */}
@@ -177,15 +177,15 @@ export function HomePage() {
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         {/* Overlay with Animation */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" 
+          className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"
         />
-        
+
         {/* Hero Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -203,16 +203,16 @@ export function HomePage() {
                     initial={{ x: '-100%', opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: '100%', opacity: 0 }}
-                    transition={{ 
+                    transition={{
                       duration: 0.8,
                       ease: 'easeInOut'
                     }}
                     className="text-white text-left"
-                    style={{ 
-                      fontFamily: 'Cinzel, serif', 
-                      fontSize: 'clamp(1.8rem, 4vw, 3rem)', 
-                      fontWeight: 400, 
-                      lineHeight: '1.3', 
+                    style={{
+                      fontFamily: 'Cinzel, serif',
+                      fontSize: 'clamp(1.8rem, 4vw, 3rem)',
+                      fontWeight: 400,
+                      lineHeight: '1.3',
                       textShadow: '2px 4px 8px rgba(0,0,0,0.5)',
                       whiteSpace: 'pre-line'
                     }}
@@ -236,7 +236,7 @@ export function HomePage() {
                     placeholder="Search Specialist"
                     className="flex-1 px-2 py-2 outline-none text-gray-700"
                   />
-                  <button 
+                  <button
                     className="px-6 py-2 rounded-full text-white transition-transform hover:scale-105"
                     style={{ backgroundColor: '#0f8987' }}
                   >
@@ -258,15 +258,15 @@ export function HomePage() {
         >
           <div className="max-w-4xl mx-auto text-center" style={{ marginTop: 'clamp(50px, 10vw, 80px)' }}>
             <p className="text-white leading-relaxed" style={{ fontFamily: 'Poppins, Roboto, serif, sans-serif', fontSize: 'clamp(0.9rem, 2.5vw, 1.3rem)', fontWeight: 100, textShadow: '1px 2px 4px rgba(0,0,0,0.6)', marginBottom: 'clamp(30px, 8vw, 50px)' }}>
-              Welcome to Dr. Akhil's Rehab Center – where expert care meets heartfelt commitment. 
-              We specialize in providing holistic, patient-focused rehabilitation designed to restore 
-              independence, mobility, and overall well-being. Backed by advanced therapies and a deeply 
-              compassionate team, our mission is to guide every individual toward a healthier, more 
+              Welcome to Dr. Akhil's Rehab Center – where expert care meets heartfelt commitment.
+              We specialize in providing holistic, patient-focused rehabilitation designed to restore
+              independence, mobility, and overall well-being. Backed by advanced therapies and a deeply
+              compassionate team, our mission is to guide every individual toward a healthier, more
               empowered life.
             </p>
-            
+
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -289,12 +289,12 @@ export function HomePage() {
                 <motion.span
                   initial={{ width: 0 }}
                   animate={{ width: 'auto' }}
-                  transition={{ 
-                    delay: 1.5, 
+                  transition={{
+                    delay: 1.5,
                     duration: 1.5,
                     ease: "linear"
                   }}
-                  style={{ 
+                  style={{
                     display: 'inline-block',
                     overflow: 'hidden',
                     whiteSpace: 'nowrap'
@@ -306,11 +306,11 @@ export function HomePage() {
             </motion.div>
           </div>
         </motion.div>
-        
+
         {/* Content */}
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pointer-events-none" style={{ zIndex: 5 }}>
           {/* Pagination Dots */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -331,13 +331,13 @@ export function HomePage() {
             {/* Left Side - Images with Badge */}
             <div className="relative flex items-start justify-center" style={{ gap: '15px', maxWidth: '850px', marginLeft: '0', marginRight: 'auto' }}>
               {/* Left Large Image - 55% width */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex-shrink-0 overflow-hidden relative" 
-                style={{ 
+                className="flex-shrink-0 overflow-hidden relative"
+                style={{
                   width: '55%',
                   borderRadius: '24px',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
@@ -356,13 +356,13 @@ export function HomePage() {
               </motion.div>
 
               {/* Center Badge - Positioned Between Images */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
                 className="absolute flex flex-col items-center justify-center text-center"
-                style={{ 
+                style={{
                   width: '140px',
                   height: '140px',
                   borderRadius: '50%',
@@ -375,27 +375,27 @@ export function HomePage() {
                 }}
               >
                 <div className="text-white" style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: '1' }}>
-                  <AnimatedCounter start={1} end={9} suffix="+" />
+                  <AnimatedCounter start={1} end={12} suffix="+" />
                 </div>
                 <span className="text-white px-3" style={{ fontSize: '0.65rem', fontWeight: 500, letterSpacing: '1px', lineHeight: '1.3' }}>YEARS OF EXPERTISE</span>
               </motion.div>
 
               {/* Right Stacked Images - 38% width */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex flex-col flex-shrink-0" 
-                style={{ 
+                className="flex flex-col flex-shrink-0"
+                style={{
                   width: '40%',
                   gap: '15px'
                 }}
               >
                 {/* Top Image */}
-                <div 
+                <div
                   className="overflow-hidden relative"
-                  style={{ 
+                  style={{
                     borderRadius: '24px',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
                   }}
@@ -411,11 +411,11 @@ export function HomePage() {
                     <h3 className="text-white text-center" style={{ fontSize: '1rem' }}>Rehabilitation Medicine</h3>
                   </div>
                 </div>
-                
+
                 {/* Bottom Image */}
-                <div 
+                <div
                   className="overflow-hidden relative"
-                  style={{ 
+                  style={{
                     borderRadius: '24px',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
                   }}
@@ -435,7 +435,7 @@ export function HomePage() {
             </div>
 
             {/* Right Side - Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -642,7 +642,7 @@ export function HomePage() {
       {/* Therapy Types Scrolling Cards Section */}
       <section className="pt-0 pb-20 relative" style={{ backgroundColor: '#1F3D3F', overflow: 'hidden', width: '100%', maxWidth: '100vw' }}>
         {/* X-ray Background Overlay */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url('https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png')`,
@@ -653,9 +653,9 @@ export function HomePage() {
         />
 
         {/* Soft Teal Glow - Top Right Corner */}
-        <div 
+        <div
           className="absolute opacity-30 blur-3xl pointer-events-none"
-          style={{ 
+          style={{
             background: 'radial-gradient(circle, #0f8987 0%, transparent 70%)',
             width: '200px',
             height: '200px',
@@ -665,9 +665,9 @@ export function HomePage() {
         />
 
         {/* Soft Teal Glow - Bottom Left Corner */}
-        <div 
+        <div
           className="absolute opacity-20 blur-2xl pointer-events-none"
-          style={{ 
+          style={{
             background: 'radial-gradient(circle, #c1f5f1 0%, transparent 70%)',
             width: '150px',
             height: '150px',
@@ -677,9 +677,9 @@ export function HomePage() {
         />
 
         {/* Soft Teal Glow - Center */}
-        <div 
+        <div
           className="absolute opacity-10 blur-3xl pointer-events-none"
-          style={{ 
+          style={{
             background: 'radial-gradient(circle, #33a9b1 0%, transparent 70%)',
             width: '300px',
             height: '300px',
@@ -701,7 +701,7 @@ export function HomePage() {
 
         {/* Scrolling Cards Container - Full Width */}
         <div className="relative overflow-hidden px-4 sm:px-6 z-10" style={{ marginBottom: '40px' }}>
-            <style>{`
+          <style>{`
               @keyframes scroll-cards {
                 0% {
                   transform: translateX(0);
@@ -847,263 +847,263 @@ export function HomePage() {
                 color: white;
               }
             `}</style>
-            
-            <div className="cards-scroll-container">
-              {/* First Set of Cards */}
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1648638810948-f3bf2cccdde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Hand Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Hand Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Specialized treatment focused on restoring hand function, mobility, and strength through personalized rehabilitation techniques.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1615997380705-504484cd99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG91bGRlciUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Shoulder Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Shoulder Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Expert rehabilitation programs designed to alleviate shoulder pain and improve range of motion for better daily function.</p>
-                  </div>
+          <div className="cards-scroll-container">
+            {/* First Set of Cards */}
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1648638810948-f3bf2cccdde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Hand Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Hand Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Specialized treatment focused on restoring hand function, mobility, and strength through personalized rehabilitation techniques.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1630623093163-6ee6c84d61e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWluJTIwcmVsaWVmJTIwdGhlcmFweXxlbnwxfHx8fDE3NjYwNzEwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Pain Relief"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Pain Relief</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Personalized comfort solutions using advanced techniques to manage and reduce chronic pain effectively.</p>
-                  </div>
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1615997380705-504484cd99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG91bGRlciUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Shoulder Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Shoulder Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Expert rehabilitation programs designed to alleviate shoulder pain and improve range of motion for better daily function.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1643237131522-bbf79b062ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWNrJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Neck Wellness"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Neck Wellness</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Comprehensive care targeting neck tension, stiffness, and discomfort through specialized therapeutic interventions.</p>
-                  </div>
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1630623093163-6ee6c84d61e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWluJTIwcmVsaWVmJTIwdGhlcmFweXxlbnwxfHx8fDE3NjYwNzEwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Pain Relief"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Pain Relief</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Personalized comfort solutions using advanced techniques to manage and reduce chronic pain effectively.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Back Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Back Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Advanced solutions for back pain management and spinal health improvement through evidence-based practices.</p>
-                  </div>
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1643237131522-bbf79b062ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWNrJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Neck Wellness"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Neck Wellness</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Comprehensive care targeting neck tension, stiffness, and discomfort through specialized therapeutic interventions.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrbmVlJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Knee Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Knee Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Mobility restoration programs designed to strengthen knee joints and improve overall leg function and stability.</p>
-                  </div>
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Back Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Back Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Advanced solutions for back pain management and spinal health improvement through evidence-based practices.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1754941622117-97957c5d669b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Sports Injury"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Sports Injury</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Athletic recovery programs tailored for sports-related injuries to help athletes return to peak performance safely.</p>
-                  </div>
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrbmVlJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Knee Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Knee Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Mobility restoration programs designed to strengthen knee joints and improve overall leg function and stability.</p>
                 </div>
-                <div className="therapy-card-icon"></div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNjYwNjg2OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Spine Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Spine Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Structural support and alignment correction for optimal spinal health and posture improvement.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              {/* Duplicate Set for Seamless Loop */}
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1648638810948-f3bf2cccdde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Hand Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Hand Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Specialized treatment focused on restoring hand function, mobility, and strength through personalized rehabilitation techniques.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1615997380705-504484cd99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG91bGRlciUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Shoulder Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Shoulder Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Expert rehabilitation programs designed to alleviate shoulder pain and improve range of motion for better daily function.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1630623093163-6ee6c84d61e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWluJTIwcmVsaWVmJTIwdGhlcmFweXxlbnwxfHx8fDE3NjYwNzEwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Pain Relief"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Pain Relief</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Personalized comfort solutions using advanced techniques to manage and reduce chronic pain effectively.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1643237131522-bbf79b062ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWNrJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Neck Wellness"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Neck Wellness</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Comprehensive care targeting neck tension, stiffness, and discomfort through specialized therapeutic interventions.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Back Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Back Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Advanced solutions for back pain management and spinal health improvement through evidence-based practices.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
-                <div className="therapy-card-image-container">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrbmVlJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Knee Therapy"
-                    className="therapy-card-image"
-                  />
-                  <div className="therapy-card-overlay">
-                    <h3 className="therapy-card-title">Knee Therapy</h3>
-                    <div className="therapy-card-divider"></div>
-                    <p className="therapy-card-description">Mobility restoration programs designed to strengthen knee joints and improve overall leg function and stability.</p>
-                  </div>
-                </div>
-                <div className="therapy-card-icon"></div>
-              </div>
-
-              <div className="therapy-card">
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1754941622117-97957c5d669b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Sports Injury"
                   className="therapy-card-image"
                 />
-                <div className="therapy-card-icon"></div>
                 <div className="therapy-card-overlay">
                   <h3 className="therapy-card-title">Sports Injury</h3>
                   <div className="therapy-card-divider"></div>
                   <p className="therapy-card-description">Athletic recovery programs tailored for sports-related injuries to help athletes return to peak performance safely.</p>
                 </div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
 
-              <div className="therapy-card">
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNjYwNjg2OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Spine Therapy"
                   className="therapy-card-image"
                 />
-                <div className="therapy-card-icon"></div>
                 <div className="therapy-card-overlay">
                   <h3 className="therapy-card-title">Spine Therapy</h3>
                   <div className="therapy-card-divider"></div>
                   <p className="therapy-card-description">Structural support and alignment correction for optimal spinal health and posture improvement.</p>
                 </div>
               </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            {/* Duplicate Set for Seamless Loop */}
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1648638810948-f3bf2cccdde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Hand Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Hand Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Specialized treatment focused on restoring hand function, mobility, and strength through personalized rehabilitation techniques.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1615997380705-504484cd99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG91bGRlciUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Shoulder Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Shoulder Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Expert rehabilitation programs designed to alleviate shoulder pain and improve range of motion for better daily function.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1630623093163-6ee6c84d61e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWluJTIwcmVsaWVmJTIwdGhlcmFweXxlbnwxfHx8fDE3NjYwNzEwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Pain Relief"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Pain Relief</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Personalized comfort solutions using advanced techniques to manage and reduce chronic pain effectively.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1643237131522-bbf79b062ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWNrJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Neck Wellness"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Neck Wellness</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Comprehensive care targeting neck tension, stiffness, and discomfort through specialized therapeutic interventions.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Back Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Back Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Advanced solutions for back pain management and spinal health improvement through evidence-based practices.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <div className="therapy-card-image-container">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrbmVlJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Knee Therapy"
+                  className="therapy-card-image"
+                />
+                <div className="therapy-card-overlay">
+                  <h3 className="therapy-card-title">Knee Therapy</h3>
+                  <div className="therapy-card-divider"></div>
+                  <p className="therapy-card-description">Mobility restoration programs designed to strengthen knee joints and improve overall leg function and stability.</p>
+                </div>
+              </div>
+              <div className="therapy-card-icon"></div>
+            </div>
+
+            <div className="therapy-card">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1754941622117-97957c5d669b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Sports Injury"
+                className="therapy-card-image"
+              />
+              <div className="therapy-card-icon"></div>
+              <div className="therapy-card-overlay">
+                <h3 className="therapy-card-title">Sports Injury</h3>
+                <div className="therapy-card-divider"></div>
+                <p className="therapy-card-description">Athletic recovery programs tailored for sports-related injuries to help athletes return to peak performance safely.</p>
+              </div>
+            </div>
+
+            <div className="therapy-card">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNjYwNjg2OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Spine Therapy"
+                className="therapy-card-image"
+              />
+              <div className="therapy-card-icon"></div>
+              <div className="therapy-card-overlay">
+                <h3 className="therapy-card-title">Spine Therapy</h3>
+                <div className="therapy-card-divider"></div>
+                <p className="therapy-card-description">Structural support and alignment correction for optimal spinal health and posture improvement.</p>
+              </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Therapy Body Map Section */}
@@ -1143,13 +1143,13 @@ export function HomePage() {
         `}</style>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="relative min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
-            
+
             {/* Ripple Animation Background - Behind Skeleton */}
             <div className="ripple-background absolute inset-0" style={{ zIndex: 1 }}></div>
-            
+
             {/* Central Skeleton Illustration */}
             <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-              <img 
+              <img
                 src="https://physeo.wpengine.com/wp-content/uploads/2025/07/home-3-hotspot-bg.png"
                 alt="Human Body Anatomy"
                 className="h-full w-auto max-h-[700px] object-contain opacity-90"
@@ -1160,7 +1160,7 @@ export function HomePage() {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 3 }}>
               <div className="relative" style={{ width: '200px', height: '700px' }}>
                 {/* Neck Hotspot - connects LEFT to Neck Stiffness Card */}
-                <div 
+                <div
                   className={`wdt-hotspot-item absolute ${hotspotSectionVisible ? 'hotspot-blink' : ''}`}
                   data-placement="left"
                   style={{
@@ -1175,9 +1175,9 @@ export function HomePage() {
                     zIndex: 10
                   }}
                 />
-                
+
                 {/* Shoulder/Palm Hotspot - connects RIGHT to Palm Discomfort Card */}
-                <div 
+                <div
                   className={`wdt-hotspot-item absolute ${hotspotSectionVisible ? 'hotspot-blink' : ''}`}
                   data-placement="right-top"
                   style={{
@@ -1194,7 +1194,7 @@ export function HomePage() {
                 />
 
                 {/* Hand/Wrist Hotspot - connects RIGHT to Hand Tightness Card */}
-                <div 
+                <div
                   className={`wdt-hotspot-item absolute ${hotspotSectionVisible ? 'hotspot-blink' : ''}`}
                   data-placement="right-hand"
                   style={{
@@ -1211,7 +1211,7 @@ export function HomePage() {
                 />
 
                 {/* Knee/Leg Hotspot - connects LEFT to Leg Fatigue Card */}
-                <div 
+                <div
                   className={`wdt-hotspot-item absolute ${hotspotSectionVisible ? 'hotspot-blink' : ''}`}
                   data-placement="left-bottom"
                   style={{
@@ -1232,9 +1232,9 @@ export function HomePage() {
             {/* Left Side Cards */}
             <div className="absolute left-0 top-0 w-full h-full pointer-events-none hidden md:block" style={{ zIndex: 4 }}>
               <div className="relative h-full max-w-7xl mx-auto">
-                
+
                 {/* Neck Stiffness */}
-                <motion.div 
+                <motion.div
                   initial={{ x: -100, opacity: 0 }}
                   animate={hotspotSectionVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -1261,7 +1261,7 @@ export function HomePage() {
                 </motion.div>
 
                 {/* Leg Fatigue */}
-                <motion.div 
+                <motion.div
                   initial={{ x: -100, opacity: 0 }}
                   animate={hotspotSectionVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -1292,9 +1292,9 @@ export function HomePage() {
             {/* Right Side Cards */}
             <div className="absolute right-0 top-0 w-full h-full pointer-events-none hidden md:block" style={{ zIndex: 4 }}>
               <div className="relative h-full max-w-7xl mx-auto">
-                
+
                 {/* Palm Discomfort */}
-                <motion.div 
+                <motion.div
                   initial={{ x: 100, opacity: 0 }}
                   animate={hotspotSectionVisible ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -1321,7 +1321,7 @@ export function HomePage() {
                 </motion.div>
 
                 {/* Hand Tightness */}
-                <motion.div 
+                <motion.div
                   initial={{ x: 100, opacity: 0 }}
                   animate={hotspotSectionVisible ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}

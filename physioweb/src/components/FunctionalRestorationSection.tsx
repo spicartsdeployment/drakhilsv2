@@ -45,9 +45,9 @@ export function FunctionalRestorationSection() {
   };
 
   return (
-    <section 
+    <section
       className="relative pt-20 pb-20"
-      style={{ 
+      style={{
         backgroundColor: '#e8f9f8',
         overflow: 'hidden',
         width: '100%',
@@ -57,17 +57,17 @@ export function FunctionalRestorationSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Label */}
         <div className="flex items-center justify-center gap-3 mb-8">
-          <div 
-            style={{ 
-              width: '12px', 
-              height: '12px', 
+          <div
+            style={{
+              width: '12px',
+              height: '12px',
               borderRadius: '50%',
               backgroundColor: '#33a9b1'
-            }} 
+            }}
           />
           <div style={{ width: '60px', height: '1px', backgroundColor: '#33a9b1' }} />
-          <span 
-            style={{ 
+          <span
+            style={{
               color: '#33a9b1',
               fontSize: '14px',
               fontWeight: '600',
@@ -81,9 +81,9 @@ export function FunctionalRestorationSection() {
 
         {/* Main Heading with Embedded Images */}
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className="max-w-6xl mx-auto leading-tight"
-            style={{ 
+            style={{
               fontSize: '2rem',
               fontWeight: '600',
               color: '#1a1a1a',
@@ -92,12 +92,12 @@ export function FunctionalRestorationSection() {
             }}
           >
             Functional Restoration{' '}
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVhbSUyMGRpc2N1c3Npb258ZW58MXx8fHwxNzY2NTA1MzA2fDA&ixlib=rb-4.1.0&q=80&w=200"
               alt="Healthcare Team"
               className="inline-block rounded-full object-cover"
-              style={{ 
-                width: '80px', 
+              style={{
+                width: '80px',
                 height: '80px',
                 verticalAlign: 'middle',
                 border: '4px solid white',
@@ -106,12 +106,12 @@ export function FunctionalRestorationSection() {
               }}
             />
             {' '}And Boosting Vitality With{' '}
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXB5JTIwZXhlcmNpc2UlMjBzdHJldGNoaW5nfGVufDF8fHx8MTc2NjUwNTMwOXww&ixlib=rb-4.1.0&q=80&w=200"
               alt="Physiotherapy"
               className="inline-block rounded-full object-cover"
-              style={{ 
-                width: '80px', 
+              style={{
+                width: '80px',
                 height: '80px',
                 verticalAlign: 'middle',
                 border: '4px solid white',
@@ -120,12 +120,12 @@ export function FunctionalRestorationSection() {
               }}
             />
             {' '}Enhanced Physiotherapy Refined For Your{' '}
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1764314399496-aa49b4e4d127?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcmVoYWJpbGl0YXRpb24lMjB0aGVyYXB5fGVufDF8fHx8MTc2NjUwNTMxM3ww&ixlib=rb-4.1.0&q=80&w=200"
               alt="Medical Care"
               className="inline-block rounded-full object-cover"
-              style={{ 
-                width: '80px', 
+              style={{
+                width: '80px',
                 height: '80px',
                 verticalAlign: 'middle',
                 border: '4px solid white',
@@ -142,8 +142,8 @@ export function FunctionalRestorationSection() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               {/* Number */}
-              <div 
-                style={{ 
+              <div
+                style={{
                   fontSize: '56px',
                   fontWeight: '300',
                   color: '#1a1a1a',
@@ -154,10 +154,10 @@ export function FunctionalRestorationSection() {
               >
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
-              
+
               {/* Title */}
-              <h3 
-                style={{ 
+              <h3
+                style={{
                   fontSize: '20px',
                   fontWeight: '500',
                   color: '#1a1a1a',
@@ -171,20 +171,20 @@ export function FunctionalRestorationSection() {
               {/* Divider Line with Dot */}
               <div className="flex items-center justify-center gap-0 mb-12">
                 <div style={{ width: '80px', height: '1px', backgroundColor: '#33a9b1' }} />
-                <div 
-                  style={{ 
-                    width: '8px', 
-                    height: '8px', 
+                <div
+                  style={{
+                    width: '8px',
+                    height: '8px',
                     borderRadius: '50%',
                     backgroundColor: '#33a9b1',
                     flexShrink: 0
-                  }} 
+                  }}
                 />
               </div>
 
               {/* Description */}
-              <p 
-                style={{ 
+              <p
+                style={{
                   fontSize: '14px',
                   color: '#666',
                   lineHeight: '1.6',
@@ -278,9 +278,9 @@ export function FunctionalRestorationSection() {
 
           {/* Phone Button */}
           <a
-            href="tel:+1122334556"
+            href="tel:+91 83338 90389"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full transition-all duration-300 shadow-md"
-            style={{ 
+            style={{
               backgroundColor: isHoveredPhone ? '#0f8987' : 'white',
               color: isHoveredPhone ? 'white' : '#0f8987',
               fontSize: '16px',
@@ -292,8 +292,8 @@ export function FunctionalRestorationSection() {
             onMouseEnter={() => setIsHoveredPhone(true)}
             onMouseLeave={() => setIsHoveredPhone(false)}
           >
-            <span>+ 112 233 44556</span>
-            <div 
+            <span>+91 83338 90389</span>
+            <div
               className="flex items-center justify-center rounded-full transition-all"
               style={{
                 backgroundColor: isHoveredPhone ? 'white' : '#0f8987',
@@ -324,7 +324,7 @@ export function FunctionalRestorationSection() {
         onMouseEnter={() => setIsScrollButtonHovered(true)}
         onMouseLeave={() => setIsScrollButtonHovered(false)}
       >
-        <span 
+        <span
           style={{
             fontFamily: 'wdt-ext',
             fontSize: '24px',

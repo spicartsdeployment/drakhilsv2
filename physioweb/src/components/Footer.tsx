@@ -1,15 +1,24 @@
 import React from 'react';
 import { Link } from '../App';
-import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Award } from 'lucide-react';
 import logo from 'figma:asset/fd3b26f01cc866255fba6d6aeee4ad8c7c85e539.png';
+import { CLINIC_IMAGES } from '../const';
+import { AWARDS } from '../const';
 
 export function Footer() {
   const instagramImages = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1764314138160-5f04f4a50dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXB5JTIwc2Vzc2lvbiUyMHBhdGllbnR8ZW58MXx8fHwxNzY2NTAwNDg5fDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Physiotherapy Session' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1522845052468-8b871a6176e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjBleGVyY2lzZXxlbnwxfHx8fDE3NjY0NzU5NDN8MA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Physical Therapy Exercise' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1764314399496-aa49b4e4d127?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWhhYmlsaXRhdGlvbiUyMHRoZXJhcHklMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzY2NTAwNDkwfDA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Rehabilitation Equipment' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1758274531664-6f340855f3a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJldGNoaW5nJTIwdGhlcmFweSUyMHdlbGxuZXNzfGVufDF8fHx8MTc2NjUwMDQ5MXww&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Wellness Therapy' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1764314138160-5f04f4a50dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcHJvZmVzc2lvbmFsJTIwdGhlcmFweXxlbnwxfHx8fDE3NjY1MDA0OTB8MA&ixlib=rb-4.1.0&q=80&w=1080', alt: 'Medical Professional' },
+    { id: 1, url: AWARDS[0], alt: 'Physiotherapy Session' },
+    { id: 2, url: AWARDS[1], alt: 'Physical Therapy Exercise' },
+    { id: 3, url: AWARDS[2], alt: 'Rehabilitation Equipment' },
+    { id: 4, url: CLINIC_IMAGES[3], alt: 'Wellness Therapy' },
+    { id: 5, url: CLINIC_IMAGES[4], alt: 'Medical Professional' },
+    { id: 6, url: CLINIC_IMAGES[5], alt: 'Patient Care' },
+    { id: 7, url: AWARDS[3], alt: 'Award Recognition' },
+    { id: 8, url: CLINIC_IMAGES[6], alt: 'Clinic Environment' },
+    { id: 9, url: CLINIC_IMAGES[7], alt: 'Therapy Session' },
+    { id: 10, url: CLINIC_IMAGES[8], alt: 'Rehabilitation Exercise' },
+    { id: 11, url: CLINIC_IMAGES[9], alt: 'Patient Interaction' },
+    { id: 12, url: CLINIC_IMAGES[10], alt: 'Medical Equipment' }
   ];
 
   return (
@@ -203,16 +212,21 @@ export function Footer() {
               Providing comprehensive rehabilitation and therapy services to help you achieve optimal health and wellness.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:opacity-70" style={{ color: '#33a9b1' }}>
+              <a href="https://www.facebook.com/share/1CXrzcoiKY/?mibextid=wwXIfr"
+                className="hover:opacity-70"
+                style={{ color: '#33a9b1' }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:opacity-70" style={{ color: '#33a9b1' }}>
+              <a href="https://x.com/dr_akhils?s=21&t=5DwrXpzm2VR0IW9iqZZlxQ" className="hover:opacity-70" style={{ color: '#33a9b1' }} target="_blank" rel="noopener noreferrer">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:opacity-70" style={{ color: '#33a9b1' }}>
+              <a href="https://www.instagram.com/dr_akhils_rehabs?igsh=aXE4eTF1d3I1ZjZn" className="hover:opacity-70" style={{ color: '#33a9b1' }} target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:opacity-70" style={{ color: '#33a9b1' }}>
+              <a href="https://www.linkedin.com/in/dr-akhilsrehab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="hover:opacity-70" style={{ color: '#33a9b1' }} target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
               </a>
             </div>
