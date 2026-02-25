@@ -54,5 +54,5 @@ export const AKHIL = [
     logo,
     akhilImg,
     homeHero,
-    xrayImage
+    xrayImage,
 ]

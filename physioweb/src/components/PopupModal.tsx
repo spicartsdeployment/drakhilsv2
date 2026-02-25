@@ -96,8 +96,8 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
               className="relative bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden"
-              style={{ 
-                maxWidth: '900px', 
+              style={{
+                maxWidth: '900px',
                 width: '100%',
                 maxHeight: '85vh',
                 borderRadius: window.innerWidth < 768 ? '16px' : '24px'
@@ -109,9 +109,9 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
               {/* Content container */}
               <div className="flex flex-col md:flex-row h-full overflow-y-auto md:overflow-y-visible">
                 {/* Left Section - Image */}
-                <div 
-                  className="w-full md:w-1/2 relative overflow-hidden" 
-                  style={{ 
+                <div
+                  className="w-full md:w-1/2 relative overflow-hidden"
+                  style={{
                     maxHeight: window.innerWidth < 768 ? '180px' : 'none',
                     minHeight: window.innerWidth < 768 ? 'auto' : '100%'
                   }}
@@ -125,7 +125,7 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                     }}
                   />
                   {/* Gradient overlay on image */}
-                  <div 
+                  <div
                     className="absolute inset-0"
                     style={{
                       background: 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 100%)'
@@ -136,9 +136,9 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                 {/* Right Section - Content */}
                 <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center" style={{ marginTop: window.innerWidth < 768 ? '0' : '-140px' }}>
                   {/* Heading */}
-                  <h2 
+                  <h2
                     className="mb-3 md:mb-4"
-                    style={{ 
+                    style={{
                       fontSize: window.innerWidth < 768 ? '1.5rem' : '2rem',
                       fontWeight: '700',
                       lineHeight: '1.2',
@@ -151,7 +151,7 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                   </h2>
 
                   {/* Description */}
-                  <p 
+                  <p
                     className="mb-4 md:mb-6"
                     style={{
                       fontSize: window.innerWidth < 768 ? '0.85rem' : '0.95rem',
@@ -160,8 +160,8 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                       fontWeight: '300'
                     }}
                   >
-                    Experience professional care that restores mobility, relieves pain, 
-                    and accelerates recovery. Join our community and receive expert 
+                    Experience professional care that restores mobility, relieves pain,
+                    and accelerates recovery. Join our community and receive expert
                     wellness tips, treatment updates, and exclusive offers.
                   </p>
 
@@ -198,7 +198,7 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                   </form>
 
                   {/* Terms text */}
-                  <p 
+                  <p
                     className="text-center mb-4 md:mb-6"
                     style={{
                       fontSize: window.innerWidth < 768 ? '0.7rem' : '0.75rem',
@@ -207,8 +207,8 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                     }}
                   >
                     By subscribing, you agree to our{' '}
-                    <a 
-                      href="/terms" 
+                    <a
+                      href="/terms"
                       className="underline hover:text-teal-600"
                       style={{ color: '#0f8987' }}
                     >
@@ -219,11 +219,11 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                   {/* Social media icons */}
                   <div className="flex items-center justify-center gap-3 md:gap-4">
                     <a
-                      href="https://instagram.com"
+                      href='https://www.instagram.com/dr_akhils_rehabs?igsh=aXE4eTF1d3I1ZjZn'
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ 
+                      style={{
                         backgroundColor: '#c1f5f1',
                         color: '#0f8987'
                       }}
@@ -232,11 +232,11 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                       <Instagram size={window.innerWidth < 768 ? 18 : 20} />
                     </a>
                     <a
-                      href="https://facebook.com"
+                      href='https://www.facebook.com/share/1CXrzcoiKY/?mibextid=wwXIfr'
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ 
+                      style={{
                         backgroundColor: '#c1f5f1',
                         color: '#0f8987'
                       }}
@@ -245,11 +245,11 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                       <Facebook size={window.innerWidth < 768 ? 18 : 20} />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href='https://www.linkedin.com/in/dr-akhilsrehab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                      style={{ 
+                      style={{
                         backgroundColor: '#c1f5f1',
                         color: '#0f8987'
                       }}

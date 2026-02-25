@@ -34,7 +34,7 @@ export function AboutSitePage() {
     },
     {
       id: 2,
-      name: 'Dr. Anjali Desai',
+      name: 'Dr. Kavya',
       specialty: 'PAIN CONSULTANT - PAIN SPECIALIST',
       image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop',
       specialtyPath: '/specialities/nursing-care',

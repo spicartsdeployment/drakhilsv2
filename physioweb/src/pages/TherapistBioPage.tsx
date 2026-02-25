@@ -3,6 +3,7 @@ import { Link, useParams } from '../App';
 import { Footer } from '../components/Footer';
 import { BackButton } from '../components/BackButton';
 import { Facebook, Linkedin, Mail, Users, Target, Award, Activity, Briefcase, GraduationCap, MessageSquare } from 'lucide-react';
+import { AKHIL } from '../const';
 
 interface TherapistData {
   id: number;
@@ -27,14 +28,14 @@ interface TherapistData {
 const therapistsData: { [key: string]: TherapistData } = {
   '1': {
     id: 1,
-    name: 'Dr. Rohan Khanna',
+    name: 'Dr. Akhil',
     title: 'Manual Therapy Specialist',
     specialty: 'Pain Specialist',
-    experience: '1-4 Years',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=700&fit=crop',
-    facebook: 'https://facebook.com',
-    linkedin: 'https://linkedin.com',
-    email: 'mailto:rohan.khanna@drakhils.com',
+    experience: '12 Years',
+    image: AKHIL[1],
+    facebook: 'https://www.facebook.com/share/1CXrzcoiKY/?mibextid=wwXIfr',
+    linkedin: 'https://www.linkedin.com/in/dr-akhilsrehab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    email: 'mailto:drakhilsrehabs@gmail.com',
     skills: [
       { name: 'Manual Therapy', percentage: 93 },
       { name: 'Rehab Program Design', percentage: 97 },
@@ -48,10 +49,10 @@ const therapistsData: { [key: string]: TherapistData } = {
   },
   '2': {
     id: 2,
-    name: 'Dr. Anjali Desai',
+    name: 'Dr. Kavya',
     title: 'Pain Consultant',
     specialty: 'Pain Specialist',
-    experience: '1-4 Years',
+    experience: '8 Years',
     image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=700&fit=crop',
     facebook: 'https://facebook.com',
     linkedin: 'https://linkedin.com',
@@ -247,7 +248,7 @@ export function TherapistBioPage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -259,7 +260,7 @@ export function TherapistBioPage() {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -273,11 +274,11 @@ export function TherapistBioPage() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white mb-4 text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -287,8 +288,8 @@ export function TherapistBioPage() {
 
           {/* Breadcrumb */}
           <div className="flex items-center justify-center gap-2">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-white hover:opacity-80 transition-opacity"
               style={{ fontSize: '14px' }}
             >
@@ -307,7 +308,7 @@ export function TherapistBioPage() {
             {/* Left Column - Profile */}
             <div className="lg:col-span-2">
               {/* Profile Card */}
-              <div 
+              <div
                 className="rounded-3xl overflow-hidden shadow-lg mb-8"
                 style={{
                   background: 'linear-gradient(135deg, #e8e8e3 0%, #f0f0eb 100%)'
@@ -337,7 +338,7 @@ export function TherapistBioPage() {
 
                   {/* Info */}
                   <div className="p-8 flex flex-col justify-center">
-                    <h2 
+                    <h2
                       style={{
                         fontFamily: 'Georgia, serif',
                         fontSize: '32px',
@@ -348,7 +349,7 @@ export function TherapistBioPage() {
                     >
                       {therapist.name}
                     </h2>
-                    <p 
+                    <p
                       style={{
                         fontSize: '16px',
                         color: '#4a5568',
@@ -405,7 +406,7 @@ export function TherapistBioPage() {
               </div>
 
               {/* Tabs */}
-              <div 
+              <div
                 className="flex gap-3 mb-6"
                 style={{
                   border: '1px solid #2d4a4a',
@@ -448,7 +449,7 @@ export function TherapistBioPage() {
                   }}
                 >
                   {activeTab !== 'experience' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -501,7 +502,7 @@ export function TherapistBioPage() {
                   }}
                 >
                   {activeTab !== 'qualification' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -554,7 +555,7 @@ export function TherapistBioPage() {
                   }}
                 >
                   {activeTab !== 'reviews' && (
-                    <span 
+                    <span
                       className="hover-bg"
                       style={{
                         position: 'absolute',
@@ -576,7 +577,7 @@ export function TherapistBioPage() {
               </div>
 
               {/* Tab Content */}
-              <div 
+              <div
                 style={{
                   backgroundColor: 'transparent',
                   padding: '30px 0'
@@ -587,15 +588,15 @@ export function TherapistBioPage() {
                     {/* Clinical Background */}
                     <div>
                       <div className="flex items-center gap-4 mb-4">
-                        <div 
+                        <div
                           className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
                           style={{ backgroundColor: '#2d4a4a', color: 'white' }}
                         >
                           <Users size={28} />
                         </div>
-                        <span 
-                          style={{ 
-                            fontSize: '48px', 
+                        <span
+                          style={{
+                            fontSize: '48px',
                             fontFamily: 'Georgia, serif',
                             color: '#2d3748',
                             lineHeight: '1'
@@ -604,21 +605,21 @@ export function TherapistBioPage() {
                           9+
                         </span>
                       </div>
-                      <h3 
-                        style={{ 
-                          fontSize: '22px', 
+                      <h3
+                        style={{
+                          fontSize: '22px',
                           fontFamily: 'Georgia, serif',
-                          color: '#2d3748', 
+                          color: '#2d3748',
                           marginBottom: '12px',
                           fontWeight: '400'
                         }}
                       >
                         Clinical Background
                       </h3>
-                      <p 
-                        style={{ 
-                          fontSize: '15px', 
-                          color: '#5a5a5a', 
+                      <p
+                        style={{
+                          fontSize: '15px',
+                          color: '#5a5a5a',
                           lineHeight: '1.7',
                           fontFamily: 'system-ui, sans-serif'
                         }}
@@ -630,15 +631,15 @@ export function TherapistBioPage() {
                     {/* Therapy Journey */}
                     <div>
                       <div className="flex items-center gap-4 mb-4">
-                        <div 
+                        <div
                           className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
                           style={{ backgroundColor: '#2d4a4a', color: 'white' }}
                         >
                           <Target size={28} />
                         </div>
-                        <span 
-                          style={{ 
-                            fontSize: '48px', 
+                        <span
+                          style={{
+                            fontSize: '48px',
                             fontFamily: 'Georgia, serif',
                             color: '#2d3748',
                             lineHeight: '1'
@@ -647,21 +648,21 @@ export function TherapistBioPage() {
                           8+
                         </span>
                       </div>
-                      <h3 
-                        style={{ 
-                          fontSize: '22px', 
+                      <h3
+                        style={{
+                          fontSize: '22px',
                           fontFamily: 'Georgia, serif',
-                          color: '#2d3748', 
+                          color: '#2d3748',
                           marginBottom: '12px',
                           fontWeight: '400'
                         }}
                       >
                         Therapy Journey
                       </h3>
-                      <p 
-                        style={{ 
-                          fontSize: '15px', 
-                          color: '#5a5a5a', 
+                      <p
+                        style={{
+                          fontSize: '15px',
+                          color: '#5a5a5a',
                           lineHeight: '1.7',
                           fontFamily: 'system-ui, sans-serif'
                         }}
@@ -673,15 +674,15 @@ export function TherapistBioPage() {
                     {/* Professional Experience */}
                     <div>
                       <div className="flex items-center gap-4 mb-4">
-                        <div 
+                        <div
                           className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
                           style={{ backgroundColor: '#2d4a4a', color: 'white' }}
                         >
                           <Award size={28} />
                         </div>
-                        <span 
-                          style={{ 
-                            fontSize: '48px', 
+                        <span
+                          style={{
+                            fontSize: '48px',
                             fontFamily: 'Georgia, serif',
                             color: '#2d3748',
                             lineHeight: '1'
@@ -690,21 +691,21 @@ export function TherapistBioPage() {
                           10+
                         </span>
                       </div>
-                      <h3 
-                        style={{ 
-                          fontSize: '22px', 
+                      <h3
+                        style={{
+                          fontSize: '22px',
                           fontFamily: 'Georgia, serif',
-                          color: '#2d3748', 
+                          color: '#2d3748',
                           marginBottom: '12px',
                           fontWeight: '400'
                         }}
                       >
                         Professional Experience
                       </h3>
-                      <p 
-                        style={{ 
-                          fontSize: '15px', 
-                          color: '#5a5a5a', 
+                      <p
+                        style={{
+                          fontSize: '15px',
+                          color: '#5a5a5a',
                           lineHeight: '1.7',
                           fontFamily: 'system-ui, sans-serif'
                         }}
@@ -716,15 +717,15 @@ export function TherapistBioPage() {
                     {/* Physio Experience */}
                     <div>
                       <div className="flex items-center gap-4 mb-4">
-                        <div 
+                        <div
                           className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
                           style={{ backgroundColor: '#43a2a8', color: 'white' }}
                         >
                           <Activity size={28} />
                         </div>
-                        <span 
-                          style={{ 
-                            fontSize: '48px', 
+                        <span
+                          style={{
+                            fontSize: '48px',
                             fontFamily: 'Georgia, serif',
                             color: '#2d3748',
                             lineHeight: '1'
@@ -733,21 +734,21 @@ export function TherapistBioPage() {
                           10+
                         </span>
                       </div>
-                      <h3 
-                        style={{ 
-                          fontSize: '22px', 
+                      <h3
+                        style={{
+                          fontSize: '22px',
                           fontFamily: 'Georgia, serif',
-                          color: '#2d3748', 
+                          color: '#2d3748',
                           marginBottom: '12px',
                           fontWeight: '400'
                         }}
                       >
                         Physio Experience
                       </h3>
-                      <p 
-                        style={{ 
-                          fontSize: '15px', 
-                          color: '#5a5a5a', 
+                      <p
+                        style={{
+                          fontSize: '15px',
+                          color: '#5a5a5a',
                           lineHeight: '1.7',
                           fontFamily: 'system-ui, sans-serif'
                         }}
@@ -761,10 +762,10 @@ export function TherapistBioPage() {
                 {activeTab === 'qualification' && (
                   <div>
                     {/* Introductory Text */}
-                    <p 
-                      style={{ 
-                        fontSize: '15px', 
-                        color: '#5a5a5a', 
+                    <p
+                      style={{
+                        fontSize: '15px',
+                        color: '#5a5a5a',
                         lineHeight: '1.8',
                         marginBottom: '40px',
                         fontFamily: 'system-ui, sans-serif'
@@ -778,9 +779,9 @@ export function TherapistBioPage() {
                       {/* Bachelor of Physiotherapy */}
                       <div>
                         <div className="flex justify-between items-center mb-3">
-                          <h4 
-                            style={{ 
-                              fontSize: '20px', 
+                          <h4
+                            style={{
+                              fontSize: '20px',
                               fontFamily: 'Georgia, serif',
                               color: '#2d3748',
                               fontWeight: '400'
@@ -788,9 +789,9 @@ export function TherapistBioPage() {
                           >
                             Bachelor of Physiotherapy (BPT)
                           </h4>
-                          <span 
-                            style={{ 
-                              fontSize: '18px', 
+                          <span
+                            style={{
+                              fontSize: '18px',
                               color: '#2d3748',
                               fontWeight: '500'
                             }}
@@ -798,28 +799,28 @@ export function TherapistBioPage() {
                             60%
                           </span>
                         </div>
-                        <div 
-                          style={{ 
-                            width: '100%', 
-                            height: '8px', 
+                        <div
+                          style={{
+                            width: '100%',
+                            height: '8px',
                             backgroundColor: '#d0d0d0',
                             borderRadius: '10px',
                             position: 'relative',
                             overflow: 'hidden'
                           }}
                         >
-                          <div 
-                            style={{ 
-                              width: animateProgress ? '60%' : '0%', 
-                              height: '100%', 
+                          <div
+                            style={{
+                              width: animateProgress ? '60%' : '0%',
+                              height: '100%',
                               background: 'linear-gradient(to right, #3cb4b4, #2d8a8a)',
                               borderRadius: '10px',
                               position: 'relative',
                               transition: 'width 1.5s ease-out'
                             }}
                           >
-                            <div 
-                              style={{ 
+                            <div
+                              style={{
                                 position: 'absolute',
                                 right: '0',
                                 top: '50%',
@@ -838,9 +839,9 @@ export function TherapistBioPage() {
                       {/* Master of Physiotherapy */}
                       <div>
                         <div className="flex justify-between items-center mb-3">
-                          <h4 
-                            style={{ 
-                              fontSize: '20px', 
+                          <h4
+                            style={{
+                              fontSize: '20px',
                               fontFamily: 'Georgia, serif',
                               color: '#2d3748',
                               fontWeight: '400'
@@ -848,9 +849,9 @@ export function TherapistBioPage() {
                           >
                             Master of Physiotherapy (MPT)
                           </h4>
-                          <span 
-                            style={{ 
-                              fontSize: '18px', 
+                          <span
+                            style={{
+                              fontSize: '18px',
                               color: '#2d3748',
                               fontWeight: '500'
                             }}
@@ -858,28 +859,28 @@ export function TherapistBioPage() {
                             90%
                           </span>
                         </div>
-                        <div 
-                          style={{ 
-                            width: '100%', 
-                            height: '8px', 
+                        <div
+                          style={{
+                            width: '100%',
+                            height: '8px',
                             backgroundColor: '#d0d0d0',
                             borderRadius: '10px',
                             position: 'relative',
                             overflow: 'hidden'
                           }}
                         >
-                          <div 
-                            style={{ 
-                              width: animateProgress ? '90%' : '0%', 
-                              height: '100%', 
+                          <div
+                            style={{
+                              width: animateProgress ? '90%' : '0%',
+                              height: '100%',
                               background: 'linear-gradient(to right, #3cb4b4, #2d8a8a)',
                               borderRadius: '10px',
                               position: 'relative',
                               transition: 'width 1.5s ease-out 0.2s'
                             }}
                           >
-                            <div 
-                              style={{ 
+                            <div
+                              style={{
                                 position: 'absolute',
                                 right: '0',
                                 top: '50%',
@@ -898,9 +899,9 @@ export function TherapistBioPage() {
                       {/* Doctor of Physiotherapy */}
                       <div>
                         <div className="flex justify-between items-center mb-3">
-                          <h4 
-                            style={{ 
-                              fontSize: '20px', 
+                          <h4
+                            style={{
+                              fontSize: '20px',
                               fontFamily: 'Georgia, serif',
                               color: '#2d3748',
                               fontWeight: '400'
@@ -908,9 +909,9 @@ export function TherapistBioPage() {
                           >
                             Doctor of Physiotherapy (DPT)
                           </h4>
-                          <span 
-                            style={{ 
-                              fontSize: '18px', 
+                          <span
+                            style={{
+                              fontSize: '18px',
                               color: '#2d3748',
                               fontWeight: '500'
                             }}
@@ -918,28 +919,28 @@ export function TherapistBioPage() {
                             50%
                           </span>
                         </div>
-                        <div 
-                          style={{ 
-                            width: '100%', 
-                            height: '8px', 
+                        <div
+                          style={{
+                            width: '100%',
+                            height: '8px',
                             backgroundColor: '#d0d0d0',
                             borderRadius: '10px',
                             position: 'relative',
                             overflow: 'hidden'
                           }}
                         >
-                          <div 
-                            style={{ 
-                              width: animateProgress ? '50%' : '0%', 
-                              height: '100%', 
+                          <div
+                            style={{
+                              width: animateProgress ? '50%' : '0%',
+                              height: '100%',
                               background: 'linear-gradient(to right, #3cb4b4, #2d8a8a)',
                               borderRadius: '10px',
                               position: 'relative',
                               transition: 'width 1.5s ease-out 0.4s'
                             }}
                           >
-                            <div 
-                              style={{ 
+                            <div
+                              style={{
                                 position: 'absolute',
                                 right: '0',
                                 top: '50%',
@@ -958,9 +959,9 @@ export function TherapistBioPage() {
                       {/* Diploma or Certification Courses */}
                       <div>
                         <div className="flex justify-between items-center mb-3">
-                          <h4 
-                            style={{ 
-                              fontSize: '20px', 
+                          <h4
+                            style={{
+                              fontSize: '20px',
                               fontFamily: 'Georgia, serif',
                               color: '#2d3748',
                               fontWeight: '400'
@@ -968,9 +969,9 @@ export function TherapistBioPage() {
                           >
                             Diploma or Certification Courses
                           </h4>
-                          <span 
-                            style={{ 
-                              fontSize: '18px', 
+                          <span
+                            style={{
+                              fontSize: '18px',
                               color: '#2d3748',
                               fontWeight: '500'
                             }}
@@ -978,28 +979,28 @@ export function TherapistBioPage() {
                             70%
                           </span>
                         </div>
-                        <div 
-                          style={{ 
-                            width: '100%', 
-                            height: '8px', 
+                        <div
+                          style={{
+                            width: '100%',
+                            height: '8px',
                             backgroundColor: '#d0d0d0',
                             borderRadius: '10px',
                             position: 'relative',
                             overflow: 'hidden'
                           }}
                         >
-                          <div 
-                            style={{ 
-                              width: animateProgress ? '70%' : '0%', 
-                              height: '100%', 
+                          <div
+                            style={{
+                              width: animateProgress ? '70%' : '0%',
+                              height: '100%',
                               background: 'linear-gradient(to right, #3cb4b4, #2d8a8a)',
                               borderRadius: '10px',
                               position: 'relative',
                               transition: 'width 1.5s ease-out 0.6s'
                             }}
                           >
-                            <div 
-                              style={{ 
+                            <div
+                              style={{
                                 position: 'absolute',
                                 right: '0',
                                 top: '50%',
@@ -1021,7 +1022,7 @@ export function TherapistBioPage() {
                 {activeTab === 'reviews' && (
                   <div className="space-y-6">
                     {/* Review 1 - Rachel Morgan */}
-                    <div 
+                    <div
                       className="relative"
                       style={{
                         borderBottom: expandedReview === 1 ? 'none' : '1px solid #d0d0d0',
@@ -1045,9 +1046,9 @@ export function TherapistBioPage() {
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <div>
-                              <h4 
-                                style={{ 
-                                  fontSize: '20px', 
+                              <h4
+                                style={{
+                                  fontSize: '20px',
                                   color: '#00b8b8',
                                   fontFamily: 'Georgia, serif',
                                   fontWeight: '400',
@@ -1055,9 +1056,9 @@ export function TherapistBioPage() {
                                 }}
                               >
                                 Rachel Morgan
-                                <span 
-                                  style={{ 
-                                    fontSize: '14px', 
+                                <span
+                                  style={{
+                                    fontSize: '14px',
                                     color: '#718096',
                                     marginLeft: '8px',
                                     fontFamily: 'system-ui, sans-serif'
@@ -1089,10 +1090,10 @@ export function TherapistBioPage() {
                             </button>
                           </div>
                           {expandedReview === 1 && (
-                            <p 
-                              style={{ 
-                                fontSize: '15px', 
-                                color: '#5a5a5a', 
+                            <p
+                              style={{
+                                fontSize: '15px',
+                                color: '#5a5a5a',
                                 lineHeight: '1.7',
                                 marginTop: '12px',
                                 fontFamily: 'system-ui, sans-serif'
@@ -1106,7 +1107,7 @@ export function TherapistBioPage() {
                     </div>
 
                     {/* Review 2 - David Lee */}
-                    <div 
+                    <div
                       className="relative"
                       style={{
                         borderBottom: expandedReview === 2 ? 'none' : '1px solid #d0d0d0',
@@ -1130,9 +1131,9 @@ export function TherapistBioPage() {
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <div>
-                              <h4 
-                                style={{ 
-                                  fontSize: '20px', 
+                              <h4
+                                style={{
+                                  fontSize: '20px',
                                   color: '#5a5a5a',
                                   fontFamily: 'Georgia, serif',
                                   fontWeight: '400',
@@ -1140,9 +1141,9 @@ export function TherapistBioPage() {
                                 }}
                               >
                                 David Lee
-                                <span 
-                                  style={{ 
-                                    fontSize: '14px', 
+                                <span
+                                  style={{
+                                    fontSize: '14px',
                                     color: '#718096',
                                     marginLeft: '8px',
                                     fontFamily: 'system-ui, sans-serif'
@@ -1174,10 +1175,10 @@ export function TherapistBioPage() {
                             </button>
                           </div>
                           {expandedReview === 2 && (
-                            <p 
-                              style={{ 
-                                fontSize: '15px', 
-                                color: '#5a5a5a', 
+                            <p
+                              style={{
+                                fontSize: '15px',
+                                color: '#5a5a5a',
                                 lineHeight: '1.7',
                                 marginTop: '12px',
                                 fontFamily: 'system-ui, sans-serif'
@@ -1191,7 +1192,7 @@ export function TherapistBioPage() {
                     </div>
 
                     {/* Review 3 - Elena Cruz */}
-                    <div 
+                    <div
                       className="relative"
                       style={{
                         paddingBottom: '24px'
@@ -1214,9 +1215,9 @@ export function TherapistBioPage() {
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <div>
-                              <h4 
-                                style={{ 
-                                  fontSize: '20px', 
+                              <h4
+                                style={{
+                                  fontSize: '20px',
                                   color: '#5a5a5a',
                                   fontFamily: 'Georgia, serif',
                                   fontWeight: '400',
@@ -1224,9 +1225,9 @@ export function TherapistBioPage() {
                                 }}
                               >
                                 Elena Cruz
-                                <span 
-                                  style={{ 
-                                    fontSize: '14px', 
+                                <span
+                                  style={{
+                                    fontSize: '14px',
                                     color: '#718096',
                                     marginLeft: '8px',
                                     fontFamily: 'system-ui, sans-serif'
@@ -1258,10 +1259,10 @@ export function TherapistBioPage() {
                             </button>
                           </div>
                           {expandedReview === 3 && (
-                            <p 
-                              style={{ 
-                                fontSize: '15px', 
-                                color: '#5a5a5a', 
+                            <p
+                              style={{
+                                fontSize: '15px',
+                                color: '#5a5a5a',
                                 lineHeight: '1.7',
                                 marginTop: '12px',
                                 fontFamily: 'system-ui, sans-serif'
@@ -1281,7 +1282,7 @@ export function TherapistBioPage() {
             {/* Right Column - Sidebar */}
             <div className="lg:col-span-1">
               {/* Merged Card - Opening Hours, Skill Overview, Book Appointment */}
-              <div 
+              <div
                 className="rounded-2xl p-6 shadow-lg"
                 style={{
                   background: 'linear-gradient(135deg, #1a4d4d 0%, #2d6a6a 100%)',
