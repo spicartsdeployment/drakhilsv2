@@ -63,7 +63,7 @@ export function QualityRehabServicesSection() {
 
   const toggleService = (index: number) => {
     setExpandedService(expandedService === index ? null : index);
-    
+
     // Scroll the clicked service into view with offset for navbar
     setTimeout(() => {
       if (serviceRefs.current[index]) {
@@ -71,7 +71,7 @@ export function QualityRehabServicesSection() {
         if (element) {
           const yOffset = -150; // Offset for navbar height
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          
+
           window.scrollTo({
             top: y,
             behavior: 'smooth'
@@ -134,9 +134,9 @@ export function QualityRehabServicesSection() {
         {/* Header */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 
+            <h2
               className="text-black"
-              style={{ 
+              style={{
                 fontFamily: 'Georgia, serif',
                 fontSize: '2.5rem',
                 lineHeight: '1.2',
@@ -154,7 +154,7 @@ export function QualityRehabServicesSection() {
           {services.map((service, index) => (
             <div key={index} ref={el => serviceRefs.current[index] = el} className="relative">
               {/* Service Row */}
-              <div 
+              <div
                 className="grid grid-cols-[60px_1fr] gap-8 items-center py-6 px-0 cursor-pointer transition-colors relative z-10"
                 style={{ backgroundColor: '#DEE8DE' }}
                 onClick={() => toggleService(index)}
@@ -162,9 +162,9 @@ export function QualityRehabServicesSection() {
                 onMouseLeave={() => setHoveredService(null)}
               >
                 {/* Icon */}
-                <div 
+                <div
                   className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ 
+                  style={{
                     backgroundColor: hoveredService === index ? '#33a9b1' : '#1a4d4d',
                     color: 'white',
                     transition: 'background-color 0.3s ease'
@@ -175,8 +175,8 @@ export function QualityRehabServicesSection() {
 
                 {/* Text Content with Arrow Button */}
                 <div className="flex-1 min-w-0 relative">
-                  <h3 
-                    style={{ 
+                  <h3
+                    style={{
                       color: hoveredService === index || expandedService === index ? '#33a9b1' : '#000',
                       fontFamily: 'Georgia, serif',
                       fontSize: '1.5rem',
@@ -187,9 +187,9 @@ export function QualityRehabServicesSection() {
                   >
                     {service.title}
                   </h3>
-                  <p 
+                  <p
                     className="text-gray-600"
-                    style={{ 
+                    style={{
                       fontSize: '0.95rem',
                       lineHeight: '1.6',
                       fontWeight: 400
@@ -209,7 +209,7 @@ export function QualityRehabServicesSection() {
 
               {/* Expandable Image with Absolute Positioning */}
               {expandedService === index && (
-                <div 
+                <div
                   className="relative z-0 cursor-pointer"
                   style={{
                     animation: 'slideDown 0.5s ease-out',
@@ -267,15 +267,15 @@ export function QualityRehabServicesSection() {
                     }
 
                     .holographic-image-wrapper::after {
-                      content: 'Click to view details';
-                      position: absolute;
-                      bottom: 20px;
-                      right: 20px;
-                      padding: 10px 20px;
-                      background: rgba(51, 169, 177, 0.95);
-                      color: white;
-                      border-radius: 50px;
-                      font-size: 14px;
+                      // content: 'Click to view details';
+                      // position: absolute;
+                      // bottom: 20px;
+                      // right: 20px;
+                      // padding: 10px 20px;
+                      // background: rgba(51, 169, 177, 0.95);
+                      // color: white;
+                      // border-radius: 50px;
+                      // font-size: 14px;
                       opacity: 0;
                       transform: translateY(10px);
                       transition: all 0.3s ease;
@@ -300,8 +300,8 @@ export function QualityRehabServicesSection() {
 
               {/* Divider */}
               {index < services.length - 1 && (
-                <div 
-                  className="h-px relative z-10" 
+                <div
+                  className="h-px relative z-10"
                   style={{ backgroundColor: '#b8d4d0' }}
                 />
               )}
