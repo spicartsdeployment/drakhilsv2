@@ -18,8 +18,12 @@ import akhilImg from './assets/images/akhil/akhil.jpeg';
 
 import logo from './assets/images/akhil/image.png';
 
+import homeHero from './assets/images/home-bg-img.jpg';
+import xrayImage from './assets/images/xrayImage.png';
+
 
 import heroclinic from './assets/images/akhil/clinic-1.jpeg';
+
 
 
 export const AWARDS = [
@@ -48,5 +52,7 @@ export const CLINIC_IMAGES = [
 
 export const AKHIL = [
     logo,
-    akhilImg
+    akhilImg,
+    homeHero,
+    xrayImage
 ]

@@ -21,7 +21,7 @@ export function ContactPage() {
   };
 
   const handleMapClick = () => {
-    window.open('https://www.google.com/maps/place/Philadelphia,+PA/@39.9525839,-75.1652215,12z', '_blank');
+    window.open('https://maps.app.goo.gl/wHR9gGpxTZfRZDDx8', '_blank');
   };
 
   return (
@@ -73,7 +73,7 @@ export function ContactPage() {
         }
       `}</style>
       {/* Hero Header Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -84,7 +84,7 @@ export function ContactPage() {
           paddingBottom: '100px'
         }}
       >
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -98,10 +98,10 @@ export function ContactPage() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
-          <h1 
+
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -114,26 +114,26 @@ export function ContactPage() {
       {/* Main Contact Section */}
       <section style={{ backgroundColor: '#dee8de', padding: '0', position: 'relative' }}>
         <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ position: 'relative', paddingTop: '80px', paddingBottom: '60px' }}>
-          
+
           {/* Single Parent Container for Left, Right, and Image */}
           <div style={{ position: 'relative' }}>
-            
+
             {/* Top Grid - Contact Info and Form Top Part */}
             <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', position: 'relative' }}>
               {/* LEFT SIDE - Contact Information */}
               <div className="contact-left-side" style={{ paddingRight: '40px' }}>
                 {/* Header with decorative line */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ 
-                    width: '50px', 
-                    height: '2px', 
+                  <div style={{
+                    width: '50px',
+                    height: '2px',
                     backgroundColor: '#0f8987',
                     borderRadius: '2px'
                   }}></div>
-                  <p style={{ 
-                    fontSize: '11px', 
-                    color: '#0f8987', 
-                    textTransform: 'uppercase', 
+                  <p style={{
+                    fontSize: '11px',
+                    color: '#0f8987',
+                    textTransform: 'uppercase',
                     letterSpacing: '1.2px',
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: '500',
@@ -144,8 +144,8 @@ export function ContactPage() {
                 </div>
 
                 {/* Main Heading */}
-                <h2 
-                  style={{ 
+                <h2
+                  style={{
                     fontFamily: 'Philosopher, serif',
                     fontSize: '42px',
                     marginBottom: '12px',
@@ -158,7 +158,7 @@ export function ContactPage() {
                 </h2>
 
                 {/* Subtext */}
-                <p 
+                <p
                   style={{
                     color: '#666',
                     fontSize: '14px',
@@ -171,17 +171,17 @@ export function ContactPage() {
                 </p>
 
                 {/* Contact Information Row - Horizontal Layout */}
-                <div className="contact-info-row" style={{ 
-                  display: 'flex', 
+                <div className="contact-info-row" style={{
+                  display: 'flex',
                   alignItems: 'flex-start',
-                  gap: '30px', 
+                  gap: '30px',
                   marginBottom: '40px',
                   flexWrap: 'nowrap'
                 }}>
                   {/* Contact Number */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <p style={{ 
-                      fontSize: '13px', 
+                    <p style={{
+                      fontSize: '13px',
                       color: '#000',
                       fontFamily: 'Poppins, sans-serif',
                       fontWeight: '500',
@@ -191,7 +191,7 @@ export function ContactPage() {
                       Contact Number
                     </p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', whiteSpace: 'nowrap' }}>
-                      <div 
+                      <div
                         style={{
                           width: '36px',
                           height: '36px',
@@ -205,22 +205,22 @@ export function ContactPage() {
                       >
                         <Phone size={18} style={{ color: '#fff' }} />
                       </div>
-                      <p style={{ 
-                        fontSize: '16px', 
+                      <p style={{
+                        fontSize: '16px',
                         color: '#000',
                         fontFamily: 'Poppins, sans-serif',
                         fontWeight: '400',
                         margin: 0
                       }}>
-                        + 123 456 7890
+                        +91 83338 90389
                       </p>
                     </div>
                   </div>
 
                   {/* Vertical Divider */}
-                  <div className="contact-divider" style={{ 
-                    width: '1px', 
-                    height: '60px', 
+                  <div className="contact-divider" style={{
+                    width: '1px',
+                    height: '60px',
                     backgroundColor: '#ccc',
                     flexShrink: 0,
                     marginTop: '24px'
@@ -228,8 +228,8 @@ export function ContactPage() {
 
                   {/* Mail Address */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <p style={{ 
-                      fontSize: '13px', 
+                    <p style={{
+                      fontSize: '13px',
                       color: '#000',
                       fontFamily: 'Poppins, sans-serif',
                       fontWeight: '500',
@@ -239,7 +239,7 @@ export function ContactPage() {
                       Mail Address
                     </p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', whiteSpace: 'nowrap' }}>
-                      <div 
+                      <div
                         style={{
                           width: '36px',
                           height: '36px',
@@ -253,22 +253,22 @@ export function ContactPage() {
                       >
                         <Mail size={18} style={{ color: '#fff' }} />
                       </div>
-                      <p style={{ 
-                        fontSize: '16px', 
+                      <p style={{
+                        fontSize: '16px',
                         color: '#000',
                         fontFamily: 'Poppins, sans-serif',
                         fontWeight: '400',
                         margin: 0
                       }}>
-                        info@example.com
+                        drakhilsrehabs@gmail.com
                       </p>
                     </div>
                   </div>
 
                   {/* Vertical Divider */}
-                  <div className="contact-divider" style={{ 
-                    width: '1px', 
-                    height: '60px', 
+                  <div className="contact-divider" style={{
+                    width: '1px',
+                    height: '60px',
                     backgroundColor: '#ccc',
                     flexShrink: 0,
                     marginTop: '24px'
@@ -276,8 +276,8 @@ export function ContactPage() {
 
                   {/* Message Timing */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    <p style={{ 
-                      fontSize: '13px', 
+                    <p style={{
+                      fontSize: '13px',
                       color: '#000',
                       fontFamily: 'Poppins, sans-serif',
                       fontWeight: '500',
@@ -287,7 +287,7 @@ export function ContactPage() {
                       Timings ( Mon To Sat )
                     </p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', whiteSpace: 'nowrap' }}>
-                      <div 
+                      <div
                         style={{
                           width: '36px',
                           height: '36px',
@@ -301,8 +301,8 @@ export function ContactPage() {
                       >
                         <Clock size={18} style={{ color: '#fff' }} />
                       </div>
-                      <p style={{ 
-                        fontSize: '16px', 
+                      <p style={{
+                        fontSize: '16px',
                         color: '#000',
                         fontFamily: 'Poppins, sans-serif',
                         fontWeight: '400',
@@ -318,7 +318,7 @@ export function ContactPage() {
               {/* RIGHT SIDE - Form Top Part (First 4 fields) */}
               <div className="contact-right-side" style={{ paddingLeft: '20px' }}>
                 <form id="contact-form" onSubmit={handleSubmit}>
-                  <div 
+                  <div
                     className="contact-form-container"
                     style={{
                       backgroundColor: 'rgb(222, 232, 222)',
@@ -326,7 +326,7 @@ export function ContactPage() {
                       padding: '15px',
                       boxShadow: 'none',
                       border: 'none',
-                      marginLeft: '110px',
+                      marginLeft: '35px',
                       marginTop: '115px'
                     }}
                   >
@@ -467,14 +467,14 @@ export function ContactPage() {
             {/* Image with Curved Cut-out - Full Width */}
             <div style={{ position: 'relative', width: '100%' }}>
               {/* Image Wrapper with Curve */}
-              <div 
+              <div
                 style={{
                   position: 'relative',
                   borderRadius: '32px',
                   overflow: 'hidden'
                 }}
               >
-                <img 
+                <img
                   className="contact-main-image"
                   src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200"
                   alt="Hands clasping"
@@ -487,7 +487,7 @@ export function ContactPage() {
                 />
 
                 {/* Curve Cut-out Container */}
-                <div 
+                <div
                   className="contact-curve-cutout"
                   style={{
                     position: 'absolute',
@@ -501,7 +501,7 @@ export function ContactPage() {
                   }}
                 >
                   {/* First Curve */}
-                  <span 
+                  <span
                     style={{
                       position: 'absolute',
                       inset: 0,
@@ -511,7 +511,7 @@ export function ContactPage() {
                   ></span>
 
                   {/* Second Soft Curve */}
-                  <span 
+                  <span
                     style={{
                       position: 'absolute',
                       bottom: 0,
@@ -525,7 +525,7 @@ export function ContactPage() {
                 </div>
 
                 {/* Form Fields Overlay in Curve Area - Bottom Part of Form */}
-                <div 
+                <div
                   className="contact-image-overlay"
                   style={{
                     position: 'absolute',
@@ -628,7 +628,7 @@ export function ContactPage() {
           </div>
 
           {/* Location Map Image */}
-          <div 
+          <div
             style={{
               marginTop: '40px',
               borderRadius: '24px',
@@ -647,7 +647,7 @@ export function ContactPage() {
               e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
             }}
           >
-            <img 
+            <img
               src={locationMapImage}
               alt="Location Map"
               style={{

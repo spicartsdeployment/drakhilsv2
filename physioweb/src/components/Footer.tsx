@@ -154,26 +154,29 @@ export function Footer() {
 
             <div className="instagram-scroll-container">
               {/* First set of images */}
-              {instagramImages.map((image) => (
-                <div key={image.id} className="instagram-card">
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="instagram-card-image"
-                  />
-                  <div className="instagram-card-overlay">
-                    <div className="instagram-icon-container">
-                      <Instagram
-                        size={26}
-                        style={{
-                          color: 'white',
-                          strokeWidth: 2
-                        }}
-                      />
+              <a href="https://www.instagram.com/dr_akhils_rehabs?igsh=aXE4eTF1d3I1ZjZn"
+                className="flex items-center gap-3"
+                target="_blank" rel="noopener noreferrer">
+                {instagramImages.map((image) => (
+                  <div key={image.id} className="instagram-card">
+                    <img
+                      src={image.url}
+                      alt={image.alt}
+                      className="instagram-card-image"
+                    />
+                    <div className="instagram-card-overlay">
+                      <div className="instagram-icon-container">
+                        <Instagram
+                          size={26}
+                          style={{
+                            color: 'white',
+                            strokeWidth: 2
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))} </a>
               {/* Duplicate set for seamless loop */}
               {instagramImages.map((image) => (
                 <div key={`duplicate-${image.id}`} className="instagram-card">
@@ -291,6 +294,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }

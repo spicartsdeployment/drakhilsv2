@@ -41,7 +41,7 @@ const aboutUs = [
   { name: 'Our Therapist', path: '/resources/about-site' },
   { name: 'FAQ', path: '/resources/faq' },
   { name: 'Gallery', path: '/about-us/gallery' },
-  { name: 'Locations', path: '/resources/locations' },
+  // { name: 'Locations', path: '/resources/locations' },
 ];
 
 export function Navbar() {

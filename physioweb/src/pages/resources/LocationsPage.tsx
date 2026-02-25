@@ -55,7 +55,7 @@ export function LocationsPage() {
       `}</style>
 
       {/* Hero Header Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -67,7 +67,7 @@ export function LocationsPage() {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -81,11 +81,11 @@ export function LocationsPage() {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -100,8 +100,8 @@ export function LocationsPage() {
         <div className="max-w-7xl mx-auto mobile-padding-10 px-4 sm:px-6 lg:px-8">
           {/* Intro Text */}
           <div className="text-center mb-16">
-            <h2 
-              style={{ 
+            <h2
+              style={{
                 fontFamily: 'Philosopher, serif',
                 fontSize: '36px',
                 marginBottom: '16px',
@@ -111,7 +111,7 @@ export function LocationsPage() {
             >
               Visit Us at Any of Our <span style={{ color: '#0f8987' }}>Convenient Locations</span>
             </h2>
-            <p 
+            <p
               style={{
                 color: '#666',
                 fontSize: '17px',
@@ -128,8 +128,8 @@ export function LocationsPage() {
           {/* Locations Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {locations.map((location, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
                 style={{
                   border: '1px solid #e5e5e5',
@@ -155,7 +155,7 @@ export function LocationsPage() {
                     }}
                   />
                   {/* Overlay Badge */}
-                  <div 
+                  <div
                     className="absolute top-4 left-4"
                     style={{
                       backgroundColor: 'rgba(193, 245, 241, 0.95)',
@@ -174,8 +174,8 @@ export function LocationsPage() {
                 {/* Location Details */}
                 <div style={{ padding: '28px' }}>
                   {/* Location Name */}
-                  <h3 
-                    style={{ 
+                  <h3
+                    style={{
                       fontFamily: 'Philosopher, serif',
                       fontSize: '24px',
                       marginBottom: '20px',
@@ -185,11 +185,11 @@ export function LocationsPage() {
                   >
                     {location.name}
                   </h3>
-                  
+
                   {/* Contact Information */}
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start gap-3">
-                      <div 
+                      <div
                         className="flex items-center justify-center flex-shrink-0"
                         style={{
                           width: '36px',
@@ -200,7 +200,7 @@ export function LocationsPage() {
                       >
                         <MapPin size={18} style={{ color: '#0f8987' }} />
                       </div>
-                      <p 
+                      <p
                         style={{
                           fontSize: '14px',
                           color: '#666',
@@ -212,9 +212,9 @@ export function LocationsPage() {
                         {location.address}
                       </p>
                     </div>
-                    
+
                     <div className="flex items-center gap-3">
-                      <div 
+                      <div
                         className="flex items-center justify-center flex-shrink-0"
                         style={{
                           width: '36px',
@@ -225,7 +225,7 @@ export function LocationsPage() {
                       >
                         <Phone size={18} style={{ color: '#0f8987' }} />
                       </div>
-                      <p 
+                      <p
                         style={{
                           fontSize: '14px',
                           color: '#666',
@@ -236,9 +236,9 @@ export function LocationsPage() {
                         {location.phone}
                       </p>
                     </div>
-                    
+
                     <div className="flex items-start gap-3">
-                      <div 
+                      <div
                         className="flex items-center justify-center flex-shrink-0"
                         style={{
                           width: '36px',
@@ -249,7 +249,7 @@ export function LocationsPage() {
                       >
                         <Clock size={18} style={{ color: '#0f8987' }} />
                       </div>
-                      <p 
+                      <p
                         style={{
                           fontSize: '14px',
                           color: '#666',
@@ -267,15 +267,15 @@ export function LocationsPage() {
           </div>
 
           {/* Contact Section */}
-          <div 
+          <div
             className="mt-16 text-center p-10 rounded-xl"
             style={{
               backgroundColor: 'white',
               border: '1px solid #e5e5e5'
             }}
           >
-            <h3 
-              style={{ 
+            <h3
+              style={{
                 fontFamily: 'Philosopher, serif',
                 fontSize: '28px',
                 marginBottom: '12px',
@@ -285,7 +285,7 @@ export function LocationsPage() {
             >
               Need Help Finding Us?
             </h3>
-            <p 
+            <p
               style={{
                 color: '#666',
                 fontSize: '16px',
@@ -297,7 +297,7 @@ export function LocationsPage() {
               Our team is here to help you find the most convenient location for your needs. Contact us today!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
+              <a
                 href="tel:+15551234567"
                 className="transition-all duration-300"
                 style={{

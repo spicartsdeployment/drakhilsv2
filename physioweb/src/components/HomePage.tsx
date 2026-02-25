@@ -13,6 +13,7 @@ import { ClientTestimonialsSection } from './ClientTestimonialsSection';
 import { ScheduleAppointmentSection } from './ScheduleAppointmentSection';
 import { FunctionalRestorationSection } from './FunctionalRestorationSection';
 import { QualityRehabServicesSection } from './QualityRehabServicesSection';
+import { AKHIL } from '../const';
 
 export function HomePage() {
   const [formData, setFormData] = React.useState({
@@ -172,7 +173,7 @@ export function HomePage() {
         {/* Animated Background Image */}
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1731514836024-614e2bab04c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXBpc3QlMjBoZWxwaW5nJTIwcGF0aWVudCUyMHNtaWxpbmd8ZW58MXx8fHwxNzY1NTU1NTI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src={AKHIL[2]} // homeHero image  
             alt="Physiotherapy Treatment"
             className="w-full h-full object-cover"
           />
@@ -470,7 +471,7 @@ export function HomePage() {
                 <div className="flex items-center justify-between pt-4">
                   <div className="flex items-center gap-4">
                     <img
-                      src="https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwcm9maWxlJTIwaGVhZHNob3QlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY2MDU2MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                      src={AKHIL[1]} // akhilImg
                       alt="Dr. Akhil"
                       className="w-16 h-16 rounded-full object-cover shadow-md"
                     />
@@ -645,7 +646,7 @@ export function HomePage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png')`,
+            backgroundImage: `url(${AKHIL[3]})`, // xrayBg
             backgroundPosition: 'center',
             opacity: 1,
             pointerEvents: 'none'
