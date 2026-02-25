@@ -810,7 +810,7 @@ export function DepartmentPage({ data }: DepartmentPageProps) {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src='https://youtu.be/i0rA0BEQOuA?si=gJ1luoPLTeVSDyif'
               title="Physiotherapy Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

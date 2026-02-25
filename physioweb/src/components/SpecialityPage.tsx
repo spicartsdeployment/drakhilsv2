@@ -96,7 +96,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
         }
       `}</style>
       {/* Hero Header Section */}
-      <section 
+      <section
         className="relative"
         style={{
           background: 'rgb(31, 61, 63)',
@@ -108,7 +108,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
         }}
       >
         {/* Background Pattern Overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: 'url(https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png)',
@@ -122,11 +122,11 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
           <div className="mb-6" style={{ marginTop: '105px' }}>
             <BackButton />
           </div>
-          
+
           {/* Title */}
-          <h1 
+          <h1
             className="text-white text-center"
-            style={{ 
+            style={{
               letterSpacing: '0.5px',
               textShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
@@ -143,7 +143,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
             {/* LEFT CONTAINER: Main Content */}
             <div className="lg:col-span-8">
               {/* Hero Image */}
-              <img 
+              <img
                 src={data.heroImage}
                 alt={data.name}
                 style={{
@@ -156,8 +156,8 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
               />
 
               {/* Description */}
-              <h2 
-                style={{ 
+              <h2
+                style={{
                   fontFamily: 'Philosopher, serif',
                   fontSize: '32px',
                   marginBottom: '24px',
@@ -167,7 +167,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                 About Our {data.name}
               </h2>
               {data.description.split('\n').map((paragraph, idx) => paragraph.trim() && (
-                <p 
+                <p
                   key={idx}
                   style={{
                     color: '#666',
@@ -185,7 +185,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" style={{ marginTop: '48px' }}>
                 {/* Left: Benefits Image */}
                 <div>
-                  <img 
+                  <img
                     src={data.sideImage}
                     alt="Benefits"
                     style={{
@@ -200,8 +200,8 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
 
                 {/* Right: Benefits Content */}
                 <div>
-                  <h2 
-                    style={{ 
+                  <h2
+                    style={{
                       fontFamily: 'Philosopher, serif',
                       fontSize: '28px',
                       marginBottom: '16px',
@@ -211,7 +211,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                   >
                     Why Choose Our Specialists
                   </h2>
-                  <p 
+                  <p
                     style={{
                       color: '#666',
                       fontSize: '14px',
@@ -224,7 +224,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                   </p>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {data.whyUsPoints.map((point, idx) => (
-                      <li 
+                      <li
                         key={idx}
                         style={{
                           fontSize: '14px',
@@ -244,8 +244,8 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
 
               {/* Common Questions - Full Width Below Benefits */}
               <div style={{ marginTop: '48px', maxWidth: '800px' }}>
-                <h3 
-                  style={{ 
+                <h3
+                  style={{
                     fontFamily: 'Philosopher, serif',
                     fontSize: '28px',
                     marginBottom: '16px',
@@ -255,7 +255,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                 >
                   Frequently Asked Questions
                 </h3>
-                <p 
+                <p
                   style={{
                     color: '#666',
                     fontSize: '15px',
@@ -269,7 +269,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
 
                 {/* FAQ Q&A Items */}
                 {genericFAQs.map((faq, idx) => (
-                  <div 
+                  <div
                     key={idx}
                     style={{
                       borderBottom: '1px solid #ccc',
@@ -291,8 +291,8 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                         textAlign: 'left'
                       }}
                     >
-                      <span 
-                        style={{ 
+                      <span
+                        style={{
                           fontFamily: 'Philosopher, serif',
                           fontSize: '18px',
                           color: '#000'
@@ -307,7 +307,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                       )}
                     </button>
                     {expandedGeneralFAQ === idx && (
-                      <p 
+                      <p
                         style={{
                           color: '#666',
                           fontSize: '15px',
@@ -330,7 +330,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
             <div className="lg:col-span-4">
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                 {/* Card 1: Get In Touch With Us */}
-                <div 
+                <div
                   className="mobile-card-width"
                   style={{
                     backgroundColor: 'rgb(26, 61, 61)',
@@ -354,97 +354,97 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     zIndex: 0
                   }} />
                   <div style={{ position: 'relative', zIndex: 1 }}>
-                  <h3 
-                    style={{
-                      fontFamily: 'Philosopher, serif',
-                      fontSize: '26px',
-                      marginBottom: '28px',
-                      borderBottom: '1px solid rgba(255,255,255,0.2)',
-                      paddingBottom: '18px',
-                      fontWeight: '400',
-                      letterSpacing: '0.5px',
-                      color: 'white'
-                    }}
-                  >
-                    Get In Touch With Us
-                  </h3>
-                  
-                  {/* Phone Number */}
-                  <div style={{ marginBottom: '26px' }}>
-                    <p style={{ 
-                      fontSize: '13px', 
-                      marginBottom: '10px', 
-                      color: '#d0d0d0',
-                      fontFamily: 'Poppins, sans-serif',
-                      fontWeight: '400',
-                      letterSpacing: '0.3px'
-                    }}>
-                      Phone Number
-                    </p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <div style={{
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '50%',
-                        backgroundColor: 'rgba(255,255,255,0.1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0
-                      }}>
-                        <Phone size={18} style={{ color: '#fff' }} />
-                      </div>
-                      <span style={{ 
-                        fontSize: '19px',
-                        fontFamily: 'Poppins, sans-serif',
+                    <h3
+                      style={{
+                        fontFamily: 'Philosopher, serif',
+                        fontSize: '26px',
+                        marginBottom: '28px',
+                        borderBottom: '1px solid rgba(255,255,255,0.2)',
+                        paddingBottom: '18px',
                         fontWeight: '400',
-                        letterSpacing: '0.3px'
-                      }}>
-                        + 864 846 75324
-                      </span>
-                    </div>
-                  </div>
+                        letterSpacing: '0.5px',
+                        color: 'white'
+                      }}
+                    >
+                      Get In Touch With Us
+                    </h3>
 
-                  {/* Service Timing */}
-                  <div>
-                    <p style={{ 
-                      fontSize: '13px', 
-                      marginBottom: '10px', 
-                      color: '#d0d0d0',
-                      fontFamily: 'Poppins, sans-serif',
-                      fontWeight: '400',
-                      letterSpacing: '0.3px'
-                    }}>
-                      Service Timing ( Mon To Sat )
-                    </p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <div style={{
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '50%',
-                        backgroundColor: 'rgba(255,255,255,0.1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0
-                      }}>
-                        <Clock size={18} style={{ color: '#fff' }} />
-                      </div>
-                      <span style={{ 
-                        fontSize: '19px',
+                    {/* Phone Number */}
+                    <div style={{ marginBottom: '26px' }}>
+                      <p style={{
+                        fontSize: '13px',
+                        marginBottom: '10px',
+                        color: '#d0d0d0',
                         fontFamily: 'Poppins, sans-serif',
                         fontWeight: '400',
                         letterSpacing: '0.3px'
                       }}>
-                        10 Am To 9 Pm
-                      </span>
+                        Phone Number
+                      </p>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{
+                          width: '40px',
+                          height: '40px',
+                          borderRadius: '50%',
+                          backgroundColor: 'rgba(255,255,255,0.1)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0
+                        }}>
+                          <Phone size={18} style={{ color: '#fff' }} />
+                        </div>
+                        <span style={{
+                          fontSize: '19px',
+                          fontFamily: 'Poppins, sans-serif',
+                          fontWeight: '400',
+                          letterSpacing: '0.3px'
+                        }}>
+                          + 864 846 75324
+                        </span>
+                      </div>
                     </div>
-                  </div>
+
+                    {/* Service Timing */}
+                    <div>
+                      <p style={{
+                        fontSize: '13px',
+                        marginBottom: '10px',
+                        color: '#d0d0d0',
+                        fontFamily: 'Poppins, sans-serif',
+                        fontWeight: '400',
+                        letterSpacing: '0.3px'
+                      }}>
+                        Service Timing ( Mon To Sat )
+                      </p>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{
+                          width: '40px',
+                          height: '40px',
+                          borderRadius: '50%',
+                          backgroundColor: 'rgba(255,255,255,0.1)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0
+                        }}>
+                          <Clock size={18} style={{ color: '#fff' }} />
+                        </div>
+                        <span style={{
+                          fontSize: '19px',
+                          fontFamily: 'Poppins, sans-serif',
+                          fontWeight: '400',
+                          letterSpacing: '0.3px'
+                        }}>
+                          10 Am To 9 Pm
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Card 2: How To Start A Physiotherapy - Video Card */}
-                <div 
+                <div
                   className="mobile-card-width"
                   style={{
                     backgroundColor: '#fff',
@@ -458,10 +458,10 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                   {/* Header with decorative lines */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px', justifyContent: 'center' }}>
                     <div style={{ width: '40px', height: '2px', backgroundColor: '#0f8987' }}></div>
-                    <p style={{ 
-                      fontSize: '12px', 
-                      color: '#0f8987', 
-                      textTransform: 'uppercase', 
+                    <p style={{
+                      fontSize: '12px',
+                      color: '#0f8987',
+                      textTransform: 'uppercase',
                       letterSpacing: '1.5px',
                       fontFamily: 'Poppins, sans-serif',
                       fontWeight: '600',
@@ -472,8 +472,8 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     <div style={{ width: '40px', height: '2px', backgroundColor: '#0f8987' }}></div>
                   </div>
 
-                  <h3 
-                    style={{ 
+                  <h3
+                    style={{
                       fontFamily: 'Philosopher, serif',
                       fontSize: '24px',
                       marginBottom: '24px',
@@ -486,7 +486,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                   </h3>
 
                   {/* Video Thumbnail */}
-                  <div 
+                  <div
                     style={{
                       position: 'relative',
                       borderRadius: '20px',
@@ -497,7 +497,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     }}
                     onClick={() => setShowVideo(true)}
                   >
-                    <img 
+                    <img
                       src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800"
                       alt="Video thumbnail"
                       style={{
@@ -506,7 +506,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                         objectFit: 'cover'
                       }}
                     />
-                    <div 
+                    <div
                       style={{
                         position: 'absolute',
                         top: '50%',
@@ -529,13 +529,13 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                   {/* Lotus Icon - Detailed SVG */}
                   <div style={{ display: 'flex', justifyContent: 'center', marginTop: '16px' }}>
                     <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#0f8987">
-                      <path d="M90.2,54.6c-0.8-0.8-1.4-1.6-1.3-1.7c0,0,0,0,0,0c0.2,0,0.9,0.5,1.6,1.3c0.4-0.4,0.8-0.7,1.1-0.9c0,0,0,0,0,0 c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0 c0,0,0,0,0,0c0,0,0,0,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0,0,0.1-0.1,0.1 c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1s-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0.1-0.1,0.1-0.1,0.2 c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0,0.1,0.1c0.1,0.1,0.1,0.1,0.2,0.2c0,0.1,0.1,0.1,0.1,0.1 c0.1,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1 c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0,0,0 c0,0,0,0,0,0c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0-0.1,0c0,0-0.1,0-0.1-0.1c0,0,0,0-0.1-0.1c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0,0 c-0.3-0.2-0.7-0.6-1.1-0.9c-0.8,0.7-1.4,1.3-1.6,1.3c0,0,0,0,0,0C88.8,56.2,89.4,55.4,90.2,54.6z M6.7,54.6 c-0.8-0.8-1.4-1.6-1.3-1.7c0,0,0,0,0,0c0.2,0,0.9,0.5,1.6,1.3c0.4-0.4,0.8-0.7,1.1-0.9c0,0,0,0,0,0c0,0,0.1-0.1,0.1-0.1 c0,0,0,0,0.1,0c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0.1 c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0,0,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1 c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.1 c-0.1,0.1-0.1,0.1-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0,0.1,0.1c0.1,0.1,0.1,0.1,0.2,0.2c0,0.1,0.1,0.1,0.1,0.1C7.9,55,8,55.1,8,55.1 c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1 c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0-0.1,0-0.1,0 c0,0,0,0-0.1,0c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1c0,0,0,0-0.1-0.1c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0,0c-0.3-0.2-0.7-0.6-1.1-0.9 c-0.8,0.7-1.4,1.3-1.6,1.3c0,0,0,0,0,0C5.4,56.2,5.9,55.4,6.7,54.6z M47.6,17c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0 c0.3,0,1.5,0.9,2.9,2.3c1.4-1.3,2.6-2.3,2.9-2.3c0,0,0,0,0.1,0c0.2,0.2-0.8,1.5-2.2,2.9c1.4,1.5,2.4,2.8,2.2,2.9c0,0,0,0-0.1,0 c-0.3,0-1.5-0.9-2.9-2.3c-1.4,1.3-2.6,2.3-2.9,2.3c0,0-0.1,0-0.1,0C45.2,19.7,46.1,18.4,47.6,17z M66.4,31.1 c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0c0.3,0,1.5,0.9,2.9,2.3c1.4-1.3,2.5-2.3,2.9-2.3c0,0,0.1,0,0.1,0c0.2,0.2-0.8,1.5-2.2,2.9 c1.4,1.5,2.4,2.8,2.2,2.9c0,0,0,0-0.1,0c-0.3,0-1.5-0.9-2.9-2.3c-1.4,1.3-2.6,2.3-2.9,2.3c0,0,0,0-0.1,0 C64,33.9,64.9,32.6,66.4,31.1z M30.8,31.9c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0c0.3,0,1.5,0.9,2.9,2.3c0.7-0.7,1.4-1.3,1.9-1.7 c0,0,0.1,0,0.1-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0,0,0.1-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1-0.1 c0.1,0,0.1,0,0.2,0l0,0c0,0,0.1,0,0.1,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1 c0,0.1-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2 c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.1-0.2,0.2-0.3,0.3 c0,0-0.1,0.1-0.1,0.1c0,0,0.1,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.3 c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.1 c0,0,0,0-0.1,0h0c0,0-0.1,0-0.2,0c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1-0.1-0.2-0.1c0,0-0.1-0.1-0.1-0.1 c-0.1-0.1-0.2-0.1-0.2-0.2c0,0-0.1,0-0.1-0.1c-0.5-0.4-1.2-1-1.9-1.7c-1.4,1.3-2.6,2.3-2.9,2.3c0,0,0,0-0.1,0 C28.3,34.7,29.3,33.4,30.8,31.9z M30.5,85.6c-2.4,0-4.8-0.3-7.2-0.7c-8.4-1.8-15.8-6.5-20.9-13.4c-0.1-0.2-0.1-0.4-0.1-0.5 c0-0.1,0.1-0.3,0.3-0.4c1.2-0.7,2.5-1.4,3.9-1.9c0,0,0.1,0,0.1,0c3-1.3,6.2-2.1,9.4-2.5c1.6,2.7,3.6,5.2,5.8,7.4 c5.2,5.2,11.8,8.8,18.9,10.5C37.4,85.1,34,85.6,30.5,85.6z M16.7,64.8c-3.6,0.3-7.2,1.2-10.7,2.6c0,0,0,0,0,0 c-1.4,0.6-2.7,1.2-4.1,2c-1,0.6-1.3,1.9-0.6,2.8C6.8,79.7,14.6,84.4,23,86.2c2.5,0.5,5,0.8,7.5,0.8c5,0,9.9-1,14.6-3.1 c0.2-0.1,0.4-0.2,0.6-0.3c-8.7-0.8-16.8-4.6-23-10.9C20.4,70.3,18.4,67.7,16.7,64.8z M37.3,55.2c-0.2,9.7,3.4,19.5,10.7,27 c-9.4-0.4-17.9-4.3-24.2-10.6c-6.1-6.1-10-14.4-10.6-23.5c-0.1-1.1,0.8-2,1.9-2v1.3c-0.2,0-0.4,0.1-0.4,0.2 c-0.1,0.1-0.2,0.2-0.2,0.4c0.5,8.5,4.1,16.6,10.2,22.6c5.4,5.4,12.4,8.9,19.9,9.9C39,73.6,36,64.9,36,55.8c-5.8-5-13.1-7.9-20.7-8.4 l0-1.4c0,0,0.1,0,0.1,0C23.8,46.5,31.4,49.9,37.3,55.2z M54,80.4c5.8-6.9,8.9-15.6,9-24.7c5.8-4.9,13.1-7.8,20.6-8.1l0,0 c0.3,0,0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.5c-0.6,8.5-4.3,16.4-10.4,22.4C68.6,76.1,61.6,79.5,54,80.4z M85.8,48.4 c0.1-1.2-0.9-2.2-2-2.2c0,0-0.1,0-0.1,0c-8.4,0.4-16,3.7-21.9,8.9c0.1,9.7-3.6,19.5-11,26.9c9.4-0.3,18-4.2,24.3-10.3 C81.1,65.7,85.1,57.5,85.8,48.4z M80.3,83c-0.7,0.3-1.5,0.5-2.2,0.7l-0.2,0.1c-0.2,0-0.3,0.1-0.5,0.1c-0.2,0.1-0.5,0.1-0.7,0.2 l-0.1,0l-0.1,0c-2.7,0.7-5.6,1-8.4,1c-3.1,0-6.2-0.4-9.2-1.2c6.9-1.7,13.2-5.3,18.3-10.3c2.5-2.5,4.6-5.3,6.4-8.4 c1.8,0.2,3.5,0.4,5.1,0.8c0,0,0.1,0,0.1,0c0.7,0.2,1.3,0.3,2,0.5c0.3,0.1,0.7,0.2,1,0.3c1.7,0.6,3.3,1.3,4.9,2.1 c0.3,0.2,0.4,0.4,0.4,0.7C92.9,75.9,87.1,80.5,80.3,83z M97.3,67.9c-1.7-0.9-3.4-1.6-5.1-2.2c-0.3-0.1-0.7-0.2-1-0.3 c-0.7-0.2-1.4-0.4-2.1-0.6c0,0,0,0,0,0c-2.1-0.5-4.2-0.8-6.3-0.9c-1.7,3.2-3.9,6.2-6.6,8.8c-6.1,6.1-13.9,9.8-22.4,10.8 c-0.1,0-0.1,0-0.2,0c4.7,2,9.6,3,14.4,3c2.9,0,5.9-0.4,8.7-1c0.1,0,0.1,0,0.2,0c0.3-0.1,0.5-0.1,0.8-0.2c0.3-0.1,0.5-0.1,0.8-0.2 c0.8-0.2,1.5-0.5,2.3-0.8c7-2.6,13.2-7.3,17.5-13.9C98.6,69.4,98.2,68.4,97.3,67.9z M49.5,79.5c-9.1-9.8-11.8-23.9-6.8-36.4 c0.3-0.7,0.5-1.3,0.8-1.9c1.4-3.1,3.3-6,5.6-8.6c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.3,0,0.4,0.2c3.9,4.4,6.7,9.7,8.1,15.4 c0.1,0.3,0.1,0.7,0.2,1c0.1,0.2,0.1,0.5,0.1,0.7l0,0.1c0.2,1.2,0.4,2.5,0.4,3.8c0,0.7,0.1,1.3,0.1,2C58.7,64.7,55.5,73,49.5,79.5z  M51,79.8c0.2-0.2,0.4-0.4,0.5-0.6c0.3-0.3,0.5-0.6,0.8-1c0.1-0.2,0.3-0.4,0.4-0.6c0.3-0.4,0.6-0.8,0.8-1.2c0.1-0.1,0.2-0.3,0.3-0.4 c0.3-0.5,0.6-1,0.9-1.5c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c3.4-5.7,5.1-12.2,5.1-18.6c0-0.7,0-1.4-0.1-2.1c-0.1-1.3-0.2-2.7-0.4-4 c-0.1-0.3-0.1-0.6-0.2-0.9c-0.1-0.4-0.1-0.7-0.2-1.1C57.8,42,55,36.5,50.8,31.8c-0.4-0.4-0.9-0.6-1.4-0.6c-0.4,0-0.8,0.1-1.2,0.4 c-2.5,2.8-4.5,5.8-6,9c-0.3,0.6-0.6,1.3-0.9,2c-5.1,13-2.4,28.4,8.1,38.9c0,0,0,0,0,0c0,0,0,0,0,0h0l0.3-0.3 c0.1-0.1,0.3-0.3,0.4-0.4C50.5,80.4,50.7,80.1,51,79.8z"/>
+                      <path d="M90.2,54.6c-0.8-0.8-1.4-1.6-1.3-1.7c0,0,0,0,0,0c0.2,0,0.9,0.5,1.6,1.3c0.4-0.4,0.8-0.7,1.1-0.9c0,0,0,0,0,0 c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0 c0,0,0,0,0,0c0,0,0,0,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0,0,0.1-0.1,0.1 c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1s-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0.1-0.1,0.1-0.1,0.2 c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0,0.1,0.1c0.1,0.1,0.1,0.1,0.2,0.2c0,0.1,0.1,0.1,0.1,0.1 c0.1,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1 c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0,0,0 c0,0,0,0,0,0c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0-0.1,0c0,0-0.1,0-0.1-0.1c0,0,0,0-0.1-0.1c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0,0 c-0.3-0.2-0.7-0.6-1.1-0.9c-0.8,0.7-1.4,1.3-1.6,1.3c0,0,0,0,0,0C88.8,56.2,89.4,55.4,90.2,54.6z M6.7,54.6 c-0.8-0.8-1.4-1.6-1.3-1.7c0,0,0,0,0,0c0.2,0,0.9,0.5,1.6,1.3c0.4-0.4,0.8-0.7,1.1-0.9c0,0,0,0,0,0c0,0,0.1-0.1,0.1-0.1 c0,0,0,0,0.1,0c0,0,0,0,0.1-0.1c0,0,0,0,0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0.1 c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0,0,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1 c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.1 c-0.1,0.1-0.1,0.1-0.2,0.2c0,0,0,0-0.1,0.1c0,0,0,0,0.1,0.1c0.1,0.1,0.1,0.1,0.2,0.2c0,0.1,0.1,0.1,0.1,0.1C7.9,55,8,55.1,8,55.1 c0,0.1,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1 c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0-0.1,0-0.1,0 c0,0,0,0-0.1,0c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1c0,0,0,0-0.1-0.1c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0,0c-0.3-0.2-0.7-0.6-1.1-0.9 c-0.8,0.7-1.4,1.3-1.6,1.3c0,0,0,0,0,0C5.4,56.2,5.9,55.4,6.7,54.6z M47.6,17c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0 c0.3,0,1.5,0.9,2.9,2.3c1.4-1.3,2.6-2.3,2.9-2.3c0,0,0,0,0.1,0c0.2,0.2-0.8,1.5-2.2,2.9c1.4,1.5,2.4,2.8,2.2,2.9c0,0,0,0-0.1,0 c-0.3,0-1.5-0.9-2.9-2.3c-1.4,1.3-2.6,2.3-2.9,2.3c0,0-0.1,0-0.1,0C45.2,19.7,46.1,18.4,47.6,17z M66.4,31.1 c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0c0.3,0,1.5,0.9,2.9,2.3c1.4-1.3,2.5-2.3,2.9-2.3c0,0,0.1,0,0.1,0c0.2,0.2-0.8,1.5-2.2,2.9 c1.4,1.5,2.4,2.8,2.2,2.9c0,0,0,0-0.1,0c-0.3,0-1.5-0.9-2.9-2.3c-1.4,1.3-2.6,2.3-2.9,2.3c0,0,0,0-0.1,0 C64,33.9,64.9,32.6,66.4,31.1z M30.8,31.9c-1.4-1.5-2.4-2.8-2.2-2.9c0,0,0,0,0.1,0c0.3,0,1.5,0.9,2.9,2.3c0.7-0.7,1.4-1.3,1.9-1.7 c0,0,0.1,0,0.1-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0,0,0.1-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1-0.1 c0.1,0,0.1,0,0.2,0l0,0c0,0,0.1,0,0.1,0c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.1 c0,0.1-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2 c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.1-0.2,0.2-0.3,0.3 c0,0-0.1,0.1-0.1,0.1c0,0,0.1,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.3 c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.1 c0,0,0,0-0.1,0h0c0,0-0.1,0-0.2,0c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1-0.1-0.2-0.1c0,0-0.1-0.1-0.1-0.1 c-0.1-0.1-0.2-0.1-0.2-0.2c0,0-0.1,0-0.1-0.1c-0.5-0.4-1.2-1-1.9-1.7c-1.4,1.3-2.6,2.3-2.9,2.3c0,0,0,0-0.1,0 C28.3,34.7,29.3,33.4,30.8,31.9z M30.5,85.6c-2.4,0-4.8-0.3-7.2-0.7c-8.4-1.8-15.8-6.5-20.9-13.4c-0.1-0.2-0.1-0.4-0.1-0.5 c0-0.1,0.1-0.3,0.3-0.4c1.2-0.7,2.5-1.4,3.9-1.9c0,0,0.1,0,0.1,0c3-1.3,6.2-2.1,9.4-2.5c1.6,2.7,3.6,5.2,5.8,7.4 c5.2,5.2,11.8,8.8,18.9,10.5C37.4,85.1,34,85.6,30.5,85.6z M16.7,64.8c-3.6,0.3-7.2,1.2-10.7,2.6c0,0,0,0,0,0 c-1.4,0.6-2.7,1.2-4.1,2c-1,0.6-1.3,1.9-0.6,2.8C6.8,79.7,14.6,84.4,23,86.2c2.5,0.5,5,0.8,7.5,0.8c5,0,9.9-1,14.6-3.1 c0.2-0.1,0.4-0.2,0.6-0.3c-8.7-0.8-16.8-4.6-23-10.9C20.4,70.3,18.4,67.7,16.7,64.8z M37.3,55.2c-0.2,9.7,3.4,19.5,10.7,27 c-9.4-0.4-17.9-4.3-24.2-10.6c-6.1-6.1-10-14.4-10.6-23.5c-0.1-1.1,0.8-2,1.9-2v1.3c-0.2,0-0.4,0.1-0.4,0.2 c-0.1,0.1-0.2,0.2-0.2,0.4c0.5,8.5,4.1,16.6,10.2,22.6c5.4,5.4,12.4,8.9,19.9,9.9C39,73.6,36,64.9,36,55.8c-5.8-5-13.1-7.9-20.7-8.4 l0-1.4c0,0,0.1,0,0.1,0C23.8,46.5,31.4,49.9,37.3,55.2z M54,80.4c5.8-6.9,8.9-15.6,9-24.7c5.8-4.9,13.1-7.8,20.6-8.1l0,0 c0.3,0,0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.5c-0.6,8.5-4.3,16.4-10.4,22.4C68.6,76.1,61.6,79.5,54,80.4z M85.8,48.4 c0.1-1.2-0.9-2.2-2-2.2c0,0-0.1,0-0.1,0c-8.4,0.4-16,3.7-21.9,8.9c0.1,9.7-3.6,19.5-11,26.9c9.4-0.3,18-4.2,24.3-10.3 C81.1,65.7,85.1,57.5,85.8,48.4z M80.3,83c-0.7,0.3-1.5,0.5-2.2,0.7l-0.2,0.1c-0.2,0-0.3,0.1-0.5,0.1c-0.2,0.1-0.5,0.1-0.7,0.2 l-0.1,0l-0.1,0c-2.7,0.7-5.6,1-8.4,1c-3.1,0-6.2-0.4-9.2-1.2c6.9-1.7,13.2-5.3,18.3-10.3c2.5-2.5,4.6-5.3,6.4-8.4 c1.8,0.2,3.5,0.4,5.1,0.8c0,0,0.1,0,0.1,0c0.7,0.2,1.3,0.3,2,0.5c0.3,0.1,0.7,0.2,1,0.3c1.7,0.6,3.3,1.3,4.9,2.1 c0.3,0.2,0.4,0.4,0.4,0.7C92.9,75.9,87.1,80.5,80.3,83z M97.3,67.9c-1.7-0.9-3.4-1.6-5.1-2.2c-0.3-0.1-0.7-0.2-1-0.3 c-0.7-0.2-1.4-0.4-2.1-0.6c0,0,0,0,0,0c-2.1-0.5-4.2-0.8-6.3-0.9c-1.7,3.2-3.9,6.2-6.6,8.8c-6.1,6.1-13.9,9.8-22.4,10.8 c-0.1,0-0.1,0-0.2,0c4.7,2,9.6,3,14.4,3c2.9,0,5.9-0.4,8.7-1c0.1,0,0.1,0,0.2,0c0.3-0.1,0.5-0.1,0.8-0.2c0.3-0.1,0.5-0.1,0.8-0.2 c0.8-0.2,1.5-0.5,2.3-0.8c7-2.6,13.2-7.3,17.5-13.9C98.6,69.4,98.2,68.4,97.3,67.9z M49.5,79.5c-9.1-9.8-11.8-23.9-6.8-36.4 c0.3-0.7,0.5-1.3,0.8-1.9c1.4-3.1,3.3-6,5.6-8.6c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.3,0,0.4,0.2c3.9,4.4,6.7,9.7,8.1,15.4 c0.1,0.3,0.1,0.7,0.2,1c0.1,0.2,0.1,0.5,0.1,0.7l0,0.1c0.2,1.2,0.4,2.5,0.4,3.8c0,0.7,0.1,1.3,0.1,2C58.7,64.7,55.5,73,49.5,79.5z  M51,79.8c0.2-0.2,0.4-0.4,0.5-0.6c0.3-0.3,0.5-0.6,0.8-1c0.1-0.2,0.3-0.4,0.4-0.6c0.3-0.4,0.6-0.8,0.8-1.2c0.1-0.1,0.2-0.3,0.3-0.4 c0.3-0.5,0.6-1,0.9-1.5c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c3.4-5.7,5.1-12.2,5.1-18.6c0-0.7,0-1.4-0.1-2.1c-0.1-1.3-0.2-2.7-0.4-4 c-0.1-0.3-0.1-0.6-0.2-0.9c-0.1-0.4-0.1-0.7-0.2-1.1C57.8,42,55,36.5,50.8,31.8c-0.4-0.4-0.9-0.6-1.4-0.6c-0.4,0-0.8,0.1-1.2,0.4 c-2.5,2.8-4.5,5.8-6,9c-0.3,0.6-0.6,1.3-0.9,2c-5.1,13-2.4,28.4,8.1,38.9c0,0,0,0,0,0c0,0,0,0,0,0h0l0.3-0.3 c0.1-0.1,0.3-0.3,0.4-0.4C50.5,80.4,50.7,80.1,51,79.8z" />
                     </svg>
                   </div>
                 </div>
 
                 {/* Card 3: Enquiry Form */}
-                <div 
+                <div
                   className="mobile-card-width"
                   style={{
                     backgroundColor: '#1a3d3d',
@@ -558,121 +558,121 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     zIndex: 0
                   }} />
                   <div style={{ position: 'relative', zIndex: 1 }}>
-                  <h3 
-                    style={{
-                      fontFamily: 'Philosopher, serif',
-                      fontSize: '28px',
-                      marginBottom: '28px',
-                      color: 'white'
-                    }}
-                  >
-                    Register Appointment
-                  </h3>
+                    <h3
+                      style={{
+                        fontFamily: 'Philosopher, serif',
+                        fontSize: '28px',
+                        marginBottom: '28px',
+                        color: 'white'
+                      }}
+                    >
+                      Register Appointment
+                    </h3>
 
-                  <form style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <input
-                      type="text"
-                      placeholder="Name*"
-                      style={{
-                        padding: '16px 20px',
-                        borderRadius: '50px',
-                        border: 'none',
-                        fontSize: '15px',
-                        backgroundColor: '#fff',
-                        color: '#333'
-                      }}
-                    />
-                    <input
-                      type="email"
-                      placeholder="E-mail Address*"
-                      style={{
-                        padding: '16px 20px',
-                        borderRadius: '50px',
-                        border: 'none',
-                        fontSize: '15px',
-                        backgroundColor: '#fff',
-                        color: '#333'
-                      }}
-                    />
-                    <select
-                      style={{
-                        padding: '16px 20px',
-                        borderRadius: '50px',
-                        border: 'none',
-                        fontSize: '15px',
-                        backgroundColor: '#fff',
-                        color: '#666',
-                        appearance: 'none',
-                        backgroundImage: 'url("data:image/svg+xml,%3Csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M1 1L6 6L11 1%27 stroke=%27%23666%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E")',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'right 20px center',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      <option value="">Select Service*</option>
-                      <option value="orthopedic">Orthopedic Rehabilitation</option>
-                      <option value="neurological">Neurological Rehabilitation</option>
-                      <option value="cardio">Cardio Pulmonary</option>
-                      <option value="pediatric">Pediatric Rehabilitation</option>
-                      <option value="geriatric">Geriatric Rehabilitation</option>
-                      <option value="sports">Sports Rehabilitation</option>
-                      <option value="womens">Women's Health</option>
-                      <option value="posture">Posture Correction</option>
-                      <option value="pain">Pain Management</option>
-                    </select>
-                    <textarea
-                      placeholder="Message"
-                      rows={4}
-                      style={{
-                        padding: '16px 20px',
-                        borderRadius: '20px',
-                        border: 'none',
-                        fontSize: '15px',
-                        backgroundColor: '#fff',
-                        color: '#333',
-                        resize: 'vertical',
-                        fontFamily: 'Poppins, sans-serif'
-                      }}
-                    />
-                    <button
-                      type="submit"
-                      style={{
-                        padding: '16px 32px',
-                        backgroundColor: isButtonClicked ? '#fff' : '#0f8987',
-                        color: isButtonClicked ? '#0f8987' : '#fff',
-                        border: '2px solid #0f8987',
-                        borderRadius: '50px',
-                        fontSize: '16px',
-                        fontWeight: '600',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                        fontFamily: 'Poppins, sans-serif'
-                      }}
-                      onMouseEnter={(e) => {
-                        if (!isButtonClicked) {
-                          e.currentTarget.style.backgroundColor = '#33a9b1';
-                          e.currentTarget.style.transform = 'translateY(-2px)';
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (!isButtonClicked) {
-                          e.currentTarget.style.backgroundColor = '#0f8987';
-                          e.currentTarget.style.transform = 'translateY(0)';
-                        }
-                      }}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsButtonClicked(!isButtonClicked);
-                      }}
-                    >
-                      Schedule Your Visit
-                    </button>
-                  </form>
+                    <form style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                      <input
+                        type="text"
+                        placeholder="Name*"
+                        style={{
+                          padding: '16px 20px',
+                          borderRadius: '50px',
+                          border: 'none',
+                          fontSize: '15px',
+                          backgroundColor: '#fff',
+                          color: '#333'
+                        }}
+                      />
+                      <input
+                        type="email"
+                        placeholder="E-mail Address*"
+                        style={{
+                          padding: '16px 20px',
+                          borderRadius: '50px',
+                          border: 'none',
+                          fontSize: '15px',
+                          backgroundColor: '#fff',
+                          color: '#333'
+                        }}
+                      />
+                      <select
+                        style={{
+                          padding: '16px 20px',
+                          borderRadius: '50px',
+                          border: 'none',
+                          fontSize: '15px',
+                          backgroundColor: '#fff',
+                          color: '#666',
+                          appearance: 'none',
+                          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M1 1L6 6L11 1%27 stroke=%27%23666%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E")',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'right 20px center',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        <option value="">Select Service*</option>
+                        <option value="orthopedic">Orthopedic Rehabilitation</option>
+                        <option value="neurological">Neurological Rehabilitation</option>
+                        <option value="cardio">Cardio Pulmonary</option>
+                        <option value="pediatric">Pediatric Rehabilitation</option>
+                        <option value="geriatric">Geriatric Rehabilitation</option>
+                        <option value="sports">Sports Rehabilitation</option>
+                        <option value="womens">Women's Health</option>
+                        <option value="posture">Posture Correction</option>
+                        <option value="pain">Pain Management</option>
+                      </select>
+                      <textarea
+                        placeholder="Message"
+                        rows={4}
+                        style={{
+                          padding: '16px 20px',
+                          borderRadius: '20px',
+                          border: 'none',
+                          fontSize: '15px',
+                          backgroundColor: '#fff',
+                          color: '#333',
+                          resize: 'vertical',
+                          fontFamily: 'Poppins, sans-serif'
+                        }}
+                      />
+                      <button
+                        type="submit"
+                        style={{
+                          padding: '16px 32px',
+                          backgroundColor: isButtonClicked ? '#fff' : '#0f8987',
+                          color: isButtonClicked ? '#0f8987' : '#fff',
+                          border: '2px solid #0f8987',
+                          borderRadius: '50px',
+                          fontSize: '16px',
+                          fontWeight: '600',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                          fontFamily: 'Poppins, sans-serif'
+                        }}
+                        onMouseEnter={(e) => {
+                          if (!isButtonClicked) {
+                            e.currentTarget.style.backgroundColor = '#33a9b1';
+                            e.currentTarget.style.transform = 'translateY(-2px)';
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (!isButtonClicked) {
+                            e.currentTarget.style.backgroundColor = '#0f8987';
+                            e.currentTarget.style.transform = 'translateY(0)';
+                          }
+                        }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsButtonClicked(!isButtonClicked);
+                        }}
+                      >
+                        Schedule Your Visit
+                      </button>
+                    </form>
                   </div>
                 </div>
 
                 {/* Card 4: All Specialities List */}
-                <div 
+                <div
                   className="mobile-card-width"
                   style={{
                     backgroundColor: 'rgb(26, 61, 61)',
@@ -695,67 +695,67 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     zIndex: 0
                   }} />
                   <div style={{ position: 'relative', zIndex: 1 }}>
-                  <h3 
-                    style={{
-                      fontFamily: 'Philosopher, serif',
-                      fontSize: '24px',
-                      marginBottom: '24px',
-                      color: 'white',
-                      textAlign: 'center',
-                      borderBottom: '1px solid rgba(255,255,255,0.2)',
-                      paddingBottom: '12px'
-                    }}
-                  >
-                    Our Specialities
-                  </h3>
-                  
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    {allSpecialities.map((speciality, idx) => {
-                      const isActive = speciality.name === data.name;
-                      return (
-                        <li 
-                          key={idx}
-                          style={{
-                            marginBottom: '8px'
-                          }}
-                        >
-                          <div
-                            onClick={() => navigate(speciality.path)}
+                    <h3
+                      style={{
+                        fontFamily: 'Philosopher, serif',
+                        fontSize: '24px',
+                        marginBottom: '24px',
+                        color: 'white',
+                        textAlign: 'center',
+                        borderBottom: '1px solid rgba(255,255,255,0.2)',
+                        paddingBottom: '12px'
+                      }}
+                    >
+                      Our Specialities
+                    </h3>
+
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {allSpecialities.map((speciality, idx) => {
+                        const isActive = speciality.name === data.name;
+                        return (
+                          <li
+                            key={idx}
                             style={{
-                              display: 'block',
-                              padding: '12px 16px',
-                              borderRadius: '8px',
-                              textDecoration: 'none',
-                              fontSize: '15px',
-                              fontFamily: 'Poppins, sans-serif',
-                              backgroundColor: isActive ? '#0f8987' : 'rgba(255,255,255,0.1)',
-                              color: isActive ? 'white' : '#ffffff',
-                              fontWeight: isActive ? '600' : '400',
-                              transition: 'all 0.3s ease',
-                              border: isActive ? 'none' : '1px solid rgba(255,255,255,0.2)',
-                              cursor: 'pointer'
-                            }}
-                            onMouseEnter={(e) => {
-                              if (!isActive) {
-                                e.currentTarget.style.backgroundColor = 'rgba(193, 245, 241, 0.3)';
-                                e.currentTarget.style.borderColor = '#c1f5f1';
-                                e.currentTarget.style.color = '#c1f5f1';
-                              }
-                            }}
-                            onMouseLeave={(e) => {
-                              if (!isActive) {
-                                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
-                                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                                e.currentTarget.style.color = '#ffffff';
-                              }
+                              marginBottom: '8px'
                             }}
                           >
-                            {isActive && '► '}{speciality.name}
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                            <div
+                              onClick={() => navigate(speciality.path)}
+                              style={{
+                                display: 'block',
+                                padding: '12px 16px',
+                                borderRadius: '8px',
+                                textDecoration: 'none',
+                                fontSize: '15px',
+                                fontFamily: 'Poppins, sans-serif',
+                                backgroundColor: isActive ? '#0f8987' : 'rgba(255,255,255,0.1)',
+                                color: isActive ? 'white' : '#ffffff',
+                                fontWeight: isActive ? '600' : '400',
+                                transition: 'all 0.3s ease',
+                                border: isActive ? 'none' : '1px solid rgba(255,255,255,0.2)',
+                                cursor: 'pointer'
+                              }}
+                              onMouseEnter={(e) => {
+                                if (!isActive) {
+                                  e.currentTarget.style.backgroundColor = 'rgba(193, 245, 241, 0.3)';
+                                  e.currentTarget.style.borderColor = '#c1f5f1';
+                                  e.currentTarget.style.color = '#c1f5f1';
+                                }
+                              }}
+                              onMouseLeave={(e) => {
+                                if (!isActive) {
+                                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+                                  e.currentTarget.style.color = '#ffffff';
+                                }
+                              }}
+                            >
+                              {isActive && '► '}{speciality.name}
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -816,7 +816,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src='https://youtu.be/i0rA0BEQOuA?si=gJ1luoPLTeVSDyif'
               title="Physiotherapy Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
