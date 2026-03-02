@@ -5,6 +5,7 @@ import { BackButton } from '../components/BackButton';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import tabCardImage from 'figma:asset/15edbbd6f09c65f963ef0c8380f86dc217a01ecb.png';
 import { AKHIL } from '../const';
+import { HOME_IMAGES } from '../const';
 
 export function AboutUsPage() {
   const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'values'>('mission');
@@ -421,7 +422,7 @@ export function AboutUsPage() {
                 }}
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1754941622138-b3c3671f2fa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXB5JTIwY2xpbmljJTIwbW9kZXJufGVufDF8fHx8MTc2NzEwMzg1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[11]}
                   alt="Physiotherapy Clinic"
                   className="w-full h-full"
                   style={{ objectFit: 'cover' }}
@@ -788,7 +789,7 @@ export function AboutUsPage() {
                       }}
                     >
                       <img
-                        src={tabCardImage}
+                        src={HOME_IMAGES[3]}
                         alt="Physiotherapy Care"
                         className="w-full h-full"
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -972,7 +973,7 @@ export function AboutUsPage() {
                       }}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc2OTE0NzU5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                        src={HOME_IMAGES[5]}
                         alt="Physiotherapy Care"
                         className="w-full h-full"
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -1156,7 +1157,7 @@ export function AboutUsPage() {
                       }}
                     >
                       <img
-                        src={tabCardImage}
+                        src={HOME_IMAGES[4]}
                         alt="Physiotherapy Care"
                         className="w-full h-full"
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -2561,7 +2562,7 @@ export function AboutUsPage() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/i0rA0BEQOuA"
               title="Client Testimonial Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
