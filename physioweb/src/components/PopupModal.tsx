@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { HOME_IMAGES } from '../const';
 
 interface PopupModalProps {
   isOpen: boolean;
@@ -117,8 +118,7 @@ export function PopupModal({ isOpen, onClose }: PopupModalProps) {
                   }}
                 >
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1731514836024-614e2bab04c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaW90aGVyYXBpc3QlMjBoZWxwaW5nJTIwcGF0aWVudCUyMHNtaWxpbmd8ZW58MXx8fHwxNzY2MjQ4MTEzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Physiotherapy Treatment"
+                    src={HOME_IMAGES[11]}
                     className="w-full h-full object-cover"
                     style={{
                       minHeight: window.innerWidth < 768 ? '180px' : '100%'

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Activity, Hand, Dumbbell, Heart, Users, Zap } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useNavigate } from '../App';
+import { DEPARTMENTS } from '../const';
 
 interface Service {
   icon: React.ReactNode;
@@ -21,7 +22,7 @@ export function QualityRehabServicesSection() {
       icon: <Activity size={24} />,
       title: 'Advanced Physiotherapy Treatment',
       description: 'Our advanced physiotherapy treatments are designed to relieve pain, restore joint function, and enhance mobility....',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200',
+      image: DEPARTMENTS[0],
       slug: 'advanced-physiotherapy'
     },
     {
@@ -49,7 +50,7 @@ export function QualityRehabServicesSection() {
       icon: <Users size={24} />,
       title: 'Pediatric Therapy',
       description: 'Specialized therapy programs tailored for children to support developmental milestones and physical growth....',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200',
+      image: DEPARTMENTS[2],
       slug: 'pediatric-therapy'
     },
     {

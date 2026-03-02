@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
+import { HOME_IMAGES } from '../const';
 interface Testimonial {
   id: number;
   name: string;
@@ -75,11 +75,11 @@ export function ClientTestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section 
-      className="relative min-h-[600px]" 
-      style={{ 
+    <section
+      className="relative min-h-[600px]"
+      style={{
         backgroundColor: '#1F3D3F',
-        backgroundImage: `url('https://physeo.wpengine.com/wp-content/uploads/2025/07/home-1-testimonial-bg-1.jpg')`,
+        backgroundImage: `url(${HOME_IMAGES[2]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center left',
         backgroundRepeat: 'no-repeat',
@@ -89,7 +89,7 @@ export function ClientTestimonialsSection() {
       }}
     >
       {/* Gradient Overlay - Transparent left to dark teal right */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           background: 'linear-gradient(90deg, rgba(8, 8, 8, 0) 18%, #1F3D3F 65%)'
@@ -97,7 +97,7 @@ export function ClientTestimonialsSection() {
       />
 
       {/* X-ray Background Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.04] z-0"
         style={{
           backgroundImage: `url('https://physeo.wpengine.com/wp-content/uploads/2025/06/Home-1-exray-bg.png')`,
@@ -107,9 +107,9 @@ export function ClientTestimonialsSection() {
       />
 
       {/* Soft Teal Glow - Top Right Corner */}
-      <div 
+      <div
         className="absolute opacity-30 blur-3xl pointer-events-none z-0"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #0f8987 0%, transparent 70%)',
           width: '200px',
           height: '200px',
@@ -119,9 +119,9 @@ export function ClientTestimonialsSection() {
       />
 
       {/* Soft Teal Glow - Bottom Left Corner */}
-      <div 
+      <div
         className="absolute opacity-20 blur-2xl pointer-events-none z-0"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #c1f5f1 0%, transparent 70%)',
           width: '150px',
           height: '150px',
@@ -131,9 +131,9 @@ export function ClientTestimonialsSection() {
       />
 
       {/* Soft Teal Glow - Center */}
-      <div 
+      <div
         className="absolute opacity-10 blur-3xl pointer-events-none z-0"
-        style={{ 
+        style={{
           background: 'radial-gradient(circle, #33a9b1 0%, transparent 70%)',
           width: '300px',
           height: '300px',
@@ -146,26 +146,26 @@ export function ClientTestimonialsSection() {
       {/* Content Container */}
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-          
+
           {/* Left Side - Empty space (shows background image through transparent gradient) */}
           <div className="hidden lg:block" />
 
           {/* Right Side - Testimonial Content */}
           <div className="relative flex items-center px-8 sm:px-12 lg:px-16 py-16 lg:py-20">
             <div className="w-full">
-              
+
               {/* Label */}
               <div className="flex items-center gap-2 mb-6">
-                <div 
-                  style={{ 
-                    width: '8px', 
-                    height: '8px', 
+                <div
+                  style={{
+                    width: '8px',
+                    height: '8px',
                     borderRadius: '50%',
                     backgroundColor: '#33a9b1'
-                  }} 
+                  }}
                 />
-                <span 
-                  style={{ 
+                <span
+                  style={{
                     color: '#33a9b1',
                     fontSize: '12px',
                     fontWeight: '600',
@@ -178,9 +178,9 @@ export function ClientTestimonialsSection() {
               </div>
 
               {/* Heading */}
-              <h2 
+              <h2
                 className="mb-8"
-                style={{ 
+                style={{
                   color: 'white',
                   lineHeight: '1.3',
                   letterSpacing: '-0.5px'
@@ -199,9 +199,9 @@ export function ClientTestimonialsSection() {
                   transition={{ duration: 0.4, ease: 'easeInOut' }}
                 >
                   {/* Testimonial Text */}
-                  <p 
+                  <p
                     className="mb-8"
-                    style={{ 
+                    style={{
                       color: 'rgba(255, 255, 255, 0.85)',
                       fontSize: '16px',
                       lineHeight: '1.75',
@@ -243,15 +243,15 @@ export function ClientTestimonialsSection() {
                       src={currentTestimonial.image}
                       alt={currentTestimonial.name}
                       className="rounded-full object-cover"
-                      style={{ 
-                        width: '60px', 
+                      style={{
+                        width: '60px',
                         height: '60px',
                         border: '3px solid rgba(51, 169, 177, 0.3)'
                       }}
                     />
                     <div>
-                      <h4 
-                        style={{ 
+                      <h4
+                        style={{
                           color: 'white',
                           fontSize: '18px',
                           fontWeight: '600',
@@ -261,8 +261,8 @@ export function ClientTestimonialsSection() {
                       >
                         {currentTestimonial.name}
                       </h4>
-                      <p 
-                        style={{ 
+                      <p
+                        style={{
                           color: 'rgba(255, 255, 255, 0.6)',
                           fontSize: '14px',
                           fontWeight: '400'
@@ -296,9 +296,9 @@ export function ClientTestimonialsSection() {
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  <ChevronLeft 
+                  <ChevronLeft
                     className="transition-colors duration-300"
-                    style={{ 
+                    style={{
                       width: '24px',
                       height: '24px',
                       strokeWidth: 2.5,
@@ -332,9 +332,9 @@ export function ClientTestimonialsSection() {
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
-                  <ChevronRight 
+                  <ChevronRight
                     className="transition-colors duration-300"
-                    style={{ 
+                    style={{
                       width: '24px',
                       height: '24px',
                       strokeWidth: 2.5,

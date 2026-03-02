@@ -24,7 +24,49 @@ import xrayImage from './assets/images/xrayImage.png';
 
 import heroclinic from './assets/images/akhil/clinic-1.jpeg';
 
+import specialities1 from './assets/images/specialities1.jpg';
+import specialities2 from './assets/images/specialities2.jpg';
+import specialities3 from './assets/images/specialities3.jpg';
+import specialities4 from './assets/images/specialities4.jpg';
+import specialities5 from './assets/images/specialities5.jpg';
 
+
+import home1 from './assets/images/Home/homesection1.jpeg';
+import home2 from './assets/images/Home/homesection2.jpeg';
+import home3 from './assets/images/Home/homesection3.jpeg';
+import home4 from './assets/images/Home/homesection4.jpeg';
+import home5 from './assets/images/Home/homesection5.jpeg';
+import home6 from './assets/images/Home/homesection6.jpeg';
+import sceleton from './assets/images/Home/scaleton.png';
+import home7 from './assets/images/Home/scrollsection1.jpeg';
+import home8 from './assets/images/Home/scrollsection2.jpeg';
+import home9 from './assets/images/Home/scrollsection3.jpeg';
+import home10 from './assets/images/Home/scrollsection4.jpeg';
+import splash from './assets/images/Home/splashimage.jpeg';
+import backpain from './assets/images/Home/backtherapy.jpg';
+import dept2 from './assets/images/Home/department2.jpeg';
+import dept3 from './assets/images/Home/department3.jpeg';
+
+
+
+
+export const HOME_IMAGES = [
+    home1,
+    home2,
+    home3,
+    home4,
+    home5, //pain relief
+    home6,
+    sceleton,
+    home7,  //neck pain
+    home8,  //shoulder pain
+    home9,  //knee pain
+    home10, //hand pain
+    splash,
+    backpain,
+    dept2,
+    dept3,
+];
 
 export const AWARDS = [
 
@@ -55,4 +97,13 @@ export const AKHIL = [
     akhilImg,
     homeHero,
     xrayImage,
-]
+];
+
+export const DEPARTMENTS = [
+    specialities1,
+    specialities2,
+    specialities3,
+    specialities4,
+    specialities5,
+];
+

@@ -14,6 +14,7 @@ import { ScheduleAppointmentSection } from './ScheduleAppointmentSection';
 import { FunctionalRestorationSection } from './FunctionalRestorationSection';
 import { QualityRehabServicesSection } from './QualityRehabServicesSection';
 import { AKHIL } from '../const';
+import { HOME_IMAGES } from '../const';
 
 export function HomePage() {
   const [formData, setFormData] = React.useState({
@@ -309,8 +310,8 @@ export function HomePage() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pointer-events-none" style={{ zIndex: 5 }}>
-          {/* Pagination Dots */}
+        {/* <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pointer-events-none" style={{ zIndex: 5 }}>
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -321,7 +322,7 @@ export function HomePage() {
             <button className="w-3 h-3 rounded-full bg-white/40 transition-transform hover:scale-125" aria-label="Slide 2" />
             <button className="w-3 h-3 rounded-full bg-white/40 transition-transform hover:scale-125" aria-label="Slide 3" />
           </motion.div>
-        </div>
+        </div> */}
       </section>
 
       {/* Care Services Section */}
@@ -345,7 +346,7 @@ export function HomePage() {
                 }}
               >
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1582380375444-275b280990a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcnRob3BlZGljJTIwcGh5c2lvdGhlcmFweXxlbnwxfHx8fDE3NjYwNjg2OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[0]}
                   alt="Physiotherapy Treatment"
                   className="w-full h-full object-cover"
                   style={{ height: '571px' }}
@@ -402,7 +403,7 @@ export function HomePage() {
                   }}
                 >
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1522845052468-8b871a6176e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjBleGVyY2lzZXxlbnwxfHx8fDE3NjYwNjg2OTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src={HOME_IMAGES[11]}
                     alt="Physical Therapy Exercise"
                     className="w-full object-cover"
                     style={{ height: '278px' }}
@@ -422,7 +423,7 @@ export function HomePage() {
                   }}
                 >
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDY4Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src={HOME_IMAGES[1]}
                     alt="Spine Therapy Treatment"
                     className="w-full object-cover"
                     style={{ height: '278px' }}
@@ -854,7 +855,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1648638810948-f3bf2cccdde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYW5kJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[10]}
                   alt="Hand Therapy"
                   className="therapy-card-image"
                 />
@@ -870,7 +871,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1615997380705-504484cd99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG91bGRlciUyMHRoZXJhcHklMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzY2MDcxMDc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[8]}
                   alt="Shoulder Therapy"
                   className="therapy-card-image"
                 />
@@ -886,7 +887,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1630623093163-6ee6c84d61e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWluJTIwcmVsaWVmJTIwdGhlcmFweXxlbnwxfHx8fDE3NjYwNzEwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[5]}
                   alt="Pain Relief"
                   className="therapy-card-image"
                 />
@@ -902,7 +903,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1643237131522-bbf79b062ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZWNrJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[7]}
                   alt="Neck Wellness"
                   className="therapy-card-image"
                 />
@@ -918,7 +919,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDF8fHx8MTc2NjA3MTA3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[12]}
                   alt="Back Therapy"
                   className="therapy-card-image"
                 />
@@ -934,7 +935,7 @@ export function HomePage() {
             <div className="therapy-card">
               <div className="therapy-card-image-container">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1609113160023-4e31f3765fd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrbmVlJTIwdGhlcmFweSUyMHBoeXNpb3RoZXJhcHl8ZW58MXx8fHwxNzY2MDcxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={HOME_IMAGES[9]}
                   alt="Knee Therapy"
                   className="therapy-card-image"
                 />
@@ -1151,7 +1152,7 @@ export function HomePage() {
             {/* Central Skeleton Illustration */}
             <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
               <img
-                src="https://physeo.wpengine.com/wp-content/uploads/2025/07/home-3-hotspot-bg.png"
+                src={HOME_IMAGES[6]}
                 alt="Human Body Anatomy"
                 className="h-full w-auto max-h-[700px] object-contain opacity-90"
               />
