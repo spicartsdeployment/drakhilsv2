@@ -42,6 +42,55 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    name: '',
+
+    service: '',
+    contact: '',
+    date: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+
+    if (e.target.checkValidity()) {
+      console.log("Form Submitted:", formData);
+      // emailjs.
+      //   send(
+      //     "service_qsm8f4",
+      //     "template_w7upb1",
+      //     formData,
+      //     "1AZTh6dOkB_Uzld2d"
+
+
+      //   )
+
+      const phone = '918333890389';
+      const whatsappURL = ` https://wa.me/${phone}?text=Hi, my name is  ${formData.name}, and Iam looking for  ${formData.service} connect me with at  : ${formData.contact} my preffered date is  ${formData.date} and   ${formData.message} to begin healing!`;
+      window.open(whatsappURL, "_blank");
+
+
+
+      // Reset form
+      setFormData({ name: "", service: "", contact: "", date: "", message: "" });
+      e.target.reset();
+    }
+
+
+
+  };
+
   // All specialities list
   const allSpecialities = [
     { name: 'Nursing Care', path: '/specialities/nursing-care' },
@@ -400,7 +449,7 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                           fontWeight: '400',
                           letterSpacing: '0.3px'
                         }}>
-                          + 864 846 75324
+                          +91 83338 90389
                         </span>
                       </div>
                     </div>
@@ -557,118 +606,152 @@ export function SpecialityPage({ data }: SpecialityPageProps) {
                     borderRadius: '24px',
                     zIndex: 0
                   }} />
-                  <div style={{ position: 'relative', zIndex: 1 }}>
-                    <h3
-                      style={{
-                        fontFamily: 'Philosopher, serif',
-                        fontSize: '28px',
-                        marginBottom: '28px',
-                        color: 'white'
-                      }}
-                    >
-                      Register Appointment
-                    </h3>
+                  <form onSubmit={handleSubmit}>
+                    <div style={{ position: 'relative', zIndex: 1 }}>
+                      <h3
+                        style={{
+                          fontFamily: 'Philosopher, serif',
+                          fontSize: '28px',
+                          marginBottom: '28px',
+                          color: 'white'
+                        }}
+                      >
+                        Register Appointment
+                      </h3>
 
-                    <form style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                      <input
-                        type="text"
-                        placeholder="Name*"
-                        style={{
-                          padding: '16px 20px',
-                          borderRadius: '50px',
-                          border: 'none',
-                          fontSize: '15px',
-                          backgroundColor: '#fff',
-                          color: '#333'
-                        }}
-                      />
-                      <input
-                        type="email"
-                        placeholder="E-mail Address*"
-                        style={{
-                          padding: '16px 20px',
-                          borderRadius: '50px',
-                          border: 'none',
-                          fontSize: '15px',
-                          backgroundColor: '#fff',
-                          color: '#333'
-                        }}
-                      />
-                      <select
-                        style={{
-                          padding: '16px 20px',
-                          borderRadius: '50px',
-                          border: 'none',
-                          fontSize: '15px',
-                          backgroundColor: '#fff',
-                          color: '#666',
-                          appearance: 'none',
-                          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M1 1L6 6L11 1%27 stroke=%27%23666%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E")',
-                          backgroundRepeat: 'no-repeat',
-                          backgroundPosition: 'right 20px center',
-                          cursor: 'pointer'
-                        }}
-                      >
-                        <option value="">Select Service*</option>
-                        <option value="orthopedic">Orthopedic Rehabilitation</option>
-                        <option value="neurological">Neurological Rehabilitation</option>
-                        <option value="cardio">Cardio Pulmonary</option>
-                        <option value="pediatric">Pediatric Rehabilitation</option>
-                        <option value="geriatric">Geriatric Rehabilitation</option>
-                        <option value="sports">Sports Rehabilitation</option>
-                        <option value="womens">Women's Health</option>
-                        <option value="posture">Posture Correction</option>
-                        <option value="pain">Pain Management</option>
-                      </select>
-                      <textarea
-                        placeholder="Message"
-                        rows={4}
-                        style={{
-                          padding: '16px 20px',
-                          borderRadius: '20px',
-                          border: 'none',
-                          fontSize: '15px',
-                          backgroundColor: '#fff',
-                          color: '#333',
-                          resize: 'vertical',
-                          fontFamily: 'Poppins, sans-serif'
-                        }}
-                      />
-                      <button
-                        type="submit"
-                        style={{
-                          padding: '16px 32px',
-                          backgroundColor: isButtonClicked ? '#fff' : '#0f8987',
-                          color: isButtonClicked ? '#0f8987' : '#fff',
-                          border: '2px solid #0f8987',
-                          borderRadius: '50px',
-                          fontSize: '16px',
-                          fontWeight: '600',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          fontFamily: 'Poppins, sans-serif'
-                        }}
-                        onMouseEnter={(e) => {
-                          if (!isButtonClicked) {
-                            e.currentTarget.style.backgroundColor = '#33a9b1';
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                          }
-                        }}
-                        onMouseLeave={(e) => {
-                          if (!isButtonClicked) {
-                            e.currentTarget.style.backgroundColor = '#0f8987';
-                            e.currentTarget.style.transform = 'translateY(0)';
-                          }
-                        }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setIsButtonClicked(!isButtonClicked);
-                        }}
-                      >
-                        Schedule Your Visit
-                      </button>
-                    </form>
-                  </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Name*"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          style={{
+                            padding: '16px 20px',
+                            borderRadius: '50px',
+                            border: 'none',
+                            fontSize: '15px',
+                            backgroundColor: '#fff',
+                            color: '#333'
+                          }}
+                        />
+                        <input
+                          type="number"
+                          name="contact"
+                          placeholder="Contact Number*"
+                          value={formData.contact}
+                          onChange={handleInputChange}
+                          style={{
+                            padding: '16px 20px',
+                            borderRadius: '50px',
+                            border: 'none',
+                            fontSize: '15px',
+                            backgroundColor: '#fff',
+                            color: '#333'
+                          }}
+                        />
+                        <select
+                          name="service"
+                          value={formData.service}
+                          onChange={handleInputChange}
+                          style={{
+                            padding: '16px 20px',
+                            borderRadius: '50px',
+                            border: 'none',
+                            fontSize: '15px',
+                            backgroundColor: '#fff',
+                            color: '#666',
+                            appearance: 'none',
+                            backgroundImage: 'url("data:image/svg+xml,%3Csvg width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M1 1L6 6L11 1%27 stroke=%27%23666%27 stroke-width=%272%27 stroke-linecap=%27round%27/%3E%3C/svg%3E")',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'right 20px center',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          <option value="">Select Service*</option>
+                          <option value="orthopedic">Orthopedic Rehabilitation</option>
+                          <option value="neurological">Neurological Rehabilitation</option>
+                          <option value="cardio">Cardio Pulmonary</option>
+                          <option value="pediatric">Pediatric Rehabilitation</option>
+                          <option value="geriatric">Geriatric Rehabilitation</option>
+                          <option value="sports">Sports Rehabilitation</option>
+                          <option value="womens">Women's Health</option>
+                          <option value="posture">Posture Correction</option>
+                          <option value="pain">Pain Management</option>
+                        </select>
+
+                        <input
+                          type="text"
+                          name="date"
+                          value={formData.date}
+                          onChange={handleInputChange}
+                          placeholder="Select Date & Time"
+                          style={{
+                            padding: '16px 20px',
+                            borderRadius: '50px',
+                            border: 'none',
+                            fontSize: '15px',
+                            backgroundColor: '#fff',
+                            color: '#666',
+                            backgroundImage: 'url("data:image/svg+xml,%3Csvg width=%2716%27 height=%2716%27 viewBox=%270 0 16 16%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12.667 2.667H3.333C2.597 2.667 2 3.264 2 4v9.333c0 .737.597 1.334 1.333 1.334h9.334c.736 0 1.333-.597 1.333-1.334V4c0-.736-.597-1.333-1.333-1.333zM5.333 1.333V4M10.667 1.333V4M2 6.667h12%27 stroke=%27%23666%27 stroke-width=%271.5%27 stroke-linecap=%27round%27/%3E%3C/svg%3E")',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'right 20px center'
+                          }}
+                        />
+
+                        <textarea
+                          name="message"
+                          placeholder="Message"
+                          rows={4}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          style={{
+                            padding: '16px 20px',
+                            borderRadius: '20px',
+                            border: 'none',
+                            fontSize: '15px',
+                            backgroundColor: '#fff',
+                            color: '#333',
+                            resize: 'vertical',
+                            fontFamily: 'Poppins, sans-serif'
+                          }}
+                        />
+                        <button
+                          type="submit"
+                          style={{
+                            padding: '16px 32px',
+                            backgroundColor: isButtonClicked ? '#fff' : '#0f8987',
+                            color: isButtonClicked ? '#0f8987' : '#fff',
+                            border: '2px solid #0f8987',
+                            borderRadius: '50px',
+                            fontSize: '16px',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            fontFamily: 'Poppins, sans-serif'
+                          }}
+                          onMouseEnter={(e) => {
+                            if (!isButtonClicked) {
+                              e.currentTarget.style.backgroundColor = '#33a9b1';
+                              e.currentTarget.style.transform = 'translateY(-2px)';
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (!isButtonClicked) {
+                              e.currentTarget.style.backgroundColor = '#0f8987';
+                              e.currentTarget.style.transform = 'translateY(0)';
+                            }
+                          }}
+                          onClick={(e) => {
+
+                            setIsButtonClicked(!isButtonClicked);
+                          }}
+                        >
+                          Schedule Your Visit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
 
                 {/* Card 4: All Specialities List */}

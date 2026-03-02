@@ -1,11 +1,14 @@
 import { Heart, Shield, Award, Users, CheckCircle, Target } from 'lucide-react';
 import React from 'react';
-
+import { DEPT_IMAGES } from '../const';
+import { SPECIALTIES_IMAGES } from '../const';
 export const departmentsData = {
   orthopedic: {
     name: 'Orthopedic Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1582380375444-275b280990a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcnRob3BlZGljJTIwcmVoYWJpbGl0YXRpb24lMjB0aGVyYXB5fGVufDF8fHx8MTc2NDY3NTYwOHww&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Our orthopedic rehabilitation program specializes in helping patients recover from bone, joint, and muscle injuries. We use evidence-based treatments and advanced techniques to restore mobility and strength.\n\nWhether you\'re recovering from surgery, dealing with chronic pain, or healing from a sports injury, our expert team provides comprehensive care tailored to your specific condition. We combine hands-on manual therapy with therapeutic exercises to accelerate your recovery.\n\nOur state-of-the-art facility features the latest rehabilitation equipment and technology to support your healing journey. From joint mobilization to strength training, we employ proven methods that have helped thousands of patients regain their function.\n\nWe work closely with your orthopedic surgeon and other healthcare providers to ensure a coordinated approach to your recovery. Our therapists stay current with the latest research and techniques in orthopedic rehabilitation.\n\nOur goal is not just to help you recover, but to prevent future injuries and optimize your long-term musculoskeletal health. We provide education and home exercise programs to empower you in your recovery journey.',
+    heroImage: DEPT_IMAGES[0],
+    description: `Our orthopedic rehabilitation program specializes in helping patients recover from bone, joint, and muscle injuries using evidence-based treatments and advanced techniques to restore mobility and strength. Whether you're recovering from surgery, dealing with chronic pain, or healing from a sports injury, our expert team provides comprehensive care tailored to your specific condition. We combine hands-on manual therapy with therapeutic exercises to accelerate recovery and improve overall function.
+
+Our state-of-the-art facility features the latest rehabilitation equipment and technology to support your healing journey. From joint mobilization to strength training, we use proven methods that have helped many patients regain mobility and strength. We also work closely with orthopedic surgeons and healthcare providers to ensure coordinated care, while educating patients with home exercise programs to prevent future injuries and support long-term musculoskeletal health.`,
     whyUsPoints: [
       {
         icon: React.createElement(Award, { size: 24 }),
@@ -23,10 +26,10 @@ export const departmentsData = {
         description: 'Customized rehabilitation plans tailored to your specific condition, goals, and lifestyle needs.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[0],
     stats: {
       supportGiven: '5000+',
-      yearsExperience: '15+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '4500+'
     },
@@ -82,8 +85,10 @@ export const departmentsData = {
   },
   neurological: {
     name: 'Neurological Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1566669419640-ae09e20a18d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyb2xvZ2ljYWwlMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2NzU2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Specialized care for individuals with neurological conditions such as stroke, spinal cord injury, brain injury, Parkinson\'s disease, and multiple sclerosis. Our goal is to maximize independence and quality of life.\n\nOur multidisciplinary team brings together neurologists, physical therapists, and rehabilitation specialists who understand the complex nature of neurological conditions. We use cutting-edge, evidence-based techniques to promote neural recovery and functional improvement.\n\nThrough intensive, repetitive practice and task-specific training, we harness the brain\'s neuroplasticity to help you regain lost skills and develop compensatory strategies. Every treatment session is designed to challenge you appropriately while building confidence.\n\nWe address all aspects of neurological recovery including motor control, balance, coordination, cognitive function, and activities of daily living. Our therapists are specially trained in the latest neurological rehabilitation techniques and technologies.\n\nOur commitment extends beyond therapy sessions - we provide comprehensive education to you and your family, helping everyone understand the recovery process and how to support continued progress at home.',
+    heroImage: DEPT_IMAGES[1],
+    description: `Specialized care for individuals with neurological conditions such as stroke, spinal cord injury, brain injury, Parkinson’s disease, and multiple sclerosis. Our goal is to maximize independence and improve quality of life. Our multidisciplinary team includes neurologists, physical therapists, and rehabilitation specialists who understand the complex nature of neurological conditions and apply evidence-based techniques to support neural recovery and functional improvement.
+
+Through intensive and task-specific training, we use the brain’s neuroplasticity to help patients regain lost skills and develop effective coping strategies. We focus on motor control, balance, coordination, cognitive function, and daily living activities. In addition to therapy sessions, we provide education and guidance for patients and their families to support recovery and maintain progress at home.`,
     whyUsPoints: [
       {
         icon: React.createElement(Users, { size: 24 }),
@@ -101,10 +106,10 @@ export const departmentsData = {
         description: 'Proven neuroplasticity-based techniques to promote brain recovery and neural pathway development.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1666886573681-a8fbe983a3fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFsJTIwZG9jdG9yfGVufDF8fHx8MTc2NDU4NzY4OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[0],
     stats: {
       supportGiven: '3000+',
-      yearsExperience: '20+',
+      yearsExperience: '12+',
       visitorRating: '4.8/5',
       happyPatients: '2800+'
     },
@@ -160,8 +165,10 @@ export const departmentsData = {
   },
   cardio: {
     name: 'Cardio Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1715111641688-ea364ec391f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJkaWFjJTIwcmVoYWJpbGl0YXRpb24lMjBleGVyY2lzZXxlbnwxfHx8fDE3NjQ2NzU2MDh8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Evidence-based cardiac rehabilitation program designed to help patients recover from heart conditions, improve cardiovascular fitness, and reduce the risk of future cardiac events.\n\nOur comprehensive cardiac rehab program combines supervised exercise, education, and lifestyle counseling to support your heart health journey. We create a safe, monitored environment where you can rebuild strength and confidence after a cardiac event.\n\nEvery exercise session is carefully supervised by cardiac rehabilitation specialists who monitor your heart rate, blood pressure, and symptoms to ensure your safety. We gradually progress your exercise intensity based on your individual response and recovery.\n\nBeyond exercise, we provide extensive education on heart-healthy living, medication management, nutrition, stress reduction, and risk factor modification. This holistic approach addresses all aspects of cardiac health to reduce your risk of future events.\n\nOur program empowers you to take control of your heart health through sustainable lifestyle changes. We support you every step of the way from hospital discharge to independent, confident living.',
+    heroImage: DEPT_IMAGES[2],
+    description: `Evidence-based cardiac rehabilitation programs are designed to help patients recover from heart conditions, improve cardiovascular fitness, and reduce the risk of future cardiac events. Our comprehensive program combines supervised exercise, education, and lifestyle counseling to support your heart health journey. We provide a safe and monitored environment where patients can gradually rebuild strength and confidence after a cardiac event, with specialists carefully tracking heart rate, blood pressure, and overall response during each session.
+
+In addition to exercise, our program focuses on education about heart-healthy living, including medication management, proper nutrition, stress reduction, and risk factor control. This holistic approach helps patients develop sustainable lifestyle changes that support long-term cardiovascular health. From hospital discharge to independent living, our team guides and supports patients every step of their recovery journey.`,
     whyUsPoints: [
       {
         icon: React.createElement(Heart, { size: 24 }),
@@ -179,10 +186,10 @@ export const departmentsData = {
         description: 'Holistic approach including exercise, education, nutrition counseling, and stress management.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[0],
     stats: {
       supportGiven: '2500+',
-      yearsExperience: '18+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '2300+'
     },
@@ -238,8 +245,10 @@ export const departmentsData = {
   },
   pediatrics: {
     name: 'Pediatrics Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1672457666348-745875c92fdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZWRpYXRyaWMlMjB0aGVyYXB5JTIwY2hpbGRyZW58ZW58MXx8fHwxNzY0Njc1NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Specialized rehabilitation services for infants, children, and adolescents with developmental delays, injuries, or disabilities. We help children reach their full potential through play-based therapy.',
+    heroImage: DEPT_IMAGES[3],
+    description: `Pediatric rehabilitation focuses on helping infants, children, and adolescents improve their physical, developmental, and functional abilities. It is designed for children with conditions such as developmental delays, cerebral palsy, genetic disorders, injuries, or neurological conditions. Our specialized team uses child-friendly, evidence-based therapies to enhance mobility, coordination, strength, and independence while supporting each child’s overall growth and development.
+
+Our approach combines therapeutic exercises, play-based activities, and family-centered care to create a supportive and engaging environment for children. We work closely with parents and caregivers to design personalized treatment plans that address each child’s unique needs and goals. By promoting motor skills, balance, communication, and daily living abilities, pediatric rehabilitation helps children reach their full potential and improve their quality of life.`,
     whyUsPoints: [
       {
         icon: React.createElement(Heart, { size: 24 }),
@@ -257,7 +266,7 @@ export const departmentsData = {
         description: 'Play-based therapy that motivates children while achieving therapeutic goals.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1758574437870-f83c160efd82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMGNvbnN1bHRhdGlvbnxlbnwxfHx8fDE3NjQ1OTkwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[0],
     stats: {
       supportGiven: '4000+',
       yearsExperience: '12+',
@@ -316,8 +325,10 @@ export const departmentsData = {
   },
   oncology: {
     name: 'Oncology Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Specialized rehabilitation for cancer patients and survivors to manage treatment side effects, restore function, and improve quality of life throughout the cancer journey.',
+    heroImage: DEPT_IMAGES[4],
+    description: `Oncology rehabilitation focuses on helping individuals recover physically and emotionally during and after cancer treatment. Cancer therapies such as surgery, chemotherapy, and radiation can affect strength, mobility, energy levels, and overall quality of life. Our oncology rehabilitation program is designed to address these challenges through personalized therapy plans that aim to restore physical function, reduce treatment-related side effects, and support overall well-being.
+
+Our experienced rehabilitation specialists provide targeted exercises, fatigue management strategies, pain relief techniques, and mobility training to help patients regain strength and independence. We work closely with oncologists and other healthcare professionals to ensure safe and coordinated care throughout the recovery process. By focusing on improving endurance, flexibility, and daily functioning, our goal is to help patients return to their normal activities and enhance their quality of life during and after cancer treatment.`,
     whyUsPoints: [
       {
         icon: React.createElement(Heart, { size: 24 }),
@@ -335,10 +346,10 @@ export const departmentsData = {
         description: 'Addressing physical, emotional, and functional challenges to enhance overall well-being.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1666886573681-a8fbe983a3fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFsJTIwZG9jdG9yfGVufDF8fHx8MTc2NDU4NzY4OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[6],
     stats: {
       supportGiven: '1800+',
-      yearsExperience: '10+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '1700+'
     },
@@ -394,8 +405,10 @@ export const departmentsData = {
   },
   sports: {
     name: 'Sports Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1762392050946-685f2dec9da7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjByZWhhYmlsaXRhdGlvbiUyMGF0aGxldGV8ZW58MXx8fHwxNzY0NTY4ODYzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'High-performance rehabilitation for athletes of all levels. We specialize in sports injury recovery, injury prevention, and performance optimization to get you back in the game.',
+    heroImage: DEPT_IMAGES[5],
+    description: `Sports rehabilitation focuses on helping athletes and active individuals recover from sports-related injuries and return safely to their physical activities. Injuries such as ligament tears, muscle strains, joint sprains, and overuse injuries can affect performance and mobility. Our sports rehabilitation program uses advanced, evidence-based techniques to restore strength, flexibility, balance, and coordination while reducing pain and preventing further injury.
+
+Our rehabilitation specialists design personalized treatment plans that include therapeutic exercises, manual therapy, mobility training, and sport-specific conditioning. We focus not only on recovery but also on improving overall performance and preventing future injuries. By gradually progressing training and monitoring recovery, we help athletes safely return to their sport with improved strength, confidence, and physical readiness.`,
     whyUsPoints: [
       {
         icon: React.createElement(Award, { size: 24 }),
@@ -413,10 +426,10 @@ export const departmentsData = {
         description: 'Proven protocols for safe and timely return to competition with reduced re-injury risk.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[3],
     stats: {
       supportGiven: '6000+',
-      yearsExperience: '15+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '5500+'
     },
@@ -472,8 +485,10 @@ export const departmentsData = {
   },
   obstetrics: {
     name: 'Obstetrics Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1666886573681-a8fbe983a3fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFsJTIwZG9jdG9yfGVufDF8fHx8MTc2NDU4NzY4OXww&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Specialized care for women during pregnancy and postpartum recovery. We address pelvic floor dysfunction, diastasis recti, pain, and help you return to optimal function.',
+    heroImage: DEPT_IMAGES[6],
+    description: `Obstetric rehabilitation focuses on supporting women during pregnancy and after childbirth by addressing the physical changes and challenges associated with motherhood. Pregnancy and delivery can place significant stress on the body, leading to issues such as back pain, pelvic discomfort, muscle weakness, and reduced mobility. Our obstetric rehabilitation program provides safe, guided exercises and therapies to strengthen the body, improve posture, and promote overall comfort during and after pregnancy.
+
+Our specialized therapists design personalized treatment plans that include pelvic floor strengthening, core stabilization, posture correction, and gentle mobility exercises. These therapies help women recover faster after delivery, manage pain, and regain strength and confidence in their daily activities. We also provide education on body mechanics and self-care techniques to support long-term maternal health and well-being.`,
     whyUsPoints: [
       {
         icon: React.createElement(Heart, { size: 24 }),
@@ -491,10 +506,10 @@ export const departmentsData = {
         description: 'Current research-backed treatments for pregnancy-related and postpartum conditions.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1758574437870-f83c160efd82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMGNvbnN1bHRhdGlvbnxlbnwxfHx8fDE3NjQ1OTkwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[3],
     stats: {
       supportGiven: '2200+',
-      yearsExperience: '8+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '2000+'
     },
@@ -550,8 +565,10 @@ export const departmentsData = {
   },
   geriatrics: {
     name: 'Geriatrics Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1762955913084-96ea3f986468?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGRlcmx5JTIwY2FyZSUyMGdlcmlhdHJpY3xlbnwxfHx8fDE3NjQ2NzU2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Specialized rehabilitation for older adults focused on maintaining independence, preventing falls, managing chronic conditions, and optimizing quality of life.',
+    heroImage: DEPT_IMAGES[7],
+    description: `Geriatric rehabilitation focuses on improving the health, mobility, and independence of older adults who may experience age-related conditions, injuries, or chronic illnesses. As people age, they may face challenges such as reduced strength, balance problems, joint pain, or recovery after surgery or illness. Our geriatric rehabilitation program is designed to help seniors regain mobility, improve physical function, and maintain a better quality of life through safe and personalized therapy.
+
+Our experienced therapists create individualized treatment plans that include strength training, balance exercises, mobility improvement, and fall prevention strategies. We focus on helping older adults perform daily activities more safely and confidently while reducing the risk of future injuries. By combining therapeutic exercises, education, and supportive care, our goal is to promote independence and overall well-being in the aging population.`,
     whyUsPoints: [
       {
         icon: React.createElement(Heart, { size: 24 }),
@@ -569,10 +586,10 @@ export const departmentsData = {
         description: 'Programs designed to help you maintain functional abilities and continue living independently.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[2],
     stats: {
       supportGiven: '3500+',
-      yearsExperience: '17+',
+      yearsExperience: '12+',
       visitorRating: '4.8/5',
       happyPatients: '3200+'
     },
@@ -628,8 +645,10 @@ export const departmentsData = {
   },
   wellness: {
     name: 'Wellness and Lifestyle Rehabilitation',
-    heroImage: 'https://images.unsplash.com/photo-1635367216109-aa3353c0c22e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGxpZmVzdHlsZSUyMHlvZ2F8ZW58MXx8fHwxNzY0Njc1NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Holistic approach to health and wellness focusing on prevention, lifestyle modification, and optimal physical function. We help you achieve and maintain your best health.',
+    heroImage: DEPT_IMAGES[8],
+    description: `Wellness and lifestyle rehabilitation focuses on improving overall health, preventing disease, and promoting a balanced and active lifestyle. This program is designed for individuals who want to enhance their physical fitness, manage stress, improve mobility, and maintain long-term well-being. Through personalized wellness plans, we help individuals build healthy habits that support both physical and mental health.
+
+Our approach combines guided exercise programs, posture and movement training, stress management techniques, and lifestyle counseling. Our specialists work closely with each individual to set achievable health goals and develop sustainable routines that promote strength, flexibility, and overall vitality. By focusing on prevention and healthy living, wellness and lifestyle rehabilitation helps individuals lead more active, energetic, and fulfilling lives.`,
     whyUsPoints: [
       {
         icon: React.createElement(Target, { size: 24 }),
@@ -647,10 +666,10 @@ export const departmentsData = {
         description: 'Evidence-based strategies to create lasting lifestyle changes for long-term health.'
       }
     ],
-    sideImage: 'https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaHlzaWNhbCUyMHRoZXJhcHklMjByZWhhYmlsaXRhdGlvbnxlbnwxfHx8fDE3NjQ2MDcxODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    sideImage: SPECIALTIES_IMAGES[3],
     stats: {
       supportGiven: '5500+',
-      yearsExperience: '10+',
+      yearsExperience: '12+',
       visitorRating: '4.9/5',
       happyPatients: '5200+'
     },

@@ -44,9 +44,25 @@ import home9 from './assets/images/Home/scrollsection3.jpeg';
 import home10 from './assets/images/Home/scrollsection4.jpeg';
 import splash from './assets/images/Home/splashimage.jpeg';
 import backpain from './assets/images/Home/backtherapy.jpg';
-import dept2 from './assets/images/Home/department2.jpeg';
-import dept3 from './assets/images/Home/department3.jpeg';
+import dept2 from './assets/images/Home/dept/dept2.jpeg';
+import dept3 from './assets/images/Home/dept/dept3.jpeg';
+import dept1 from './assets/images/Home/dept/dept1.jpeg';
+import dept4 from './assets/images/Home/dept/dept4.jpeg';
+import dept5 from './assets/images/Home/dept/dept5.jpg';
+import dept6 from './assets/images/Home/dept/dept6.jpeg';
+import dept7 from './assets/images/Home/dept/dept7.jpg';
+import dept8 from './assets/images/Home/dept/dept8.jpg';
+import dept9 from './assets/images/Home/dept/dept9.jpeg';
 
+import spec1 from './assets/images/Home/specialties/spec1.jpg';
+import spec2 from './assets/images/Home/specialties/spec2.jpg';
+import spec3 from './assets/images/Home/specialties/spec3.jpg';
+import spec4 from './assets/images/Home/specialties/spec4.jpg';
+import spec5 from './assets/images/Home/specialties/spec5.jpeg';
+import spec6 from './assets/images/Home/specialties/spec6.jpeg';
+import spec7 from './assets/images/Home/specialties/spec7.jpg';
+import spec8 from './assets/images/Home/specialties/spec8.jpg';
+import spec9 from './assets/images/Home/specialties/spec9.jpg';
 
 
 
@@ -107,3 +123,26 @@ export const DEPARTMENTS = [
     specialities5,
 ];
 
+export const DEPT_IMAGES = [
+    dept1,
+    dept2,
+    dept3,
+    dept4,
+    dept5,
+    dept6,
+    dept7,
+    dept8,
+    dept9,
+];
+
+export const SPECIALTIES_IMAGES = [
+    spec1,
+    spec2,
+    spec3,
+    spec4,
+    spec5,
+    spec6,
+    spec7,
+    spec8,
+    spec9,
+];

@@ -607,7 +607,7 @@ export function ServiceDetailPage() {
                           fontWeight: '400',
                           letterSpacing: '0.3px'
                         }}>
-                          + 864 846 75324
+                          +91 83338 90389
                         </span>
                       </div>
                     </div>
